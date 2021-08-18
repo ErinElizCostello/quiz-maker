@@ -1,0 +1,1 @@
+export const SET_HOW_MANY_ANSWERS = 'SET_HOW_MANY_ANSWERS'
