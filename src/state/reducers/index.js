@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import {setHowManyAnswers} from './howManyAnswers'
+import { setHowManyAnswers } from './setHowManyAnswers'
 
 
 

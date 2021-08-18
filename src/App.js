@@ -1,4 +1,4 @@
-import QuizMaker from './quizMaker'
+import QuizMaker from './components/quizMaker'
 
 function App() {
   return (

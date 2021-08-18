@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { setHowManyAnswers } from '../state/actions/setHowManyAnswers';
 
 
 const QuizMaker = () => {
+
+  const dispatch = useDispatch()
+
+  const numberOfAnswers = useSelector(state => state.setHowManyAnswers)
 
   const [questionText, setQuestionText] = useState('')
   const [answerText, setAnswerText] = useState('')
   const [answers, setAnswers] = useState([])
   const [quizQuestions, setQuizQuestions] = useState([])
-  const [numberOfAnswers, setNumberOfAnswers] = useState(0)
 
-  const onChangeNumberOfAnswers = (event) => {
-    setNumberOfAnswers(event.target.value)
-  }
+  const onChangeNumberOfAnswers = (event) =>  dispatch(setHowManyAnswers(event.target.value))
 
   const onChangeQuestionText = (event) => {
     setQuestionText(event.target.value)
