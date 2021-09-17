@@ -28,8 +28,8 @@ const QuestionsForm = () => {
       )
     dispatch(setQuestion({id: Math.random(), question: questionText, answers}))
     
-    setQuestionText('')
-    setAnswerText({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
+    // setQuestionText('')
+    // setAnswerText({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
   }
 
   const answerLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
