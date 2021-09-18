@@ -1,9 +1,11 @@
-import QuizMaker from './components/quizMaker/quizMaker'
+import Routes from './navigation/routes';
+
+
 
 function App() {
   return (
     <div className="App">
-      <QuizMaker />
+      <Routes />
     </div>
   );
 }

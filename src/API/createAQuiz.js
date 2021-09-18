@@ -1,17 +1,15 @@
-export const createAQuiz = (quiz) => {
+export const createAQuiz = (title, quiz) => {
   return fetch('http://localhost:3001/createQuiz', {
     method: 'POST',
     body: JSON.stringify({
-      // id: "8",
       user: "erin",
-      // time: 11,
-      quiz: JSON.stringify(quiz),
-      // user_id: userID,
-      // recipe_id_api: APIrecipeID
+      title: title,
+      quiz: quiz
     }),
     headers: {
       'Content-Type': 'application/json',
     }
   })
     .then(response => response.json())
+    .then(data => console.log('data', data))
 }

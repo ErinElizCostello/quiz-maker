@@ -2,3 +2,5 @@ export const SET_HOW_MANY_ANSWERS = 'SET_HOW_MANY_ANSWERS'
 
 export const SET_QUESTION = 'SET_QUESTION'
 export const DELETE_QUESTION = 'DELETE_QUESTION'
+
+export const SET_QUIZ_ID = 'SET_QUIZ_ID'

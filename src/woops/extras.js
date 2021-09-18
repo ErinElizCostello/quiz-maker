@@ -153,3 +153,20 @@ console.log('template', template)
 //   const [answers10, setAnswers10] = useState('')
 //   const [answers11, setAnswers11] = useState('')
 //   const [answers12, setAnswers12] = useState('')
+
+
+
+
+
+// fetch('http://localhost:3001/createQuiz', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     user: "erin",
+    //     quiz: theQuiz.setQuestion[0]
+    //   }),
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   }
+    // })
+    //   .then(response => response.json())
+    //   .then(data => console.log('data', data))
