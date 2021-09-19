@@ -1,8 +1,9 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const app = express()
 const db = require('./db')
-const quizzesRouter = require('./routes/routes')
+const router = require('./routes/routes')
 
 app.use(express.json());
 app.use(express.urlencoded({
@@ -16,7 +17,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 //     res.send('Hello World!')
 // })
 
-app.use('/', quizzesRouter)
+app.use('/', router)
+
 
 const PORT = process.env.PORT || 3001
 

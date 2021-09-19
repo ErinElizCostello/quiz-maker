@@ -4,6 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 import LandingPage from '../components/landingPage';
 import QuizMaker from '../components/quizMaker/quizMaker'
 import Quiz from '../components/quizTaker/quiz';
+import Login from '../components/signUpAndLogin/login';
+import SignUp from '../components/signUpAndLogin/signUp';
 
 const Routes = () => {
   return (
@@ -11,6 +13,12 @@ const Routes = () => {
       <Switch>
         <Route exact path='/'>
           <LandingPage />
+        </Route>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/signup'>
+          <SignUp />
         </Route>
         <Route path='/createAQuiz'>
           <QuizMaker />

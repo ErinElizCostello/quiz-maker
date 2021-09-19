@@ -5,13 +5,22 @@ import ListOfQuizzes from './quizTaker/listOfQuizzes';
 
 
 const LandingPage = () => {
-  return ( 
+  return (
     <div>
-      
-      <Link to='/createAQuiz'>Create A Quiz!</Link>
-      <ListOfQuizzes />
+      <div>
+        <Link to='/login'>Login</Link>
+      </div>
+      <div>
+        <Link to='/signup'>Sign up</Link>
+      </div>
+      <div>
+        <Link to='/createAQuiz'>Create A Quiz!</Link>
+      </div>
+      <div>
+        <ListOfQuizzes />
+      </div>
     </div>
-   );
+  );
 }
- 
+
 export default LandingPage;
