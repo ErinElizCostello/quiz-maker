@@ -6,6 +6,8 @@ import QuizMaker from '../components/quizMaker/quizMaker'
 import Quiz from '../components/quizTaker/quiz';
 import Login from '../components/signUpAndLogin/login';
 import SignUp from '../components/signUpAndLogin/signUp';
+import MyQuizzes from '../components/user/myQuizzes';
+import SecuredMyQuizzes from './securedMyQuizzes';
 
 const Routes = () => {
   return (
@@ -20,12 +22,14 @@ const Routes = () => {
         <Route path='/signup'>
           <SignUp />
         </Route>
+       
         <Route path='/createAQuiz'>
           <QuizMaker />
         </Route>
         <Route path='/quiz'>
           <Quiz />
         </Route>
+        <SecuredMyQuizzes path={`/myQuizzes`} component={MyQuizzes} />
       </Switch>
     </div>
   );
