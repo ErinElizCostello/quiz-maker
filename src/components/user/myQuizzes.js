@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import { getAUsersQuizzes } from '../../API/getAUsersQuizzes';
+import { setQuizID } from '../../state/actions/quizID';
 
 const MyQuizzes = () => {
+ const dispatch = useDispatch()
 
   const theUser = JSON.parse(localStorage.getItem('QuizUser')).payload.user
 
@@ -14,6 +19,10 @@ const MyQuizzes = () => {
         setUsersQuizzes(quizzes.data)
       })
   }, []);
+
+  const quizID = (id) => dispatch(setQuizID(id))
+
+  
 
   return (
     <div>
@@ -28,6 +37,11 @@ const MyQuizzes = () => {
             </div>
             <div>
               {quiz.createdAt}
+            </div>
+            <div onClick={() => quizID(quiz._id)}>
+              <Link to='/quiz'>
+                The Quiz
+              </Link>
             </div>
           </div>
         ))
