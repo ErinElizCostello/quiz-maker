@@ -170,3 +170,13 @@ console.log('template', template)
     // })
     //   .then(response => response.json())
     //   .then(data => console.log('data', data))
+
+
+     // return res.status(200).send({ err: err, result: result, }
+  // if(err){
+  //   res.send(err.message)
+  // }else{
+  //   console.log('what r we sending???')
+  //   return res.status(200).send({ err: err, result: jwt, })
+  // }
+  //   })

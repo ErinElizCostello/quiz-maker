@@ -30,12 +30,12 @@ getUser = async (req, res) => {
           id: user._id,
           user: user.username,
           iat: Math.floor(Date.now() / 1000),
-        }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1m' }
+        }, process.env.ACCESS_TOKEN_SECRET, 
+        { expiresIn: '1d' }
         );
         
         return res.send({ payload, token });
       } else {
-        // response is OutgoingMessage object that server response http request
         return response.json({ success: false, message: 'passwords do not match' });
       }
     })
