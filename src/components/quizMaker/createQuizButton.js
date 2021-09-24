@@ -5,10 +5,12 @@ import { createAQuiz } from '../../API/createAQuiz';
 
 const CreateQuizButton = () => {
 
+  const theUser = JSON.parse(localStorage.getItem('QuizUser')).payload.user
+
   let theQuiz = useSelector(state => state)
 
   const createTheQuiz = () => {
-    createAQuiz(theQuiz.setQuestion[0].title, theQuiz.setQuestion)
+    createAQuiz(theQuiz.setQuestion[0].title, theQuiz.setQuestion, theUser)
   }
 
   return (

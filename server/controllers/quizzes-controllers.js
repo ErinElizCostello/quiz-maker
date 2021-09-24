@@ -66,6 +66,20 @@ getQuizById = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
+getQuizzesByUser = async (req, res) => {
+    await Quizzes.find({user: req.body.username}, (err, quizzes) => {
+        if (err) {
+            return res.status(400).json({ success: false, error: err })
+        }
+        if (!quizzes.length) {
+            return res
+                .status(404)
+                .json({ success: false, error: `No quizzes found for that user` })
+        }
+        return res.status(200).json({ success: true, data: quizzes })
+    }).catch(err => console.log(err))
+}
+
 getQuizzes = async (req, res) => {
     await Quizzes.find({}, (err, quizzes) => {
         if (err) {
@@ -124,5 +138,6 @@ module.exports = {
     deleteQuiz,
     getQuizzes,
     getQuizById,
-    editQuiz
+    editQuiz,
+    getQuizzesByUser
 }

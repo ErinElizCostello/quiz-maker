@@ -7,11 +7,14 @@ const VerifyControllers = require('../controllers/verify-controllers')
 
 const router = express.Router()
 
-router.post('/createQuiz', QuizzesControllers.createQuiz)
-router.put('/quiz/:id', QuizzesControllers.editQuiz)
-router.delete('/quiz/:id', QuizzesControllers.deleteQuiz)
-router.get('/quiz/:id', QuizzesControllers.getQuizById)
 router.get('/quizzes', QuizzesControllers.getQuizzes)
+router.get('/quiz/:id', QuizzesControllers.getQuizById)
+router.post('/createQuiz', QuizzesControllers.createQuiz)
+router.delete('/deleteQuiz/:id', QuizzesControllers.deleteQuiz)
+router.put('/editQuiz/:id', QuizzesControllers.editQuiz)
+
+
+router.post('/myQuizzes', QuizzesControllers.getQuizzesByUser)
 
 router.get('/getAllUsers', LoginControllers.getAllUsers)
 router.post('/login', LoginControllers.getUser)

@@ -1,8 +1,8 @@
-export const createAQuiz = (title, quiz) => {
+export const createAQuiz = (title, quiz, user) => {
   return fetch('http://localhost:3001/createQuiz', {
     method: 'POST',
     body: JSON.stringify({
-      user: "erin",
+      user: user,
       title: title,
       quiz: quiz
     }),
