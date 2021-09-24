@@ -14,8 +14,10 @@ const Login = () => {
   const loginTheUser = () => {
     loginUser(username, password)
       .then(data => {
-        data.success &&
+        if(data.success !== false) {
         localStorage.setItem('QuizUser', JSON.stringify(data))
+        
+        }
         console.log('data', data)
       })
   }
