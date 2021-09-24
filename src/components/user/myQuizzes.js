@@ -8,7 +8,8 @@ import { setQuizID } from '../../state/actions/quizID';
 const MyQuizzes = () => {
  const dispatch = useDispatch()
 
-  const theUser = JSON.parse(localStorage.getItem('QuizUser')).payload.user
+  const theUser = localStorage.getItem('QuizUser')
+  ? JSON.parse(localStorage.getItem('QuizUser')).payload.user : ''
 
   const [usersQuizzes, setUsersQuizzes] = useState([])
 
@@ -16,7 +17,7 @@ const MyQuizzes = () => {
     getAUsersQuizzes(theUser)
       .then(quizzes => {
         console.log(quizzes)
-        setUsersQuizzes(quizzes.data)
+        quizzes.success && setUsersQuizzes(quizzes.data)
       })
   }, []);
 

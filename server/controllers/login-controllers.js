@@ -36,7 +36,7 @@ getUser = async (req, res) => {
         
         return res.send({ payload, token });
       } else {
-        return response.json({ success: false, message: 'passwords do not match' });
+        return res.json({ success: false, message: 'passwords do not match' });
       }
     })
   }).catch(err => console.log(err))

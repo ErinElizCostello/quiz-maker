@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { getQuizByID } from '../../API/getQuizByID';
 
 
 
@@ -10,15 +11,8 @@ const Quiz = () => {
   const [theQuiz, setTheQuiz] = useState(null)
 
   useEffect(() => {
-    theQuizID &&
-      fetch(`http://localhost:3001/quiz/${theQuizID}`)
-        .then(response => response.json())
-        .then(data => {
-          console.log('data', data)
-          setTheQuiz(data.data)
-        })
-
-
+    theQuizID && getQuizByID(theQuizID)
+    .then(quiz => setTheQuiz(quiz.data))
   }, []);
 
   return (

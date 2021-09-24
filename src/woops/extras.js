@@ -180,3 +180,11 @@ console.log('template', template)
   //   return res.status(200).send({ err: err, result: jwt, })
   // }
   //   })
+
+
+  // fetch(`http://localhost:3001/quiz/${theQuizID}`)
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     console.log('data', data)
+      //     setTheQuiz(data.data)
+      //   })
