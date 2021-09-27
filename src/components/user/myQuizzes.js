@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { getAUsersQuizzes } from '../../API/getAUsersQuizzes';
 import { setQuizID } from '../../state/actions/quizID';
+import { deleteAQuiz } from '../../API/deleteAQuiz';
 
 const MyQuizzes = () => {
  const dispatch = useDispatch()
@@ -22,7 +23,13 @@ const MyQuizzes = () => {
   }, []);
 
   const quizID = (id) => dispatch(setQuizID(id))
-
+  
+  const deleteTheQuiz = id => {
+    return deleteAQuiz(id)
+    .then( data => {
+      console.log(data)
+    })
+  }
   
 
   return (
@@ -43,6 +50,9 @@ const MyQuizzes = () => {
               <Link to='/quiz'>
                 The Quiz
               </Link>
+            </div>
+            <div>
+              <button onClick={() => deleteTheQuiz(quiz._id)}>X</button>
             </div>
           </div>
         ))
