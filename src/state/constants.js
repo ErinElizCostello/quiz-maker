@@ -4,3 +4,4 @@ export const SET_QUESTION = 'SET_QUESTION'
 export const DELETE_QUESTION = 'DELETE_QUESTION'
 
 export const SET_QUIZ_ID = 'SET_QUIZ_ID'
+export const SET_RESULTS = 'SET_RESULTS'

@@ -8,6 +8,7 @@ const Quizzes = new Schema(
         title: { type: String, required: true },
         // time: { type: Number, required: true },
         quiz: { type: Object, required: true },
+        results: { type: Object, required: true },
     },
     { timestamps: true },
 )
