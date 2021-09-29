@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import LandingPage from '../components/landingPage';
 import QuizMaker from '../components/quizMaker/quizMaker'
-import Quiz from '../components/quizTaker/quiz';
+import QuizPage from '../components/quizTaker/quizPage';
 import Login from '../components/signUpAndLogin/login';
 import SignUp from '../components/signUpAndLogin/signUp';
 import MyQuizzes from '../components/user/myQuizzes';
@@ -27,7 +27,7 @@ const Routes = () => {
           <QuizMaker />
         </Route>
         <Route path='/quiz'>
-          <Quiz />
+          <QuizPage />
         </Route>
         <SecuredMyQuizzes path={`/myQuizzes`} component={MyQuizzes} />
       </Switch>

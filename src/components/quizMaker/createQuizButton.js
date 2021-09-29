@@ -8,8 +8,7 @@ const CreateQuizButton = () => {
   const theUser = JSON.parse(localStorage.getItem('QuizUser')).payload.user
 
   let theQuiz = useSelector(state => state)
-  // let results = useSelector(state => state.setResults)
-
+  
   const createTheQuiz = () => {
     createAQuiz(theQuiz.setQuestion[0].title, theQuiz.setQuestion, theUser, theQuiz.setResults)
   }

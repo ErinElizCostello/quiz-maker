@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getQuizByID } from '../../API/getQuizByID';
-
+import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken';
+import ResultsDisplay from './resultsDisplay';
 
 
 const Quiz = () => {
+
+  const dispatch = useDispatch()
 
   const theQuizID = useSelector(state => state.setQuizID)
 
@@ -24,7 +27,32 @@ const Quiz = () => {
     setSelection([...selection, letter])
     console.log('selection', selection)
   }
- 
+
+  const calculateResults = () => {
+    let numberOfLetters = {}
+
+    selection.forEach(letter => numberOfLetters[letter] ? numberOfLetters[letter]++ : numberOfLetters[letter] = 1)
+
+    const sortedValues = Object.values(numberOfLetters).sort(function (a, b) {
+      return b - a
+    })
+    // .reverse()
+
+    const thatResult = []
+
+    Object.keys(numberOfLetters).forEach(letter => numberOfLetters[letter] === sortedValues[0] && thatResult.push(letter))
+
+    // const quizResult = selection.filter(letter => sortedValues[-1] === numberOfLetters[letter])
+    dispatch(setResultOfQuizTaken(thatResult))
+
+
+    console.log('sortedValues', sortedValues)
+    console.log('thatResult', thatResult)
+
+    console.log('numberOfLetters', numberOfLetters)
+    console.log('datQUIZZZ', theQuiz)
+  }
+
   return (
     <div>
       <div>
@@ -37,18 +65,18 @@ const Quiz = () => {
               {thisQuiz.question}
             </div>
             <div style={{ margin: 10 }}></div>
-            <div 
+            <div
             // onChange={answer => onChangeAnswer(answer)}
             >
               {thisQuiz.answers.map(answer => (
                 <div>
-                  <input 
-                    type="radio" 
-                    id="radioBtn" 
-                    name={thisQuiz.question} 
-                    value={answer.letter} 
+                  <input
+                    type="radio"
+                    id="radioBtn"
+                    name={thisQuiz.question}
+                    value={answer.letter}
                     onChange={answer => onChangeAnswer(answer)}
-                    />
+                  />
                   <label for="radioBtn">{`  ${answer.text}`}</label>
                   {/* ${answer.letter}. */}
                 </div>
@@ -57,6 +85,10 @@ const Quiz = () => {
           </div>
         ))}
       </div>
+      <div onClick={calculateResults}>
+        <button>See my results</button>
+      </div>
+      <ResultsDisplay />
     </div>
   );
 }
