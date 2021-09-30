@@ -15,21 +15,39 @@ const ResultsDisplay = () => {
       .then(quiz => {
         setQuizResultsOptions(quiz.data.results)
         console.log('quiz.data', quiz.data)
-       })
+      })
   }, []);
 
-  const result = quizResultsOptions.length ? quizResultsOptions.filter(option => option.letter === theResult[0]) : ''
+  const result = []
+  
+  quizResultsOptions.length && quizResultsOptions.forEach(option =>
+    theResult.length && theResult.forEach(letter => 
+      option.letter === letter && result.push(option.text)
+    )
+  )
+
+
+  //^^^this is why its not showing ties
 
   console.log('ggrrr', result)
 
-  return ( 
+  return (
     <div>
       {
-        // result[0] && result[0].text
-        result[0] && result.map(aResult => aResult.text)
+        result.length > 1 && `It's a tie!` 
+      }
+      <br /><br />
+      {
+        result.length > 1 ?
+        result.map(aResult => 
+          (
+            <div>{aResult}<br /></div>
+          )
+        )
+        : result[0]
       }
     </div>
-   );
+  );
 }
- 
+
 export default ResultsDisplay;
