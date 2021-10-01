@@ -8,7 +8,7 @@ const QuizPage = () => {
   return ( 
     <div>
       <Quiz />
-      {/* <ResultsDisplay /> */}
+      <ResultsDisplay />
     </div>
    );
 }

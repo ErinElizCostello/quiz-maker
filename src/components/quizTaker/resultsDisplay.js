@@ -11,6 +11,7 @@ const ResultsDisplay = () => {
   const [quizResultsOptions, setQuizResultsOptions] = useState([])
 
   useEffect(() => {
+    setQuizResultsOptions([])
     theQuizID && getQuizByID(theQuizID)
       .then(quiz => {
         setQuizResultsOptions(quiz.data.results)

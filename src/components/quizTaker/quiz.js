@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getQuizByID } from '../../API/getQuizByID';
 import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken';
+import BackButton from '../backButton';
 import ResultsDisplay from './resultsDisplay';
 
 
@@ -15,6 +16,7 @@ const Quiz = () => {
   const [selection, setSelection] = useState([])
 
   useEffect(() => {
+    
     theQuizID && getQuizByID(theQuizID)
       .then(quiz => setTheQuiz(quiz.data))
   }, []);
@@ -55,6 +57,7 @@ const Quiz = () => {
 
   return (
     <div>
+      <BackButton backTo="home" />
       <div>
         {theQuiz && theQuiz.title}
       </div>
@@ -88,7 +91,7 @@ const Quiz = () => {
       <div onClick={calculateResults}>
         <button>See my results</button>
       </div>
-      <ResultsDisplay />
+      {/* <ResultsDisplay /> */}
     </div>
   );
 }

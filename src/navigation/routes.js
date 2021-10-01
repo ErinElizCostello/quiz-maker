@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import DeleteUserAccount from '../components/deleteUserAccount';
 
 import LandingPage from '../components/landingPage';
 import QuizMaker from '../components/quizMaker/quizMaker'
@@ -22,7 +23,9 @@ const Routes = () => {
         <Route path='/signup'>
           <SignUp />
         </Route>
-       
+       <Route path="/deleteUserAccount">
+         <DeleteUserAccount />
+       </Route>
         <Route path='/createAQuiz'>
           <QuizMaker />
         </Route>
