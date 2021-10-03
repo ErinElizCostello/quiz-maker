@@ -2,7 +2,7 @@ const SignUp = require('../models/signUpAndLogin-model')
 bcrypt = require('bcrypt'),
   SALT_WORK_FACTOR = 10;
 
-createNewUser = (req, res) => {
+createNewUser = async (req, res) => {
   const body = req.body
 
   if (!body) {
@@ -12,38 +12,60 @@ createNewUser = (req, res) => {
     })
   }
 
-  bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
-    if (err) return err;
+  ////
 
-    bcrypt.hash(body.password, salt, function (err, hash) {
-      if (err) return next(err);
-      
-      body.password = hash;
+  await SignUp.findOne({ username: body.username }, (err, user) => {
+    if (err) {
+      return res.status(400).json({ success: false, error: err })
+    }
 
-      const user = new SignUp(body)
+    if (user) {
+      return res
+        .status(404)
+        .json({ success: false, error: `username is already taken, pick a new one` })
+    } else {
 
-      if (!user) {
-        return res.status(400).json({ success: false, error: err })
-      }
 
-      user
-        .save()
-        .then(() => {
-          return res.status(201).json({
-            success: true,
-            user: user,
-            message: 'New user created',
-          })
-        })
-        .catch(error => {
-          return res.status(400).json({
-            error,
-            message: 'New user not created',
-          })
-        })
-    });
-  });
 
+
+
+
+
+      /////
+
+      bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
+        if (err) return err;
+
+        bcrypt.hash(body.password, salt, function (err, hash) {
+          if (err) return next(err);
+
+          body.password = hash;
+
+          const user = new SignUp(body)
+
+          if (!user) {
+            return res.status(400).json({ success: false, error: err })
+          }
+
+          user
+            .save()
+            .then(() => {
+              return res.status(201).json({
+                success: true,
+                user: user,
+                message: 'New user created',
+              })
+            })
+            .catch(error => {
+              return res.status(400).json({
+                error,
+                message: 'New user not created',
+              })
+            })
+        });
+      });
+    }
+  })
 }
 
 module.exports = {
