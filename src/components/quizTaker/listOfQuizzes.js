@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setQuizID } from '../../state/actions/quizID';
-
+import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
+import { setResults } from '../../state/actions/results'
 
 const ListOfQuizzes = () => {
 
@@ -27,6 +28,8 @@ const ListOfQuizzes = () => {
 
   const quizID = id => {
     console.log('id', id)
+    dispatch(setResultOfQuizTaken([]))
+    dispatch(setResults([]))
     dispatch(setQuizID(id))
   }
 

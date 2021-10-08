@@ -14,8 +14,8 @@ const QuizMaker = () => {
       <button>Back</button>
       </Link>
       <QuestionsForm />
-      <ResultsForm />
-      <CreateQuizButton />
+      {/* <ResultsForm /> */}
+      {/* <CreateQuizButton /> */}
       <QuestionsDisplay />
     </div>
   );

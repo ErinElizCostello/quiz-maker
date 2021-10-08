@@ -6,6 +6,13 @@ import { getAUsersQuizzes } from '../../API/getAUsersQuizzes';
 import { setQuizID } from '../../state/actions/quizID';
 import { deleteAQuiz } from '../../API/deleteAQuiz';
 
+import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
+import { setResults } from '../../state/actions/results'
+// import BackToMyQuizzes from './backToMyQuizzes';
+
+
+
+
 const MyQuizzes = () => {
  const dispatch = useDispatch()
 
@@ -22,7 +29,11 @@ const MyQuizzes = () => {
       })
   }, []);
 
-  const quizID = (id) => dispatch(setQuizID(id))
+  const quizID = (id) => {
+    dispatch(setResultOfQuizTaken([]))
+    dispatch(setResults([]))
+    dispatch(setQuizID(id))
+  }
   
   const deleteTheQuiz = id => {
     return deleteAQuiz(id)

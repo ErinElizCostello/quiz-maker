@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setResults } from '../../state/actions/results';
+import CreateQuizButton from './createQuizButton';
+import BackButton from '../backButton'
 
 
 const ResultsForm = () => {
   const dispatch = useDispatch()
+
+  const displayResults = useSelector(state => state.setResults)
 
   const [resultsText, setResultsText] = useState({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
 
@@ -28,6 +32,7 @@ const ResultsForm = () => {
 
   return (
     <div>
+      <BackButton backTo="questionsForm" />
       {
         resultsLetters.map(letter => (
           <div key={letter}>
@@ -38,7 +43,35 @@ const ResultsForm = () => {
           </div>
         ))
       }
-      <button onClick={addResults}>Add Results</button>
+      <button onClick={addResults}>
+        {
+          displayResults.length ? `Edit Results` : 'Add Results'
+        }
+        
+        </button>
+
+      <div>
+        {
+          displayResults.map(result => (
+           <div>
+             {
+             `mostly ${result.letter}'s ...`
+             }
+             <br />
+             {
+               result.text
+             }
+             
+             <br /><br /><br />
+           </div>
+          ))
+        }
+      </div>
+{
+  displayResults.length !== 0 &&
+  <CreateQuizButton />
+}
+    
     </div>
   );
 }

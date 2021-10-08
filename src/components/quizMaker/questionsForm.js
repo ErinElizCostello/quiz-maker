@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setHowManyAnswers } from '../../state/actions/setHowManyAnswers';
+// import { setHowManyAnswers } from '../../state/actions/setHowManyAnswers';
 import { setQuestion } from '../../state/actions/questions';
+import { Link } from 'react-router-dom';
 
 
 
 
 const QuestionsForm = () => {
-  
+
   const dispatch = useDispatch()
 
   const [titleText, setTitleText] = useState('')
@@ -16,21 +17,21 @@ const QuestionsForm = () => {
   const [answerText, setAnswerText] = useState({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
 
   const onChangeTitleText = event => setTitleText(event.target.value)
-  
+
   const onChangeQuestionText = event => setQuestionText(event.target.value)
 
   const onChangeAnswerText = (letter, event) => setAnswerText({ ...answerText, [letter]: event.target.value })
 
   const addQuestion = () => {
-    
+
 
     const answers = []
-    
+
     Object.keys(answerText).forEach(letter => answerText[letter] &&
-      answers.push({letter: letter, text: answerText[letter]})
-      )
-    dispatch(setQuestion({id: Math.random(), title: titleText, question: questionText, answers}))
-    
+      answers.push({ letter: letter, text: answerText[letter] })
+    )
+    dispatch(setQuestion({ id: Math.random(), title: titleText, question: questionText, answers }))
+
     // setQuestionText('')
     // setAnswerText({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
   }
@@ -68,6 +69,11 @@ const QuestionsForm = () => {
           Add Question
         </button>
       </div>
+      <Link to="/resultsForm">
+        <div>
+          Add Results...
+        </div>
+      </Link>
     </div>
   );
 }

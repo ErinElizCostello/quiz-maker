@@ -4,6 +4,7 @@ import DeleteUserAccount from '../components/deleteUserAccount';
 
 import LandingPage from '../components/landingPage';
 import QuizMaker from '../components/quizMaker/quizMaker'
+import ResultsForm from '../components/quizMaker/resultsForm';
 import QuizPage from '../components/quizTaker/quizPage';
 import Login from '../components/signUpAndLogin/login';
 import SignUp from '../components/signUpAndLogin/signUp';
@@ -28,6 +29,9 @@ const Routes = () => {
        </Route>
         <Route path='/createAQuiz'>
           <QuizMaker />
+        </Route>
+        <Route path='/resultsForm'>
+          <ResultsForm />
         </Route>
         <Route path='/quiz'>
           <QuizPage />

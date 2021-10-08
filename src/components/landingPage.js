@@ -6,9 +6,11 @@ import LogOut from './signUpAndLogin/logOut';
 import { setResultOfQuizTaken } from '../state/actions/resultOfQuizTaken'
 import { useDispatch } from 'react-redux';
 import DeleteUserAccount from './deleteUserAccount';
+import { setQuestion } from '../state/actions/questions';
+import LinkToCreateAQuiz from '../woops/linkToCreateAQuiz';
 
 const LandingPage = () => {
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
 
   // useEffect(() => {
   //   window.location.reload()
@@ -24,6 +26,10 @@ const LandingPage = () => {
   }
 
 
+  const clearOldData = () => {
+    dispatch(setQuestion([]))
+  }
+
   return (
     <div>
       {localStorage.getItem('QuizUser') ?
@@ -35,8 +41,15 @@ const LandingPage = () => {
               My quizzes
             </div>
           </Link>
-          <div>
-            <Link to='/createAQuiz'>Create A Quiz!</Link>
+          {/* <LinkToCreateAQuiz /> */}
+          <div   
+          // onClick={
+          //      () => clearOldData()
+          //      }
+          >
+            <Link to='/createAQuiz' 
+           
+              >Create A Quiz!</Link>
           </div>
           <div>
             <Link to='/deleteUserAccount'>
