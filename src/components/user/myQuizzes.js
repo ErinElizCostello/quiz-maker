@@ -8,18 +8,22 @@ import { deleteAQuiz } from '../../API/deleteAQuiz';
 
 import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
 import { setResults } from '../../state/actions/results'
+import AreYouSureYouWantToDeleteThisQuiz from '../quizMaker/areYouSureYouWantToDeleteThisQuiz';
 // import BackToMyQuizzes from './backToMyQuizzes';
 
 
 
 
 const MyQuizzes = () => {
- const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const theUser = localStorage.getItem('QuizUser')
-  ? JSON.parse(localStorage.getItem('QuizUser')).payload.user : ''
+    ? JSON.parse(localStorage.getItem('QuizUser')).payload.user : ''
 
   const [usersQuizzes, setUsersQuizzes] = useState([])
+  const [areYouSureMessage, setAreYouSureMessage] = useState(false)
+  const [deleteQuizId, setDeleteQuizId] = useState(null)
+  const [deleteQuizTitle, setDeleteQuizTitle] = useState(null)
 
   useEffect(() => {
     getAUsersQuizzes(theUser)
@@ -34,17 +38,18 @@ const MyQuizzes = () => {
     dispatch(setResults([]))
     dispatch(setQuizID(id))
   }
-  
-  const deleteTheQuiz = id => {
-    return deleteAQuiz(id)
-    .then( data => {
-      console.log(data)
-    })
+
+  const theAreYouSureMessage = (id, title) => {
+    setDeleteQuizId(id)
+    setDeleteQuizTitle(title)
+    setAreYouSureMessage(true)
+    
   }
-  
+
 
   return (
     <div>
+
       {
         usersQuizzes.map(quiz => (
           <div style={{ border: '1px solid black' }}>
@@ -63,11 +68,22 @@ const MyQuizzes = () => {
               </Link>
             </div>
             <div>
-              <button onClick={() => deleteTheQuiz(quiz._id)}>X</button>
+              <button onClick={() => theAreYouSureMessage(quiz._id, quiz.title)
+                // () => 
+                // deleteTheQuiz(quiz._id)
+              }>X</button>
             </div>
+
           </div>
         ))
       }
+
+      <div>
+        {areYouSureMessage &&
+          <AreYouSureYouWantToDeleteThisQuiz
+            quizInfo={{ deleteQuizId, deleteQuizTitle, setAreYouSureMessage }}
+          />}
+      </div>
     </div>
   );
 }
