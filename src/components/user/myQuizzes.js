@@ -9,6 +9,7 @@ import { deleteAQuiz } from '../../API/deleteAQuiz';
 import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
 import { setResults } from '../../state/actions/results'
 import AreYouSureYouWantToDeleteThisQuiz from '../quizMaker/areYouSureYouWantToDeleteThisQuiz';
+import BackButton from '../backButton';
 // import BackToMyQuizzes from './backToMyQuizzes';
 
 
@@ -49,6 +50,7 @@ const MyQuizzes = () => {
 
   return (
     <div>
+      <BackButton backTo="home" />
 
       {
         usersQuizzes.map(quiz => (

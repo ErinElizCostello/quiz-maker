@@ -6,7 +6,7 @@ import LogOut from './signUpAndLogin/logOut';
 import { setResultOfQuizTaken } from '../state/actions/resultOfQuizTaken'
 import { useDispatch } from 'react-redux';
 import DeleteUserAccount from './deleteUserAccount';
-import { setQuestion } from '../state/actions/questions';
+import { clearQuestions } from '../state/actions/questions';
 import LinkToCreateAQuiz from '../woops/linkToCreateAQuiz';
 
 const LandingPage = () => {
@@ -27,7 +27,7 @@ const LandingPage = () => {
 
 
   const clearOldData = () => {
-    dispatch(setQuestion([]))
+    dispatch(clearQuestions([]))
   }
 
   return (
@@ -43,11 +43,11 @@ const LandingPage = () => {
           </Link>
           {/* <LinkToCreateAQuiz /> */}
           <div   
-          // onClick={
-          //      () => clearOldData()
-          //      }
+          
           >
-            <Link to='/createAQuiz' 
+            <Link 
+            onClick={clearOldData}
+            to='/createAQuiz' 
            
               >Create A Quiz!</Link>
           </div>

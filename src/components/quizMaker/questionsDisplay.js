@@ -17,7 +17,7 @@ const QuestionsDisplay = () => {
   return (
     <div>
       {
-         questions.map(question => (
+        questions.map(question => (
           <div key={question.id}>
             <div>
               {`${questionNumber++}. ${question.question}`}
