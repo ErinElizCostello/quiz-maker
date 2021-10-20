@@ -5,6 +5,7 @@ import { setQuizID } from './quizID';
 import { setResults } from './results';
 import { setResultOfQuizTaken} from './resultOfQuizTaken'
 import { setQuizTitle } from './quizTitle';
+import { setNumberOfAnswers } from './numberOfAnswers';
 
 const rootReducer = combineReducers({
   // setHowManyAnswers,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   setQuizID,
   setResults,
   setResultOfQuizTaken,
-  setQuizTitle
+  setQuizTitle,
+  setNumberOfAnswers
 });
 
 export default rootReducer

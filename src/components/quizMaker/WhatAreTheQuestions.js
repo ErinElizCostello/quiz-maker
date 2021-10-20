@@ -10,12 +10,7 @@ import ResultsForm from './resultsForm';
 const WhatAreTheQuestions = () => {
   return (
     <div>
-      <Link to="/">
-      <button>Back</button>
-      </Link>
       <QuestionsForm />
-      {/* <ResultsForm /> */}
-      {/* <CreateQuizButton /> */}
       <QuestionsDisplay />
     </div>
   );

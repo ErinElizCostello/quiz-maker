@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { setHowManyAnswers } from '../../state/actions/setHowManyAnswers';
 import { setQuestion } from '../../state/actions/questions';
 import { Link } from 'react-router-dom';
+import BackButton from '../backButton';
 
 
 
@@ -17,6 +18,7 @@ const QuestionsForm = () => {
   const [answerText, setAnswerText] = useState({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
 
   const quizQuestions = useSelector(state => state.setQuestion)
+  const numberOfQuestions = useSelector(state => state.setNumberOfAnswers)
 
   // const onChangeTitleText = event => setTitleText(event.target.value)
 
@@ -41,10 +43,10 @@ const QuestionsForm = () => {
     setAnswerText({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
   }
 
-  const clearText = () => setQuestionText('') 
-  // setAnswerText({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
 
-  const answerLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+  const possibleAnswerLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+
+  const answerLetters = possibleAnswerLetters.slice(0, numberOfQuestions)
 
   return (
     <div>
@@ -54,6 +56,9 @@ const QuestionsForm = () => {
           title => onChangeTitleText(title)}>
         </textarea>
       </div> */}
+      <div>
+        <BackButton />
+      </div>
       <div>
         <label>What is the question?</label><br />
         <textarea id="option" value={questionText} name="option" rows="2" cols="40" onChange={

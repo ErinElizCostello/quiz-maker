@@ -11,6 +11,7 @@ import Login from '../components/signUpAndLogin/login';
 import SignUp from '../components/signUpAndLogin/signUp';
 import MyQuizzes from '../components/user/myQuizzes';
 import SecuredMyQuizzes from './securedMyQuizzes';
+import HowManyPossibleAnswers from '../components/quizMaker/howManyPossibleAnswers';
 
 const Routes = () => {
   return (
@@ -30,6 +31,9 @@ const Routes = () => {
        </Route>
         <Route path='/createAQuiz'>
           <WhatIsTheTitle />
+        </Route>
+        <Route path='/numberOfAnswers'>
+          <HowManyPossibleAnswers />
         </Route>
         <Route path='/questions'>
           <WhatAreTheQuestions />

@@ -29,7 +29,7 @@ const WhatIsTheTitle = () => {
         </textarea>
       </div>
       <div>
-        <Link to="/questions">
+        <Link to="/numberOfAnswers">
           <button onClick={saveTitle}>next...</button>
         </Link>
       </div>
