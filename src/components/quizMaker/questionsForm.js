@@ -19,6 +19,8 @@ const QuestionsForm = () => {
 
   const quizQuestions = useSelector(state => state.setQuestion)
   const numberOfQuestions = useSelector(state => state.setNumberOfAnswers)
+  const numberOfResults = useSelector(state => state.setNumberOfAnswers)
+
 
   // const onChangeTitleText = event => setTitleText(event.target.value)
 
@@ -26,19 +28,21 @@ const QuestionsForm = () => {
 
   const onChangeAnswerText = (letter, event) => setAnswerText({ ...answerText, [letter]: event.target.value })
 
-  const addQuestion =  () => {
+  const addQuestion = () => {
 
 
     const answers = []
 
-   Object.keys(answerText).forEach(letter => answerText[letter] &&
+    Object.keys(answerText).forEach(letter => answerText[letter] &&
       answers.push({ letter: letter, text: answerText[letter] })
     )
-   dispatch(setQuestion({ id: Math.random(), 
-    // title: titleText, 
-    question: questionText, answers }))
+    dispatch(setQuestion({
+      id: Math.random(),
+      // title: titleText, 
+      question: questionText, answers
+    }))
 
-  //  clearText()
+    //  clearText()
     setQuestionText('')
     setAnswerText({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
   }
@@ -78,18 +82,26 @@ const QuestionsForm = () => {
       }
 
       <div>
+        {
+           Object.keys(answerText).filter(answer => answerText[answer] !== '').length === numberOfResults ?
         <button onClick={addQuestion}>
           Add Question
         </button>
+        :
+        <button disabled>
+          Add Question
+        </button>
+}
       </div>
       {
         quizQuestions.length ?
-        <Link to="/resultsForm">
-        <div>
-          Add Results...
-        </div>
-      </Link>
-      : null
+          <Link to="/resultsForm">
+            <div>
+              <button>next...</button>
+            </div>
+          </Link>
+          :
+          <button disabled>next...</button>
       }
     </div>
   );

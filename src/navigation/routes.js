@@ -12,6 +12,7 @@ import SignUp from '../components/signUpAndLogin/signUp';
 import MyQuizzes from '../components/user/myQuizzes';
 import SecuredMyQuizzes from './securedMyQuizzes';
 import HowManyPossibleAnswers from '../components/quizMaker/howManyPossibleAnswers';
+// import PreviewResultsAndCreateQuiz from '../woops/previewResultsAndCreateQuiz';
 
 const Routes = () => {
   return (
@@ -41,6 +42,9 @@ const Routes = () => {
         <Route path='/resultsForm'>
           <ResultsForm />
         </Route>
+        {/* <Route path='/previewResults'>
+          <PreviewResultsAndCreateQuiz />
+        </Route> */}
         <Route path='/quiz'>
           <QuizPage />
         </Route>

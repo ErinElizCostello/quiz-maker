@@ -3,14 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setResults } from '../../state/actions/results';
 import CreateQuizButton from './createQuizButton';
 import BackButton from '../backButton'
+import { Link } from 'react-router-dom';
 
 
 const ResultsForm = () => {
   const dispatch = useDispatch()
 
   const displayResults = useSelector(state => state.setResults)
+  const numberOfResults = useSelector(state => state.setNumberOfAnswers)
 
   const [resultsText, setResultsText] = useState({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
+  const [showCreateQuizButton, setShowCreateQuizButton] = useState(false)
 
   const onChangeResultsText = (letter, event) => setResultsText({ ...resultsText, [letter]: event.target.value })
 
@@ -26,9 +29,12 @@ const ResultsForm = () => {
     // dispatch(setQuestion({id: Math.random(), title: titleText, question: questionText, answers}))
     console.log('resultzz', theResults)
     dispatch(setResults(theResults))
+    setShowCreateQuizButton(true)
   }
 
-  const resultsLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+  const possibleResultsLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+
+  const resultsLetters = possibleResultsLetters.slice(0, numberOfResults)
 
   return (
     <div>
@@ -43,12 +49,24 @@ const ResultsForm = () => {
           </div>
         ))
       }
-      <button onClick={addResults}>
+      
+        {/* {
+          displayResults.length ? `Edit Results` : 'Preview Results'
+        } */}
         {
-          displayResults.length ? `Edit Results` : 'Add Results'
-        }
+          displayResults.length ? <button onClick={addResults} >Edit Results</button>
+          :
+          Object.keys(resultsText).filter(result => resultsText[result] !== '').length === numberOfResults ?
+          // <Link to="/previewResults">
+      <button onClick={addResults}>
         
+        Preview Results
         </button>
+        // </Link>
+        
+        :
+        <button disabled>Preview Results</button>
+}
 
       <div>
         {
@@ -68,7 +86,7 @@ const ResultsForm = () => {
         }
       </div>
 {
-  displayResults.length !== 0 &&
+  showCreateQuizButton &&
   <CreateQuizButton />
 }
     

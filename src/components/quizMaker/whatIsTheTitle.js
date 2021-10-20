@@ -9,7 +9,7 @@ const WhatIsTheTitle = () => {
 
   const dispatch = useDispatch()
 
-  const [titleText, setTitleText] = useState('')
+  const [titleText, setTitleText] = useState(null)
 
   const onChangeTitleText = event => setTitleText(event.target.value)
 
@@ -29,9 +29,14 @@ const WhatIsTheTitle = () => {
         </textarea>
       </div>
       <div>
-        <Link to="/numberOfAnswers">
-          <button onClick={saveTitle}>next...</button>
-        </Link>
+        {
+          titleText ?
+            <Link to="/numberOfAnswers">
+              <button onClick={saveTitle}>next...</button>
+            </Link>
+            :
+            <button disabled>next...</button>
+        }
       </div>
     </div>
   );

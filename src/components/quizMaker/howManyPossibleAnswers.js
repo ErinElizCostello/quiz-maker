@@ -3,13 +3,14 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { setNumberOfAnswers } from '../../state/actions/numberOfAnswers';
+import { clearQuestions } from '../../state/actions/questions';
 import BackButton from '../backButton';
 
 const HowManyPossibleAnswers = () => {
 
   const dispatch = useDispatch()
 
-  const [number, setNumber] = useState('')
+  const [number, setNumber] = useState(null)
 
   const onChangeNumber = (event) => {
     setNumber(Number(event.target.value))
@@ -17,6 +18,7 @@ const HowManyPossibleAnswers = () => {
 
   const chooseNumberOfAnswers = () => {
     dispatch(setNumberOfAnswers(number))
+    dispatch(clearQuestions([]))
   }
 
   return (
@@ -34,6 +36,7 @@ const HowManyPossibleAnswers = () => {
           onChange={e => onChangeNumber(e)}
           value={number}
         >
+          <option value="">choose</option>
           <option value="2">2 answers</option>
           <option value="3">3 answers</option>
           <option value="4">4 answers</option>
@@ -48,9 +51,14 @@ const HowManyPossibleAnswers = () => {
         </select>
       </div>
       <div>
-        <Link to='/questions'>
+        {
+          number ?
+          <Link to='/questions'>
           <button onClick={chooseNumberOfAnswers}>next...</button>
         </Link>
+        :
+        <button disabled>next...</button>
+        }
       </div>
     </div>
   );
