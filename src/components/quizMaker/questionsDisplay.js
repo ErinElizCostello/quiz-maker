@@ -23,18 +23,19 @@ const QuestionsDisplay = () => {
               {`${questionNumber++}. ${question.question}`}
             </div>
             <br /> <br />
-            {question.answers.map(answer => (
-              <div>
-                {`${answer.letter}.  ${answer.text}`}
-              </div>
-            ))}
+            {
+              question.answers.map(answer => (
+                <div>
+                  {`${answer.letter}.  ${answer.text}`}
+                </div>
+              ))
+            }
 
             <button onClick={() => deleteTheQuestion(question.id)}>X</button>
 
             <br /><br />
           </div>
         ))
-        
       }
     </div>
   );

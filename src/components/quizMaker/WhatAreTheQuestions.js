@@ -7,7 +7,7 @@ import ResultsForm from './resultsForm';
 
 
 
-const QuizMaker = () => {
+const WhatAreTheQuestions = () => {
   return (
     <div>
       <Link to="/">
@@ -21,4 +21,4 @@ const QuizMaker = () => {
   );
 }
 
-export default QuizMaker;
+export default WhatAreTheQuestions;

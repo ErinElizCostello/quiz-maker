@@ -3,8 +3,9 @@ import { Switch, Route } from 'react-router-dom';
 import DeleteUserAccount from '../components/deleteUserAccount';
 
 import LandingPage from '../components/landingPage';
-import QuizMaker from '../components/quizMaker/quizMaker'
+import WhatAreTheQuestions from '../components/quizMaker/WhatAreTheQuestions'
 import ResultsForm from '../components/quizMaker/resultsForm';
+import WhatIsTheTitle from '../components/quizMaker/whatIsTheTitle';
 import QuizPage from '../components/quizTaker/quizPage';
 import Login from '../components/signUpAndLogin/login';
 import SignUp from '../components/signUpAndLogin/signUp';
@@ -28,7 +29,10 @@ const Routes = () => {
          <DeleteUserAccount />
        </Route>
         <Route path='/createAQuiz'>
-          <QuizMaker />
+          <WhatIsTheTitle />
+        </Route>
+        <Route path='/questions'>
+          <WhatAreTheQuestions />
         </Route>
         <Route path='/resultsForm'>
           <ResultsForm />

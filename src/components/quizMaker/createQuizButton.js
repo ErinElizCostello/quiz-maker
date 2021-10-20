@@ -17,7 +17,7 @@ const CreateQuizButton = () => {
   let theQuiz = useSelector(state => state)
   
   const createTheQuiz = async () => {
-    await createAQuiz(theQuiz.setQuestion[0].title, theQuiz.setQuestion, theUser, theQuiz.setResults)
+    await createAQuiz(theQuiz.setQuizTitle, theQuiz.setQuestion, theUser, theQuiz.setResults)
 
     setRedirectToHomePage(true)
     // dispatch(setQuestion([]))
