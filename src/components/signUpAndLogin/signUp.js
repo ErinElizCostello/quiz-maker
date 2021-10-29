@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { signUpUser } from '../../API/signUpUser';
 import { Link, Redirect } from 'react-router-dom'
+import '../../styles/signUp.css'
+
+import { signUpUser } from '../../API/signUpUser';
+
 import BackButton from '../backButton'
+
 
 
 const SignUp = () => {
@@ -18,37 +22,57 @@ const SignUp = () => {
   const createNewAccount = () => {
     signUpUser(username, password)
       .then(data => {
-        console.log('data', data)
         data.error === 'username is already taken, pick a new one' ?
           setUsernameAlreadyExistsMessage(true)
           :
           setRedirectToLogin(true)
       })
-
-
   }
 
   return (
-    <div>
-      {redirectToLogin ? <Redirect to={{ pathname: '/login' }}></Redirect> : null}
-      <BackButton backTo="home" />
-      <div>
-        {usernameAlreadyExistsMessage && <p>username already exists, pick another one</p>}
-        <label>Username</label>
-        <input onChange={usernameText}></input>
-      </div>
-      <div>
-        <label>Password</label>
-        <input onChange={passwordText}></input>
-      </div>
-      <div>
-        <button onClick={createNewAccount}>Sign Up</button>
-      </div>
-      <Link to='/login'>
-        <div>
-          Login!
+    <div className="background">
+      {redirectToLogin && <Redirect to={{ pathname: '/login' }} />}
+      <div className="everything">
+        <div className="backButton">
+          <BackButton />
         </div>
-      </Link>
+        
+        <div className="formAndLoginLink">
+          <p className="title">Sign Up</p>
+        {
+            usernameAlreadyExistsMessage &&
+            <p>
+              username already exists, pick another one
+            </p>
+          }
+          <div>
+          <label className="label">
+            Username
+          </label>
+          <br />
+          <input className="input" onChange={usernameText} />
+          </div>
+
+          <div>
+            <label className="label">
+              Password
+            </label>
+            <br />
+            <input className="input" onChange={passwordText} />
+          </div>
+          <br />
+          <div>
+            <button onClick={createNewAccount}>
+              Sign Up
+            </button>
+          </div>
+          <Link className="link" to='/login'>
+            <p className="loginLink">
+              Login!
+            </p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

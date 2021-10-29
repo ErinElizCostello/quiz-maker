@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 import { setQuizTitle } from '../../state/actions/quizTitle';
+
 import BackButton from '../backButton'
+
 
 
 const WhatIsTheTitle = () => {
@@ -13,9 +16,7 @@ const WhatIsTheTitle = () => {
 
   const onChangeTitleText = event => setTitleText(event.target.value)
 
-  const saveTitle = () => {
-    dispatch(setQuizTitle(titleText))
-  }
+  const saveTitle = () => dispatch(setQuizTitle(titleText))
 
   return (
     <div>
@@ -23,19 +24,30 @@ const WhatIsTheTitle = () => {
         <BackButton />
       </div>
       <div>
-        <label>What is the Title?</label><br />
-        <textarea id="option" name="option" rows="2" cols="40" onChange={
-          title => onChangeTitleText(title)}>
-        </textarea>
+        <label>
+          What is the Title?
+        </label>
+        <br />
+        <textarea
+          id="option"
+          name="option"
+          rows="2"
+          cols="40"
+          onChange={title => onChangeTitleText(title)}
+        />
       </div>
       <div>
         {
           titleText ?
             <Link to="/numberOfAnswers">
-              <button onClick={saveTitle}>next...</button>
+              <button onClick={saveTitle}>
+                next...
+              </button>
             </Link>
             :
-            <button disabled>next...</button>
+            <button disabled>
+              next...
+            </button>
         }
       </div>
     </div>

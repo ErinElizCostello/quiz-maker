@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { loginUser } from '../../API/loginUser';
 import { Link, Redirect } from 'react-router-dom'
+import '../../styles/login.css'
+
+import { loginUser } from '../../API/loginUser';
+
 import BackButton from '../backButton'
 
 
@@ -32,32 +35,48 @@ const Login = () => {
           localStorage.setItem('QuizUser', JSON.stringify(data))
           setRedirectToHomePage(true)
         }
-        console.log('data', data)
       })
   }
 
   return (
-    <div>
-      {redirectToHomePage && <Redirect to={{ pathname: '/' }}></Redirect>}
-      <BackButton backTo="home" />
-      <div>
-        {userDoesNotExistMessage && <p>user does not exist</p>}
-        {wrongPasswordMessage && <p>wrong password!</p>}
-        <label>Username</label>
-        <input onChange={usernameText}></input>
-      </div>
-      <div>
-        <label>Password</label>
-        <input onChange={passwordText}></input>
-      </div>
-      <div>
-        <button onClick={loginTheUser}>Login</button>
-      </div>
-      <Link to='/signUp'>
-        <div>
-          sign up!
+    <div className="background">
+      {redirectToHomePage && <Redirect to={{ pathname: '/' }} />}
+
+      <div className="everything">
+        <div className="backButton">
+          <BackButton backTo="home" />
         </div>
-      </Link>
+
+        <div className="formAndSignUpLink">
+        <p className="title">Login</p>
+          <div>
+            {userDoesNotExistMessage && <p>user does not exist</p>}
+            {wrongPasswordMessage && <p>wrong password!</p>}
+            <label className="label">
+              Username
+            </label>
+            <br />
+            <input className="input" onChange={usernameText} />
+          </div>
+          <div>
+            <label className="label">
+              Password
+            </label>
+            <br />
+            <input className="input" onChange={passwordText} />
+          </div>
+          <div>
+            <button onClick={loginTheUser}>
+              Login
+            </button>
+          </div>
+          <Link className="link" to='/signUp'>
+            <p className="signUpLink">
+              sign up!
+            </p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

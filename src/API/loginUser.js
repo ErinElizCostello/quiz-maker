@@ -9,6 +9,5 @@ export const loginUser = (username, password) => {
       'Content-Type': 'application/json',
     }
   })
-    .then(response => response.json())
-    
+    .then(response => response.json())   
 }

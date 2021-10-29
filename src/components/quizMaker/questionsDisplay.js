@@ -2,15 +2,22 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteQuestion } from '../../state/actions/questions';
 
+
+
 const QuestionsDisplay = () => {
 
   const dispatch = useDispatch()
+
   const questions = useSelector(state => state.setQuestion)
+
+  //for numbering the questions
   let questionNumber = 1
 
   const deleteTheQuestion = (questionId) => {
     const updatedListOfQuestions = questions.filter(question => question.id !== questionId)
+
     questionNumber = 1
+
     dispatch(deleteQuestion(updatedListOfQuestions))
   }
 
@@ -30,9 +37,9 @@ const QuestionsDisplay = () => {
                 </div>
               ))
             }
-
-            <button onClick={() => deleteTheQuestion(question.id)}>X</button>
-
+            <button onClick={() => deleteTheQuestion(question.id)}>
+              X
+            </button>
             <br /><br />
           </div>
         ))

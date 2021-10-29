@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import BackButton from './backButton';
+
 import { deleteAUserAccount } from '../API/deleteAUserAccount';
+
+import BackButton from './backButton';
+
+
 
 const DeleteUserAccount = () => {
 
@@ -11,22 +15,22 @@ const DeleteUserAccount = () => {
   const deleteAccount = () => {
     deleteAUserAccount(theUser)
       .then(data => {
-        console.log(data)
         localStorage.getItem("QuizUser") && localStorage.removeItem("QuizUser")
         setAccountDeletedMessage(true)
       })
-        
   }
 
-  return ( 
+  return (
     <div>
-      <BackButton backTo="home" />
-      
-      <button onClick={deleteAccount}>delete my account</button>
-
+      <div>
+        <BackButton backTo="home" />
+      </div>
+      <button onClick={deleteAccount}>
+        delete my account
+      </button>
       {accountDeletedMessage && `Your account has been successfully deleted`}
     </div>
-   );
+  );
 }
- 
+
 export default DeleteUserAccount;

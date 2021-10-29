@@ -1,0 +1,157 @@
+/* 'Monoton', cursive; */
+  /* 'Lobster', cursive; */
+  /* 'Rampart One', cursive; */
+  /* 'Poppins', sans-serif; */
+  /* "Rubik Beastly", cursive; */
+
+  @media screen and (min-width: 601px) {
+
+    .background {
+      background-color: #fdcbcb;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+    } 
+  
+    .everything {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    } 
+  
+     .backButton {
+      margin: 10px
+    }
+  
+    .formAndLoginLink {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+    } 
+  
+    .title {
+      font-family: Helvetica;
+      color: #937983;
+      font-size: 35px;
+    }
+
+    .label {
+      font-family: Helvetica;
+      color: #937983;
+      font-size: 35px;
+    }
+  
+    .input {
+      width: 350px;
+      height: 40px;
+      border: 2px solid #937983;
+      border-radius: 10px;
+      box-sizing: border-box;
+      outline: none;
+      margin: 10px;
+    }
+  
+    .loginLink {
+      font-family: Helvetica;
+      color: #937983;
+      font-size: 35px;
+      text-decoration: none;
+    }
+  
+    .loginLink:hover {
+      font-family: "Rubik Beastly", cursive;
+      color: #71b5ac;
+      font-size: 35px;
+      text-decoration: none;
+    }
+  
+    .link {
+      text-decoration: none;
+    }
+  }
+  
+  
+  
+  
+  
+  /* small screen */
+  
+  @media screen and (max-width: 601px) {
+    .background {
+      background-color: #fdcbcb;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+    }
+  
+    .everything {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* margin: 0;
+      padding: 0; */
+    }
+  
+    .backButton {
+      margin: 10px
+    }
+  
+    .formAndLoginLink {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .title {
+      font-family: Helvetica;
+      color: #937983;
+      font-size: 35px;
+    }
+  
+    .label {
+      font-family: Helvetica;
+      color: #937983;
+      font-size: 35px;
+    }
+  
+    .input {
+      width: 300px;
+      height: 40px;
+      border: 2px solid #937983;
+      border-radius: 10px;
+      box-sizing: border-box;
+      outline: none;
+      margin: 10px;
+    }
+  
+    .loginLink {
+      font-family: Helvetica;
+      color: #937983;
+      font-size: 35px;
+      text-decoration: none;
+    }
+  
+    .loginUpLink:hover {
+      font-family: "Rubik Beastly", cursive;
+      color: #71b5ac;
+      font-size: 35px;
+      text-decoration: none;
+    }
+  
+    .link {
+      text-decoration: none;
+    }
+  }
+  

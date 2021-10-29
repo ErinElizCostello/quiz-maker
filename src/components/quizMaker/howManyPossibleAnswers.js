@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 
 import { setNumberOfAnswers } from '../../state/actions/numberOfAnswers';
 import { clearQuestions } from '../../state/actions/questions';
+
 import BackButton from '../backButton';
+
+
 
 const HowManyPossibleAnswers = () => {
 
@@ -12,9 +15,7 @@ const HowManyPossibleAnswers = () => {
 
   const [number, setNumber] = useState(null)
 
-  const onChangeNumber = (event) => {
-    setNumber(Number(event.target.value))
-  }
+  const onChangeNumber = event => setNumber(Number(event.target.value))
 
   const chooseNumberOfAnswers = () => {
     dispatch(setNumberOfAnswers(number))
@@ -26,13 +27,19 @@ const HowManyPossibleAnswers = () => {
       <div>
         <BackButton />
       </div>
-      <div>How many possible answers do you want your quiz questions to have? You can choose up to 12</div>
-      <br /><br />
-
       <div>
-        <label for="numberOfAnswers">number of Answers</label>
-
-        <select name="numberOfAnswers" id="numberOfAnswers"
+        <p>
+          How many possible answers do you want your quiz questions to have? You can choose up to 12
+        </p>
+      </div>
+      <br /><br />
+      <div>
+        <label for="numberOfAnswers">
+          number of Answers
+        </label>
+        <select
+          name="numberOfAnswers"
+          id="numberOfAnswers"
           onChange={e => onChangeNumber(e)}
           value={number}
         >
@@ -53,11 +60,15 @@ const HowManyPossibleAnswers = () => {
       <div>
         {
           number ?
-          <Link to='/questions'>
-          <button onClick={chooseNumberOfAnswers}>next...</button>
-        </Link>
-        :
-        <button disabled>next...</button>
+            <Link to='/questions'>
+              <button onClick={chooseNumberOfAnswers}>
+                next...
+              </button>
+            </Link>
+            :
+            <button disabled>
+              next...
+            </button>
         }
       </div>
     </div>

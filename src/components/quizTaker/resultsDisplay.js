@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+
 import { getQuizByID } from '../../API/getQuizByID';
+
 
 
 const ResultsDisplay = () => {
@@ -15,7 +17,6 @@ const ResultsDisplay = () => {
     theQuizID && getQuizByID(theQuizID)
       .then(quiz => {
         setQuizResultsOptions(quiz.data.results)
-        console.log('quiz.data', quiz.data)
       })
   }, []);
 
@@ -26,11 +27,6 @@ const ResultsDisplay = () => {
       option.letter === letter && result.push(option.text)
     )
   )
-
-
-  //^^^this is why its not showing ties
-
-  console.log('ggrrr', result)
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import DeleteUserAccount from '../components/deleteUserAccount';
 
+import DeleteUserAccount from '../components/deleteUserAccount';
 import LandingPage from '../components/landingPage';
 import WhatAreTheQuestions from '../components/quizMaker/WhatAreTheQuestions'
 import ResultsForm from '../components/quizMaker/resultsForm';
@@ -12,7 +12,8 @@ import SignUp from '../components/signUpAndLogin/signUp';
 import MyQuizzes from '../components/user/myQuizzes';
 import SecuredMyQuizzes from './securedMyQuizzes';
 import HowManyPossibleAnswers from '../components/quizMaker/howManyPossibleAnswers';
-// import PreviewResultsAndCreateQuiz from '../woops/previewResultsAndCreateQuiz';
+
+
 
 const Routes = () => {
   return (
@@ -27,9 +28,9 @@ const Routes = () => {
         <Route path='/signup'>
           <SignUp />
         </Route>
-       <Route path="/deleteUserAccount">
-         <DeleteUserAccount />
-       </Route>
+        <Route path="/deleteUserAccount">
+          <DeleteUserAccount />
+        </Route>
         <Route path='/createAQuiz'>
           <WhatIsTheTitle />
         </Route>
@@ -42,13 +43,13 @@ const Routes = () => {
         <Route path='/resultsForm'>
           <ResultsForm />
         </Route>
-        {/* <Route path='/previewResults'>
-          <PreviewResultsAndCreateQuiz />
-        </Route> */}
         <Route path='/quiz'>
           <QuizPage />
         </Route>
-        <SecuredMyQuizzes path={`/myQuizzes`} component={MyQuizzes} />
+        <SecuredMyQuizzes
+          path={`/myQuizzes`}
+          component={MyQuizzes}
+        />
       </Switch>
     </div>
   );

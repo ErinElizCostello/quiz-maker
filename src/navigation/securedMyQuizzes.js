@@ -3,6 +3,8 @@ import { Route, Redirect } from 'react-router-dom';
 
 import MyQuizzes from '../components/user/myQuizzes'
 
+
+
 const SecuredMyQuizzes = () => {
   return (
     <div>
@@ -12,7 +14,7 @@ const SecuredMyQuizzes = () => {
             ?
             (<MyQuizzes />)
             :
-            (<Redirect to={{ pathname: '/login' }}></Redirect>)}
+            (<Redirect to={{ pathname: '/login' }} />)}
       >
       </Route>
     </div>

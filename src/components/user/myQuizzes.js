@@ -3,15 +3,13 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { getAUsersQuizzes } from '../../API/getAUsersQuizzes';
-import { setQuizID } from '../../state/actions/quizID';
-import { deleteAQuiz } from '../../API/deleteAQuiz';
 
+import { setQuizID } from '../../state/actions/quizID';
 import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
 import { setResults } from '../../state/actions/results'
+
 import AreYouSureYouWantToDeleteThisQuiz from '../quizMaker/areYouSureYouWantToDeleteThisQuiz';
 import BackButton from '../backButton';
-// import BackToMyQuizzes from './backToMyQuizzes';
-
 
 
 
@@ -19,7 +17,7 @@ const MyQuizzes = () => {
   const dispatch = useDispatch()
 
   const theUser = localStorage.getItem('QuizUser')
-    ? JSON.parse(localStorage.getItem('QuizUser')).payload.user : ''
+    && JSON.parse(localStorage.getItem('QuizUser')).payload.user
 
   const [usersQuizzes, setUsersQuizzes] = useState([])
   const [areYouSureMessage, setAreYouSureMessage] = useState(false)
@@ -29,7 +27,6 @@ const MyQuizzes = () => {
   useEffect(() => {
     getAUsersQuizzes(theUser)
       .then(quizzes => {
-        console.log(quizzes)
         quizzes.success && setUsersQuizzes(quizzes.data)
       })
   }, []);
@@ -44,14 +41,15 @@ const MyQuizzes = () => {
     setDeleteQuizId(id)
     setDeleteQuizTitle(title)
     setAreYouSureMessage(true)
-    
+
   }
 
 
   return (
     <div>
-      <BackButton backTo="home" />
-
+      <div>
+        <BackButton backTo="home" />
+      </div>
       {
         usersQuizzes.map(quiz => (
           <div style={{ border: '1px solid black' }}>
@@ -70,16 +68,13 @@ const MyQuizzes = () => {
               </Link>
             </div>
             <div>
-              <button onClick={() => theAreYouSureMessage(quiz._id, quiz.title)
-                // () => 
-                // deleteTheQuiz(quiz._id)
-              }>X</button>
+              <button onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}>
+                X
+              </button>
             </div>
-
           </div>
         ))
       }
-
       <div>
         {areYouSureMessage &&
           <AreYouSureYouWantToDeleteThisQuiz
