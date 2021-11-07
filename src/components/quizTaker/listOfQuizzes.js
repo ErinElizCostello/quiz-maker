@@ -6,6 +6,8 @@ import { setQuizID } from '../../state/actions/quizID';
 import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
 import { setResults } from '../../state/actions/results'
 
+import '../../styles/listOfQuizzes.css'
+
 
 
 const ListOfQuizzes = () => {
@@ -32,19 +34,26 @@ const ListOfQuizzes = () => {
     <div>
       {
         quizzesList.map(quiz => (
-          <div style={{ height: 100, width: 200, border: '1px solid black' }}>
+          <div className="quizCard">
             <div>
-              {quiz.title}
+              <p className="quizCardTitle">
+                {quiz.title}
+              </p>
             </div>
             <div>
-              {quiz.user}
+              <p className="username">
+                {`created by ${quiz.user}`}
+              </p>
             </div>
             <div>
               <Link
+                className="link"
                 to='/quiz'
                 onClick={() => quizID(quiz._id)}
               >
-                Take quiz
+                <p className="linkToQuiz">
+                  Take quiz
+                </p>
               </Link>
             </div>
           </div>
