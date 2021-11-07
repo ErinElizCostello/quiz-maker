@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { setQuestion } from '../../state/actions/questions';
+import { clearResults } from '../../state/actions/results';
 
 import BackButton from '../backButton';
 
@@ -41,6 +42,8 @@ const QuestionsForm = () => {
 
     setAnswerText({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
   }
+
+  const clearFormerResults = () => dispatch(clearResults([]))
 
   const possibleAnswerLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
 
@@ -94,7 +97,7 @@ const QuestionsForm = () => {
       </div>
       {
         quizQuestions.length ?
-          <Link to="/resultsForm">
+          <Link to="/resultsForm" onClick={clearFormerResults}>
             <div>
               <button>
                 next...

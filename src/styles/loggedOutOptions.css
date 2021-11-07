@@ -1,0 +1,77 @@
+@media screen and (min-width: 601px) {
+  .container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+   }
+
+  .login {
+    margin: 20px;
+    font-family: Helvetica;
+    color: white;
+  }
+
+  .login:hover{
+    margin: 20px;
+    font-family: Helvetica;
+    color: pink;
+  }
+
+  .signUp {
+    margin: 20px;
+    font-family: Helvetica;
+    color: white;
+  }
+
+  .signUp:hover{
+    margin: 20px;
+    font-family: Helvetica;
+    color: pink;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+}
+
+
+
+/* /////// */
+
+
+
+@media screen and (max-width: 601px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .login {
+    margin: 20px;
+    font-family: Helvetica;
+    color: white;
+  }
+
+  .login :hover{
+    margin: 20px;
+    font-family: Helvetica;
+    color: pink;
+  }
+
+  .signUp {
+    margin: 20px;
+    font-family: Helvetica;
+    color: white;
+  }
+
+  .signUp :hover{
+    margin: 20px;
+    font-family: Helvetica;
+    color: pink;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+}

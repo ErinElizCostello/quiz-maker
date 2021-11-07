@@ -7,6 +7,8 @@ import { verifyTheUser } from '../API/verifyTheUser';
 
 import { clearQuestions } from '../state/actions/questions';
 
+import '../styles/loggedInOptions.css'
+
 
 
 const LoggedInOptions = () => {
@@ -26,32 +28,55 @@ const LoggedInOptions = () => {
   const clearOldData = () => dispatch(clearQuestions([]))
 
   return (
-    <div>
-      <div>
-        {`Hello ${JSON.parse(localStorage.getItem('QuizUser')).payload.user}`}
+    <div className="container">
+      <div className="left-side-navbar">
+      <Link className="link" to="/myQuizzes">
+          <div onClick={verify}>
+            <p className="greeting">
+            {`${JSON.parse(localStorage.getItem('QuizUser')).payload.user}'s Quizzes`}
+            </p>
+          </div>
+        </Link>
+        {/* <div>
+          <p className="greeting">
+            {`Hello ${JSON.parse(localStorage.getItem('QuizUser')).payload.user}`}
+          </p>
+        </div> */}
       </div>
-      <div>
-        <button onClick={logOutUser}>
-          Log Out
-        </button>
-      </div>
-      <Link to="/myQuizzes">
-        <div onClick={verify}>
-          My quizzes
+      <div className="middle-navbar"></div>
+      <div className="right-side-navbar">
+        {/* <Link className="link" to="/myQuizzes">
+          <div onClick={verify}>
+            <p className="myQuizzes">
+              My quizzes
+            </p>
+          </div>
+        </Link> */}
+        <div>
+          <Link
+            className="link"
+            onClick={clearOldData}
+            to='/createAQuiz'
+          >
+            <p className="createAQuiz">
+              Create a quiz
+            </p>
+          </Link>
         </div>
-      </Link>
-      <div>
-        <Link
-          onClick={clearOldData}
-          to='/createAQuiz'
-        >
-          Create A Quiz!
-        </Link>
-      </div>
-      <div>
-        <Link to='/deleteUserAccount'>
-          Delete my account
-        </Link>
+        <div onClick={logOutUser}>
+          {/* <button onClick={logOutUser}> */}
+          <p className="logOut">
+            Log Out
+          </p>
+          {/* </button> */}
+        </div>
+        {/* <div>
+          <Link className="link" to='/deleteUserAccount'>
+            <p className="settings">
+              Settings
+            </p>
+          </Link>
+        </div> */}
       </div>
     </div>
   );

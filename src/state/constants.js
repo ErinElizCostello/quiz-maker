@@ -10,3 +10,4 @@ export const SET_QUIZ_ID = 'SET_QUIZ_ID'
 
 export const SET_RESULTS = 'SET_RESULTS'
 export const SET_RESULTS_OF_QUIZ_TAKEN = 'SET_RESULTS'
+export const CLEAR_RESULTS = 'CLEAR_RESULTS'
