@@ -11,6 +11,10 @@ import { setResults } from '../../state/actions/results'
 import AreYouSureYouWantToDeleteThisQuiz from '../quizMaker/areYouSureYouWantToDeleteThisQuiz';
 import BackButton from '../backButton';
 
+import moment from 'moment'
+
+import '../../styles/myQuizzes.css'
+
 
 
 const MyQuizzes = () => {
@@ -50,36 +54,53 @@ const MyQuizzes = () => {
       <div>
         <BackButton backTo="home" />
       </div>
-      {
-        usersQuizzes.map(quiz => (
-          <div style={{ border: '1px solid black' }}>
+      <div className="quizListLayout">
+        {
+          usersQuizzes.map(quiz => (
             <div>
-              {quiz.title}
+              <div className="myQuizzesCard">
+                <div onClick={() => quizID(quiz._id)}>
+                  <Link to='/quiz'>
+                    <p className="myQuizzesText">
+                      {quiz.title}
+                    </p>
+                  </Link>
+                </div>
+                <div>
+                  <p className="myQuizzesText">
+                    {quiz.user}
+                  </p>
+                </div>
+                <div>
+                  <p className="myQuizzesText">
+                    {moment(quiz.createdAt).format("MMM Do YYYY")}
+                  </p>
+                </div>
+                {/* <div onClick={() => quizID(quiz._id)}>
+                  <Link to='/quiz'>
+                    <p className="myQuizzesText">
+                      The Quiz
+                    </p>
+                  </Link>
+                </div> */}
+                <div className="myQuizzesText">
+                  <button onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}>
+                    Delete this quiz
+                  </button>
+                </div>
+              </div>
             </div>
-            <div>
-              {quiz.user}
-            </div>
-            <div>
-              {quiz.createdAt}
-            </div>
-            <div onClick={() => quizID(quiz._id)}>
-              <Link to='/quiz'>
-                The Quiz
-              </Link>
-            </div>
-            <div>
-              <button onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}>
-                X
-              </button>
-            </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
       <div>
         {areYouSureMessage &&
+        <div className={areYouSureMessage && "areYouSureModal"}>
           <AreYouSureYouWantToDeleteThisQuiz
             quizInfo={{ deleteQuizId, deleteQuizTitle, setAreYouSureMessage }}
-          />}
+          />
+          </div>
+          }
       </div>
     </div>
   );

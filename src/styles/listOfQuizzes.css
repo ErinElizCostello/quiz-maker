@@ -12,6 +12,24 @@
     justify-content: center;
     align-items: center;
     background-color: powderblue;
+    
+  }
+
+  .quizCard:hover {
+    /* height: 125px; 
+    width: 500px; 
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-color: rgb(132, 219, 230);
+
+    
   }
 
   .quizCardTitle {
@@ -24,4 +42,40 @@
 }
 
 @media screen and (max-width: 601px) {
+  .quizCard {
+    height: 100px; 
+    width: 275px; 
+    border: 1px solid black;
+    margin: 30px;
+    padding: 15px;
+    padding-top: 25px;
+    border-radius: 5px;
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: powderblue;
+    text-align: center;
+  }
+  .quizCard:hover {
+    /* height: 75px; 
+    width: 275px; 
+    border: 1px solid black;
+    margin: 30px;
+    padding: 25px;
+    border-radius: 5px;
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    background-color: rgb(132, 219, 230);
+    /* text-align: center; */
+  }
+
+  .quizCardTitle {
+    font-size: 20px;
+    margin: auto;
+  }
 }

@@ -6,6 +6,8 @@ import { setQuizID } from '../../state/actions/quizID';
 import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
 import { setResults } from '../../state/actions/results'
 
+import moment from 'moment'
+
 import '../../styles/listOfQuizzes.css'
 
 
@@ -34,19 +36,29 @@ const ListOfQuizzes = () => {
     <div>
       {
         quizzesList.map(quiz => (
-          <div className="quizCard">
-            <div>
-              <p className="quizCardTitle">
-                {quiz.title}
-              </p>
-            </div>
-            <div>
-              <p className="username">
-                {`created by ${quiz.user}`}
-              </p>
-            </div>
-            <div>
-              <Link
+          <Link
+            className="link"
+            to='/quiz'
+            onClick={() => quizID(quiz._id)}
+          >
+            <div className="quizCard">
+              <div>
+                <p className="quizCardTitle">
+                  {quiz.title}
+                </p>
+              </div>
+              <div>
+                <p className="username">
+                  {`created by ${quiz.user}`}
+                </p>
+              </div>
+              <div>
+                <p className="username">
+                  {moment(quiz.createdAt).format("MMM Do YYYY")}
+                </p>
+              </div>
+              <div>
+                {/* <Link
                 className="link"
                 to='/quiz'
                 onClick={() => quizID(quiz._id)}
@@ -54,9 +66,10 @@ const ListOfQuizzes = () => {
                 <p className="linkToQuiz">
                   Take quiz
                 </p>
-              </Link>
+              </Link> */}
+              </div>
             </div>
-          </div>
+          </Link>
         ))
       }
     </div>
