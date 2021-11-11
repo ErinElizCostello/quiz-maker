@@ -7,6 +7,8 @@ import { clearQuestions } from '../../state/actions/questions';
 
 import BackButton from '../backButton';
 
+import '../../styles/howManyPossibleAnswers.css'
+
 
 
 const HowManyPossibleAnswers = () => {
@@ -27,13 +29,13 @@ const HowManyPossibleAnswers = () => {
       <div>
         <BackButton />
       </div>
-      <div>
+      <div className="titleHowManyPossibleAnswers">
         <p>
-          How many possible answers do you want your quiz questions to have? You can choose up to 12
+          How many possible answers do you want your quiz questions to have? <br /> You can choose up to 12
         </p>
       </div>
       <br /><br />
-      <div>
+      <div className="numberOfAnswers">
         <label for="numberOfAnswers">
           number of Answers
         </label>

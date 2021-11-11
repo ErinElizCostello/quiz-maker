@@ -1,0 +1,13 @@
+.titleHowManyPossibleAnswers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: Helvetica;
+  font-size: 30px;
+  text-align: center;
+  
+}
+
+/* numberOfAnswers {
+
+} */

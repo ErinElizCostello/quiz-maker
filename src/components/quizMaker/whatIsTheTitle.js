@@ -6,6 +6,8 @@ import { setQuizTitle } from '../../state/actions/quizTitle';
 
 import BackButton from '../backButton'
 
+import '../../styles/whatIsTheTitle.css'
+
 
 
 const WhatIsTheTitle = () => {
@@ -23,32 +25,35 @@ const WhatIsTheTitle = () => {
       <div>
         <BackButton />
       </div>
-      <div>
-        <label>
-          What is the Title?
-        </label>
-        <br />
-        <textarea
-          id="option"
-          name="option"
-          rows="2"
-          cols="40"
-          onChange={title => onChangeTitleText(title)}
-        />
-      </div>
-      <div>
-        {
-          titleText ?
-            <Link to="/numberOfAnswers">
-              <button onClick={saveTitle}>
+      <div className="layoutWhatIsTheTitle">
+        <div>
+          <label className="whatIsTheTitleLabel">
+            What is the Title?
+          </label>
+          <br />
+          <textarea
+            id="option"
+            className="textAreaWhatIsThetTitle"
+            name="option"
+            rows="2"
+            cols="40"
+            onChange={title => onChangeTitleText(title)}
+          />
+        </div>
+        <div>
+          {
+            titleText ?
+              <Link to="/numberOfAnswers">
+                <button id="non-disabled-button" onClick={saveTitle}>
+                  next...
+                </button>
+              </Link>
+              :
+              <button id="disabled-button" disabled>
                 next...
               </button>
-            </Link>
-            :
-            <button disabled>
-              next...
-            </button>
-        }
+          }
+        </div>
       </div>
     </div>
   );
