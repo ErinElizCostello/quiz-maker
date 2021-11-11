@@ -40,6 +40,15 @@
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   }
+
+  .myQuizzesPageTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Helvetica;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 601px) {

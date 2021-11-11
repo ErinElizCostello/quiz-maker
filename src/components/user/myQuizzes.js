@@ -54,6 +54,9 @@ const MyQuizzes = () => {
       <div>
         <BackButton backTo="home" />
       </div>
+      <div className="myQuizzesPageTitle">
+        {`${theUser}'s Quizzes'`}
+      </div>
       <div className="quizListLayout">
         {
           usersQuizzes.map(quiz => (
@@ -76,13 +79,6 @@ const MyQuizzes = () => {
                     {moment(quiz.createdAt).format("MMM Do YYYY")}
                   </p>
                 </div>
-                {/* <div onClick={() => quizID(quiz._id)}>
-                  <Link to='/quiz'>
-                    <p className="myQuizzesText">
-                      The Quiz
-                    </p>
-                  </Link>
-                </div> */}
                 <div className="myQuizzesText">
                   <button onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}>
                     Delete this quiz
@@ -95,12 +91,12 @@ const MyQuizzes = () => {
       </div>
       <div>
         {areYouSureMessage &&
-        <div className={areYouSureMessage && "areYouSureModal"}>
-          <AreYouSureYouWantToDeleteThisQuiz
-            quizInfo={{ deleteQuizId, deleteQuizTitle, setAreYouSureMessage }}
-          />
+          <div className={areYouSureMessage && "areYouSureModal"}>
+            <AreYouSureYouWantToDeleteThisQuiz
+              quizInfo={{ deleteQuizId, deleteQuizTitle, setAreYouSureMessage }}
+            />
           </div>
-          }
+        }
       </div>
     </div>
   );
