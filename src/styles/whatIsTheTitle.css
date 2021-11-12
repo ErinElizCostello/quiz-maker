@@ -1,7 +1,7 @@
 @media screen and (min-width: 601px) {
   .layoutWhatIsTheTitle {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -55,7 +55,7 @@
 @media screen and (max-width: 601px) {
   .layoutWhatIsTheTitle {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -66,6 +66,10 @@
     font-family: Helvetica;
     font-size: 30px;
     margin: 20px;
+  }
+
+  textArea {
+    font-family: Helvetica;
   }
 
   .textAreaWhatIsThetTitle {

@@ -36,10 +36,11 @@ const HowManyPossibleAnswers = () => {
       </div>
       <br /><br />
       <div className="numberOfAnswers">
-        <label for="numberOfAnswers">
-          number of Answers
+        <label className="labelNumberOfAnswers" for="numberOfAnswers">
+          Number of Answers:
         </label>
         <select
+          className="selectNumberOfAnswers"
           name="numberOfAnswers"
           id="numberOfAnswers"
           onChange={e => onChangeNumber(e)}
@@ -58,21 +59,24 @@ const HowManyPossibleAnswers = () => {
           <option value="11">11 answers</option>
           <option value="12">12 answers</option>
         </select>
+        
       </div>
-      <div>
-        {
-          number ?
-            <Link to='/questions'>
-              <button onClick={chooseNumberOfAnswers}>
+      <div className="nextButtonHowManyPossibleAnswersLayout">
+          {
+            number ?
+              <Link to='/questions'>
+                <button
+                id="non-disabled-button"
+                onClick={chooseNumberOfAnswers}>
+                  next...
+                </button>
+              </Link>
+              :
+              <button id="disabled-button" disabled>
                 next...
               </button>
-            </Link>
-            :
-            <button disabled>
-              next...
-            </button>
-        }
-      </div>
+          }
+        </div>
     </div>
   );
 }
