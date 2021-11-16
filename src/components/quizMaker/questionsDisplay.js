@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteQuestion } from '../../state/actions/questions';
 
 
+import '../../styles/questionsDisplay.css'
+
 
 const QuestionsDisplay = () => {
 
@@ -22,28 +24,30 @@ const QuestionsDisplay = () => {
   }
 
   return (
-    <div>
-      {
-        questions.map(question => (
-          <div key={question.id}>
-            <div>
-              {`${questionNumber++}. ${question.question}`}
+    <div className="questionsDisplay">
+      <div>
+        {
+          questions.map(question => (
+            <div className="aQuestion" key={question.id}>
+              <div>
+                {`${questionNumber++}. ${question.question}`}
+              </div>
+              <br /> <br />
+              {
+                question.answers.map(answer => (
+                  <div>
+                    {`${answer.letter}.  ${answer.text}`}
+                  </div>
+                ))
+              }
+              <button className="xButton" onClick={() => deleteTheQuestion(question.id)}>
+                X
+              </button>
+              <br /><br />
             </div>
-            <br /> <br />
-            {
-              question.answers.map(answer => (
-                <div>
-                  {`${answer.letter}.  ${answer.text}`}
-                </div>
-              ))
-            }
-            <button onClick={() => deleteTheQuestion(question.id)}>
-              X
-            </button>
-            <br /><br />
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </div>
   );
 }

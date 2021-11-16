@@ -1,0 +1,12 @@
+.layoutQuestions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 100vh;
+  width: 100vw; */
+}
+
+/* .questionsDisplayBorder {
+  border: 2px solid grey;
+} */

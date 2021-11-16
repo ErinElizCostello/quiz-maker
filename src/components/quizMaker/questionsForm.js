@@ -7,6 +7,7 @@ import { clearResults } from '../../state/actions/results';
 
 import BackButton from '../backButton';
 
+import '../../styles/questionsForm.css'
 
 
 const QuestionsForm = () => {
@@ -51,14 +52,13 @@ const QuestionsForm = () => {
   const answerLetters = possibleAnswerLetters.slice(0, numberOfQuestions)
 
   return (
-    <div>
-      <div>
-        <BackButton />
-      </div>
+    <div className="questionsFormText">
+    <div className="spacerTopQuestionsForm"></div>
       <div>
         <label>What is the question?</label><br />
         <textarea
           id="option"
+          className="textAreaQuestion"
           value={questionText}
           name="option"
           rows="2"
@@ -70,10 +70,11 @@ const QuestionsForm = () => {
         answerLetters.map(letter => (
           <div key={letter}>
             <label>
-              {letter}
+              {`${letter}.  `}
             </label>
             <textarea
               id="option"
+              className="textAreaAnswer"
               value={answerText[letter]}
               name="option"
               rows="2"
@@ -86,26 +87,27 @@ const QuestionsForm = () => {
       <div>
         {
           Object.keys(answerText).filter(answer => answerText[answer] !== '').length === numberOfResults ?
-            <button onClick={addQuestion}>
+            <button id="non-disabled-button-add-question" onClick={addQuestion}>
               Add Question
             </button>
             :
-            <button disabled>
+            <button id="disabled-button-add-question" disabled>
               Add Question
             </button>
         }
       </div>
+      <div className="spacerBottomQuestionsForm"></div>
       {
         quizQuestions.length ?
           <Link to="/resultsForm" onClick={clearFormerResults}>
             <div>
-              <button>
+              <button id="non-disabled-button-next">
                 next...
               </button>
             </div>
           </Link>
           :
-          <button disabled>
+          <button id="disabled-button-next" disabled>
             next...
           </button>
       }
