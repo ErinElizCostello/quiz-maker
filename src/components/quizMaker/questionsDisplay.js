@@ -29,8 +29,13 @@ const QuestionsDisplay = () => {
         {
           questions.map(question => (
             <div className="aQuestion" key={question.id}>
-              <div>
-                {`${questionNumber++}. ${question.question}`}
+              <div className="questionAndDeleteButton">
+                <div>
+                  {`${questionNumber++}. ${question.question}`}
+                </div>
+                <button className="xButton" onClick={() => deleteTheQuestion(question.id)}>
+                  X
+                </button>
               </div>
               <br /> <br />
               {
@@ -40,9 +45,7 @@ const QuestionsDisplay = () => {
                   </div>
                 ))
               }
-              <button className="xButton" onClick={() => deleteTheQuestion(question.id)}>
-                X
-              </button>
+
               <br /><br />
             </div>
           ))

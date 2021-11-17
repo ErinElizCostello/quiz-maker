@@ -53,48 +53,50 @@ const QuestionsForm = () => {
 
   return (
     <div className="questionsFormText">
-    <div className="spacerTopQuestionsForm"></div>
-      <div>
-        <label>What is the question?</label><br />
-        <textarea
-          id="option"
-          className="textAreaQuestion"
-          value={questionText}
-          name="option"
-          rows="2"
-          cols="40"
-          onChange={question => onChangeQuestionText(question)}
-        />
-      </div>
-      {
-        answerLetters.map(letter => (
-          <div key={letter}>
-            <label>
-              {`${letter}.  `}
-            </label>
-            <textarea
-              id="option"
-              className="textAreaAnswer"
-              value={answerText[letter]}
-              name="option"
-              rows="2"
-              cols="40"
-              onChange={event => onChangeAnswerText(letter, event)}
-            />
-          </div>
-        ))
-      }
-      <div>
+      {/* <div className="spacerTopQuestionsForm"></div> */}
+      <div className="questionsFormBox">
+        <div>
+          <label>What is the question?</label><br />
+          <textarea
+            id="option"
+            className="textAreaQuestion"
+            value={questionText}
+            name="option"
+            rows="2"
+            cols="40"
+            onChange={question => onChangeQuestionText(question)}
+          />
+        </div>
         {
-          Object.keys(answerText).filter(answer => answerText[answer] !== '').length === numberOfResults ?
-            <button id="non-disabled-button-add-question" onClick={addQuestion}>
-              Add Question
-            </button>
-            :
-            <button id="disabled-button-add-question" disabled>
-              Add Question
-            </button>
+          answerLetters.map(letter => (
+            <div key={letter}>
+              <label>
+                {`${letter}.  `}
+              </label>
+              <textarea
+                id="option"
+                className="textAreaAnswer"
+                value={answerText[letter]}
+                name="option"
+                rows="1"
+                cols="40"
+                onChange={event => onChangeAnswerText(letter, event)}
+              />
+            </div>
+          ))
         }
+        <div>
+          {
+            Object.keys(answerText).filter(answer => answerText[answer] !== '').length === numberOfResults ?
+              <button id="non-disabled-button-add-question" onClick={addQuestion}>
+                Add Question
+              </button>
+              :
+              <button id="disabled-button-add-question" disabled>
+                Add Question
+              </button>
+          }
+        </div>
       </div>
       <div className="spacerBottomQuestionsForm"></div>
       {
