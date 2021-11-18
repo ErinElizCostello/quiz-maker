@@ -3,8 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { setResults } from '../../state/actions/results';
 
-import CreateQuizButton from './createQuizButton';
+
 import BackButton from '../backButton'
+
+import '../../styles/resultsForm.css'
+
+import { Redirect } from 'react-router-dom'
+
+import { createAQuiz } from '../../API/createAQuiz';
 
 
 
@@ -17,6 +23,7 @@ const ResultsForm = () => {
 
   const [resultsText, setResultsText] = useState({ a: '', b: '', c: '', d: '', e: '', f: '', g: '', h: '', i: '', j: '', k: '', l: '' })
   const [showCreateQuizButton, setShowCreateQuizButton] = useState(false)
+  const [redirectToHomePage, setRedirectToHomePage] = useState(false)
 
   const onChangeResultsText = (letter, event) => setResultsText({ ...resultsText, [letter]: event.target.value })
 
@@ -36,61 +43,107 @@ const ResultsForm = () => {
   //only display a text area for each number of possible answers selected by the user
   const resultsLetters = possibleResultsLetters.slice(0, numberOfResults)
 
+
+  const theUser = JSON.parse(localStorage.getItem('QuizUser')).payload.user
+
+
+
+  let theQuiz = useSelector(state => state)
+
+  const createTheQuiz = async () => {
+    await createAQuiz(theQuiz.setQuizTitle, theQuiz.setQuestion, theUser, theQuiz.setResults)
+
+    setRedirectToHomePage(true)
+  }
+
   return (
     <div>
       <BackButton />
-      {
-        resultsLetters.map(letter => (
-          <div key={letter}>
-            <label>
-              {`If the quiz taker gets mostly ${letter.toUpperCase()}s...`}
-            </label>
-            <textarea
-              id="option"
-              name="option"
-              rows="5"
-              cols="40"
-              onChange={event => onChangeResultsText(letter, event)}
-            />
-          </div>
-        ))
-      }
-      {
-        displayResults.length ?
-          <button onClick={addResults}>
-            Edit Results
-          </button>
-          :
-          //cannot preview results until all form areas are filled in
-          Object.keys(resultsText).filter(result => resultsText[result] !== '').length === numberOfResults ?
-            <button onClick={addResults}>
-              Preview Results
-            </button>
-            :
-            <button disabled>
-              Preview Results
-            </button>
-      }
-      <div>
-        {
-          displayResults.map(result => (
+      <div className="resultsLayout">
+        <div className="resultsFormLayout">
+          <div className="resultsFormBox">
+            {
+              resultsLetters.map(letter => (
+                <div key={letter}>
+                  <label>
+                    {`If the quiz taker gets mostly ${letter.toUpperCase()}s...`}
+                  </label>
+                  <textarea
+                    id="option"
+                    className="textAreaResult"
+                    name="option"
+                    rows="5"
+                    cols="40"
+                    onChange={event => onChangeResultsText(letter, event)}
+                  />
+                </div>
+              ))
+            }
             <div>
               {
-                `mostly ${result.letter}'s ...`
+                displayResults.length ?
+                  <button className="previewQuizNonDisabledButton" onClick={addResults}>
+                    Edit Results
+                  </button>
+                  :
+                  //cannot preview results until all form areas are filled in
+                  Object.keys(resultsText).filter(result => resultsText[result] !== '').length === numberOfResults ?
+                    <button className="previewQuizNonDisabledButton" onClick={addResults}>
+                      Preview Results
+                    </button>
+                    :
+                    <button className="previewQuizDisabledButton" disabled>
+                      Preview Results
+                    </button>
               }
-              <br />
-              {
-                result.text
-              }
-              <br /><br /><br />
             </div>
-          ))
-        }
+          </div>
+          <div>
+            {
+              showCreateQuizButton ?
+                <div>
+                  {
+                    redirectToHomePage &&
+                    <Redirect to={{ pathname: '/' }} />
+                  }
+                  <div>
+                    <button className="createQuizNonDisabledButton" onClick={createTheQuiz}>
+                      Create Quiz
+                    </button>
+                  </div>
+                </div>
+                :
+                <div>
+                  <button className="createQuizDisabledButton" disabled>
+                    Create Quiz
+                  </button>
+                </div>
+            }
+          </div>
+        </div>
+        <div className="resultsDisplay">
+          {
+            displayResults.map(result => (
+              <div>
+                <div className="resultsDisplayMostlys">
+                  {
+                    `mostly ${result.letter}'s ...`
+                  }
+                </div>
+
+                <br />
+                <div className="resultsDisplayMostlys">
+                  {
+                    result.text
+                  }
+                </div>
+                <br /><br /><br />
+              </div>
+            ))
+          }
+        </div>
+
       </div>
-      {
-        showCreateQuizButton &&
-        <CreateQuizButton />
-      }
     </div>
   );
 }

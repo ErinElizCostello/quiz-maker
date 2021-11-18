@@ -122,16 +122,18 @@
     resize: none;
     border-radius: 10px;
     outline: none;
-    /* padding: 5px; */
-    width: 250px
+    padding: 10px;
+    width: 250px;
+    margin: 5px;
   }
 
   .textAreaAnswer {
     resize: none;
     border-radius: 10px;
     outline: none;
-    padding: 5px;
-    width: 250px
+    padding: 10px;
+    width: 250px;
+    margin: 3px;
   }
 
   #non-disabled-button-next {
@@ -148,6 +150,7 @@
     font-size: 16px;
     margin: 20px;
     cursor: pointer;
+    text-decoration: none;
   }
 
   #disabled-button-next {

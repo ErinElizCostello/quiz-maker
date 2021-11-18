@@ -52,11 +52,11 @@ const ListOfQuizzes = () => {
                   {`created by ${quiz.user}`}
                 </p>
               </div>
-              <div>
+              {/* <div>
                 <p className="username">
                   {moment(quiz.createdAt).format("MMM Do YYYY")}
                 </p>
-              </div>
+              </div> */}
               <div>
                 {/* <Link
                 className="link"
