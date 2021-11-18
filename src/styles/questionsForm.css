@@ -1,104 +1,221 @@
-.questionsFormText {
-  font-family: Helvetica;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
+@media screen and (min-width: 1170px) {
+  .questionsFormText {
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-.textAreaQuestion {
-  resize: none;
-  margin: 15px;
-  border-radius: 10px;
-  outline: none;
-  padding: 5px
-}
+  .textAreaQuestion {
+    resize: none;
+    margin: 15px;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+  }
 
-.textAreaAnswer {
-  resize: none;
-  border-radius: 10px;
-  outline: none;
-  padding: 5px
-}
+  .textAreaAnswer {
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+  }
 
-#non-disabled-button-next {
-  background-color: #6bceb4;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 20px;
-  cursor: pointer;
-}
+  #non-disabled-button-next {
+    background-color: #6bceb4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+  }
 
-#disabled-button-next {
-  background-color: #a4cec3;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 20px;
-  /* cursor: pointer; */
-}
+  #disabled-button-next {
+    background-color: #a4cec3;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    /* cursor: pointer; */
+  }
 
-#non-disabled-button-add-question {
-  background-color: #f9dc74;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 20px;
-  cursor: pointer;
-}
+  #non-disabled-button-add-question {
+    background-color: #f9dc74;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+  }
 
-#disabled-button-add-question {
-  background-color: #b1a784;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 20px;
-  /* cursor: pointer; */
-}
+  #disabled-button-add-question {
+    background-color: #b1a784;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    /* cursor: pointer; */
+  }
 
-/* .spacerBottomQuestionsForm {
+  /* .spacerBottomQuestionsForm {
   margin: 20px;
 } */
 
-.spacerTopQuestionsForm {
-  /* margin: 20px; */
+  .spacerTopQuestionsForm {
+    /* margin: 20px; */
+  }
+
+  .questionsFormBox {
+    border: 2px solid grey;
+    border-radius: 40px;
+    width: 400px;
+    height: 300px;
+    /* text-align: center; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: Helvetica;
+    padding: 60px;
+  }
 }
 
-.questionsFormBox {
-  border: 2px solid grey;
-  border-radius: 40px;
-  width: 400px;
-  height: 300px;
-  /* text-align: center; */
-  padding-top: 50px;
-  padding-bottom: 50px;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-family: Helvetica;
-  padding: 60px
+
+@media screen and (max-width: 1169px) {
+  .questionsFormText {
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .labelQuestion {
+    margin-top: 30px;
+  }
+
+  .textAreaQuestion {
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    /* padding: 5px; */
+    width: 250px
+  }
+
+  .textAreaAnswer {
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    width: 250px
+  }
+
+  #non-disabled-button-next {
+    background-color: #6bceb4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  #disabled-button-next {
+    background-color: #a4cec3;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    /* cursor: pointer; */
+  }
+
+  #non-disabled-button-add-question {
+    background-color: #f9dc74;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  #disabled-button-add-question {
+    background-color: #b1a784;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    /* cursor: pointer; */
+  }
+
+  /* .spacerBottomQuestionsForm {
+  margin: 20px;
+} */
+
+  /* .spacerTopQuestionsForm { */
+    /* margin: 20px; */
+  /* } */
+
+  .questionsFormBox {
+    border: 2px solid grey;
+    border-radius: 40px;
+    width: 320px;
+    height: 250px;
+    /* text-align: center; */
+    /* padding-top: 40px; */
+    /* padding-bottom: 50px;  */
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Helvetica;
+    padding: 10px;
+    
+  }
 }
 

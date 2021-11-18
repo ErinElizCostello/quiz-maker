@@ -1,12 +1,18 @@
-.layoutQuestions {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  /* height: 100vh;
-  width: 100vw; */
+@media screen and (min-width: 1170px) {
+  .layoutQuestions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
-/* .questionsDisplayBorder {
-  border: 2px solid grey;
-} */
+@media screen and (max-width: 1169px) {
+  .layoutQuestions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

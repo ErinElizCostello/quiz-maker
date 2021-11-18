@@ -56,7 +56,9 @@ const QuestionsForm = () => {
       {/* <div className="spacerTopQuestionsForm"></div> */}
       <div className="questionsFormBox">
         <div>
-          <label>What is the question?</label><br />
+          <div className="labelQuestion">
+          <label >What is the question?</label><br />
+          </div>
           <textarea
             id="option"
             className="textAreaQuestion"

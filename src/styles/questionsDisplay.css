@@ -1,44 +1,93 @@
-.questionsDisplay {
-  border: 2px solid grey;
-  width: 500px;
-  height: 500px;
-  /* text-align: center; */
-  padding: 30px;
-  /* padding-bottom: 50px; */
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: Helvetica;
-  
-  /* position: fixed;
+@media screen and (min-width: 1170px) {
+  .questionsDisplay {
+    border: 2px solid grey;
+    width: 500px;
+    height: 500px;
+    /* text-align: center; */
+    padding: 30px;
+    /* padding-bottom: 50px; */
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Helvetica;
+
+    /* position: fixed;
   top: 5;
   right: 5; */
+  }
+
+  .aQuestion {
+    margin: 5px;
+  }
+
+  .xButton {
+    background-color: #f98f6f;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .questionAndDeleteButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
 }
 
-.aQuestion {
-  margin: 5px
-}
+@media screen and (max-width: 1169px) {
+  .questionsDisplay {
+    border: 2px solid grey;
+    width: 275px;
+    height: 250px;
+    /* text-align: center; */
+    padding: 30px;
+    /* padding-bottom: 50px; */
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Helvetica;
 
-.xButton {
-  background-color: #f98f6f;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 20px;
-  cursor: pointer;
-}
+    /* position: fixed;
+  top: 5;
+  right: 5; */
+  }
 
-.questionAndDeleteButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  .aQuestion {
+    margin: 5px;
+  }
+
+  .xButton {
+    background-color: #f98f6f;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .questionAndDeleteButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
 }
