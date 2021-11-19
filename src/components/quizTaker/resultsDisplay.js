@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { getQuizByID } from '../../API/getQuizByID';
 
+import '../../styles/resultsDisplay.css'
 
 
 const ResultsDisplay = () => {
@@ -29,7 +30,7 @@ const ResultsDisplay = () => {
   )
 
   return (
-    <div>
+    <div className={result.length && "resultsModal"}>
       {
         result.length > 1 && `It's a tie!` 
       }
@@ -41,7 +42,7 @@ const ResultsDisplay = () => {
             <div>{aResult}<br /></div>
           )
         )
-        : result[0]
+        : <div className="theResult"> {result[0]} </div>
       }
     </div>
   );

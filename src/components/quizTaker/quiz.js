@@ -7,6 +7,7 @@ import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken';
 
 import BackButton from '../backButton';
 
+import '../../styles/quiz.css'
 
 
 const Quiz = () => {
@@ -49,41 +50,45 @@ const Quiz = () => {
       <div>
         <BackButton backTo="home" />
       </div>
-      <div>
-        {theQuiz && theQuiz.title}
-      </div>
-      <div>
-        {
-          theQuiz && theQuiz.quiz.map(thisQuiz => (
-            <div style={{ margin: 20 }}>
-              <div>
-                {thisQuiz.question}
+      <div className="quizTakerLayout">
+        <div className="quizTitle">
+          {theQuiz && theQuiz.title}
+        </div>
+        <div>
+          {
+            theQuiz && theQuiz.quiz.map(thisQuiz => (
+              <div className="quizTakerQuestionAndRadioButtons">
+                <div>
+                  {thisQuiz.question}
+                </div>
+                <div className="quizTakerQuestionSpacers"></div>
+                <div className="quizTakerAnswers">
+                  {thisQuiz.answers.map(answer => (
+                    <div className="radioButtonWithAnswer">
+                      <input
+                        type="radio"
+                        id="radioBtn"
+                        name={thisQuiz.question}
+                        value={answer.letter}
+                        onChange={answer => onChangeAnswer(answer)}
+                      />
+                      <div className="radioButtonLabel">
+                        <label for="radioBtn">
+                          {`  ${answer.text}`}
+                        </label>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div style={{ margin: 10 }}></div>
-              <div>
-                {thisQuiz.answers.map(answer => (
-                  <div>
-                    <input
-                      type="radio"
-                      id="radioBtn"
-                      name={thisQuiz.question}
-                      value={answer.letter}
-                      onChange={answer => onChangeAnswer(answer)}
-                    />
-                    <label for="radioBtn">
-                      {`  ${answer.text}`}
-                    </label>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))
-        }
-      </div>
-      <div>
-        <button onClick={calculateResults}>
-          See my results
-        </button>
+            ))
+          }
+        </div>
+        <div>
+          <button className="seeMyResultsButton" onClick={calculateResults}>
+            See my results
+          </button>
+        </div>
       </div>
     </div>
   );

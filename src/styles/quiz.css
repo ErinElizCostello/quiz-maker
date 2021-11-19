@@ -1,0 +1,107 @@
+@media screen and (min-width: 601px) {
+  .quizTakerLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+  }
+
+  .quizTitle {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .quizTakerAnswers {
+    margin-bottom: 60px;
+  }
+
+  .seeMyResultsButton {
+    background-color: #f9dc74;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .quizTakerQuestionAndRadioButtons {
+    margin: 20
+  }
+
+  .quizTakerQuestionSpacers {
+    margin: 10
+  }
+
+  .radioButtonWithAnswer {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .radioButtonLabel {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+  } 
+}
+
+@media screen and (max-width: 601px) {
+  .quizTakerLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    margin: 30px
+  }
+
+  .quizTitle {
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .quizTakerAnswers {
+    margin-bottom: 60px;
+    
+  }
+
+  .quizTakerQuestionAndRadioButtons {
+    margin: 20
+  }
+
+  .quizTakerQuestionSpacers {
+    margin: 10
+  }
+
+  .radioButtonWithAnswer {
+    display: flex; 
+    flex-direction: row;
+  }
+
+  .radioButtonLabel {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+  } 
+
+  .seeMyResultsButton {
+    background-color: #f9dc74;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+  }
+}
