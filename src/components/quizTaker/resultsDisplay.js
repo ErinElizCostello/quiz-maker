@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { getQuizByID } from '../../API/getQuizByID';
 
 import '../../styles/resultsDisplay.css'
+import BackButton from '../backButton';
 
 
 const ResultsDisplay = () => {
@@ -22,29 +23,34 @@ const ResultsDisplay = () => {
   }, []);
 
   const result = []
-  
+
   quizResultsOptions.length && quizResultsOptions.forEach(option =>
-    theResult.length && theResult.forEach(letter => 
+    theResult.length && theResult.forEach(letter =>
       option.letter === letter && result.push(option.text)
     )
   )
 
   return (
+    result.length && 
     <div className={result.length && "resultsModal"}>
-      {
-        result.length > 1 && `It's a tie!` 
-      }
-      <br /><br />
-      {
-        result.length > 1 ?
-        result.map(aResult => 
-          (
-            <div>{aResult}<br /></div>
-          )
-        )
-        : <div className="theResult"> {result[0]} </div>
-      }
+      <div className="theResult">
+
+        {
+          result.length > 1 && `It's a tie!`
+        }
+        <br /><br />
+        {
+          result.length > 1 ?
+            result.map(aResult =>
+            (
+              <div>{aResult}<br /><BackButton /></div>
+            )
+            )
+            : <div>{result[0]}<br /><BackButton /></div>
+        }
+      </div>
     </div>
+      
   );
 }
 
