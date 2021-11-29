@@ -43,11 +43,12 @@ const ResultsDisplay = () => {
           result.length > 1 ?
             result.map(aResult =>
             (
-              <div>{aResult}<br /><BackButton /></div>
+              <div>{aResult}<br /></div>
             )
             )
-            : <div>{result[0]}<br /><BackButton /></div>
+            : <div>{result[0]}<br /></div>
         }
+        <BackButton />
       </div>
     </div>
       

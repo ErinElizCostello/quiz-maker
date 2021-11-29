@@ -17,22 +17,33 @@ const Quiz = () => {
   const theQuizID = useSelector(state => state.setQuizID)
 
   const [theQuiz, setTheQuiz] = useState(null)
-  const [selection, setSelection] = useState([])
+  const [selection, setSelection] = useState({})
+  const [disabledButton, setDisabledButton] = useState(true)
+
+  let quizLength = theQuiz && theQuiz.quiz.length
 
   useEffect(() => {
     theQuizID && getQuizByID(theQuizID)
       .then(quiz => setTheQuiz(quiz.data))
   }, []);
 
-  const onChangeAnswer = event => {
+  const onChangeAnswer = async (event, id) => {
     let letter = event.target.value
-    setSelection([...selection, letter])
+    let selectionCopy = selection
+
+    selectionCopy[id] = letter
+
+    setSelection(selectionCopy)
+    
+    quizLength === Object.values(selection).length ? setDisabledButton(false) : setDisabledButton(true)
   }
 
   const calculateResults = () => {
+
+    let letters = Object.values(selection)
     let numberOfLetters = {}
 
-    selection.forEach(letter => numberOfLetters[letter] ? numberOfLetters[letter]++ : numberOfLetters[letter] = 1)
+    letters.forEach(letter => numberOfLetters[letter] ? numberOfLetters[letter]++ : numberOfLetters[letter] = 1)
 
     const sortedValues = Object.values(numberOfLetters).sort(function (a, b) {
       return b - a
@@ -48,7 +59,7 @@ const Quiz = () => {
   return (
     <div>
       <div>
-        <BackButton backTo="home" />
+        <BackButton />
       </div>
       <div className="quizTakerLayout">
         <div className="quizTitle">
@@ -70,7 +81,7 @@ const Quiz = () => {
                         id="radioBtn"
                         name={thisQuiz.question}
                         value={answer.letter}
-                        onChange={answer => onChangeAnswer(answer)}
+                        onChange={answer => onChangeAnswer(answer, thisQuiz.id)}
                       />
                       <div className="radioButtonLabel">
                         <label for="radioBtn">
@@ -85,9 +96,16 @@ const Quiz = () => {
           }
         </div>
         <div>
-          <button className="seeMyResultsButton" onClick={calculateResults}>
-            See my results
-          </button>
+          {
+            disabledButton ?
+              <button disabled className="seeMyResultsButtonDisabled">
+                See my results
+              </button>
+              :
+              <button className="seeMyResultsButton" onClick={calculateResults}>
+                See my results
+              </button>
+          }
         </div>
       </div>
     </div>
@@ -95,3 +113,65 @@ const Quiz = () => {
 }
 
 export default Quiz;
+
+
+
+
+
+// let differentUpdatedSelections = []
+
+    // if (!selection.length) {
+    //   updatedSelections.push(item)
+    // }
+
+    // if (selection.length) {
+    //   selection.forEach(answer =>
+    //     answer.id === id ? updatedSelections.push(item) : updatedSelections.push(answer)
+    //   )
+    // }
+
+    // setSelection(updatedSelections)
+    // setSelection([...selection, item])
+    // console.log('selectionsInside', selection)
+
+
+
+
+
+// console.log('updatedSelection', updatedSelections)
+
+    // !selection.length && setSelection([...selection, {id: id, letter: letter}])
+
+    // selection.length &&
+    // selection.forEach(answer => answer && answer.id === id ?
+    //   updatedSelections.push(item) : updatedSelections.push(answer)
+    // )
+
+
+
+    // selection.map(answer => answer.id === id ?
+    // {id: id, letter: letter} : {id: id, letter: letter}
+    // )
+
+    // console.log('updatedSelections', updatedSelections)
+    // setSelection(updatedSelections)
+    // let question = aQuestion
+    // let selectionsCopy = selection
+
+    // console.log('selectionsCopy', selectionsCopy)
+
+    // !selection.length ?
+    // selectionsCopy.forEach(theQuestion => question === theQuestion[0] ?
+      // theQuestion[1] = letter
+    //   updatedSelections.push([theQuestion[0], letter])
+    //   : 
+    //   updatedSelections.push([question, letter])
+    // )
+
+    // : updatedSelections.push([question, letter])
+
+    // setSelection(updatedSelections)
+  // :
+  // setSelection()
+
+    // setSelection([...selection, letter])
