@@ -18,6 +18,16 @@ const LoggedOutOptions = () => {
             to='/login'
           >
             <p className="login">
+              Create a quiz
+            </p>
+          </Link>
+        </div>
+        <div>
+          <Link
+            className="link"
+            to='/login'
+          >
+            <p className="login">
               Login
             </p>
           </Link>

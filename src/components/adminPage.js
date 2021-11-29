@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { getAllUsers } from '../API/admin'
 import { deleteAUserAccount } from '../API/deleteAUserAccount'
 
+import '../styles/adminPage.css'
+
+
 const AdminPage = () => {
 
   const [users, setUsers] = useState([])
@@ -26,9 +29,15 @@ const AdminPage = () => {
           {
             users && users.map(user =>
               <li>
-                <div style={{ display: 'flex', flexDirection: 'row', margin: "15px" }}>
-                  <div style={{ margin: "5px" }}>{user.username}</div>
-                  <div style={{ margin: "5px" }}><button onClick={() => deleteThisUser(user.username)}>delete</button></div>
+                <div className="display">
+                  <div className="theMargin">
+                    {user.username}
+                  </div>
+                  <div className="theMargin">
+                    <button onClick={() => deleteThisUser(user.username)}>
+                      delete
+                    </button>
+                  </div>
                 </div>
               </li>
             )

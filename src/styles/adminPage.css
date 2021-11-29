@@ -1,0 +1,9 @@
+.display {
+  display: flex; 
+  flex-direction: row; 
+  margin: 15px;
+}
+
+.theMargin {
+  margin: 5px;
+}
