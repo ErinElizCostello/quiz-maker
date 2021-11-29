@@ -12,7 +12,7 @@ import SignUp from '../components/signUpAndLogin/signUp';
 import MyQuizzes from '../components/user/myQuizzes';
 import SecuredMyQuizzes from './securedMyQuizzes';
 import HowManyPossibleAnswers from '../components/quizMaker/howManyPossibleAnswers';
-
+import AdminPage from '../components/adminPage';
 
 
 const Routes = () => {
@@ -45,6 +45,9 @@ const Routes = () => {
         </Route>
         <Route path='/quiz'>
           <QuizPage />
+        </Route>
+        <Route path='/admin'>
+          <AdminPage />
         </Route>
         <SecuredMyQuizzes
           path={`/myQuizzes`}

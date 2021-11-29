@@ -30,10 +30,10 @@ const LoggedInOptions = () => {
   return (
     <div className="container">
       <div className="left-side-navbar">
-      <Link className="link" to="/myQuizzes">
+        <Link className="link" to="/myQuizzes">
           <div onClick={verify}>
             <p className="greeting">
-            {`${JSON.parse(localStorage.getItem('QuizUser')).payload.user}'s Quizzes`}
+              {`${JSON.parse(localStorage.getItem('QuizUser')).payload.user}'s Quizzes`}
             </p>
           </div>
         </Link>
@@ -52,6 +52,17 @@ const LoggedInOptions = () => {
             </p>
           </div>
         </Link> */}
+        {
+          JSON.parse(localStorage.getItem('QuizUser')).payload.user === process.env.REACT_APP_ADMIN &&
+          <div>
+            <Link to="/admin">
+              <p className="createAQuiz">
+                admin
+              </p>
+            </Link>
+          </div>
+        }
+
         <div>
           <Link
             className="link"
