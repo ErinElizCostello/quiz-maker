@@ -2,18 +2,27 @@
   .quizCard {
     height: 125px; 
     width: 500px; 
-    border: 1px solid black;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    font-family: Helvetica;
+    border: 1px solid rgba(107, 146, 140, 0.4);
+    /* rgba(240, 46, 170, 0.4) */
+    box-shadow: rgba(107, 146, 140, 0.4) 10px 10px, rgba(107, 146, 140, 0.3) 20px 20px, rgba(107, 146, 140, 0.2) 30px 30px, rgba(107, 146, 140, 0.1) 40px 40px, rgba(107, 146, 140, 0.05) 50px 50px;
+    margin: 60px;
+    padding: 30px;
+    border-radius: 30px;
+    font-family: "Roboto Mono", monospace;
+color: rgb(77, 105, 101);
+/* rgb(199, 35, 139); */
+    /* font-family: Helvetica; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: powderblue;
+    background-color: rgb(222, 238, 236);
+    /* rgb(247, 230, 240) */
+    /* powderblue; */
     
   }
+
+  
 
   .quizCard:hover {
     /* height: 125px; 
@@ -27,7 +36,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    background-color: rgb(132, 219, 230);
+    background-color: rgb(233, 228, 215);
+    /* rgb(193, 247, 229); */
+     /* rgb(132, 219, 230); */
 
     
   }

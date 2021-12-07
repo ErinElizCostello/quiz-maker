@@ -2,30 +2,59 @@
   .container { 
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;
+    align-items: center; 
+   }
+
+   .headerTitle {
+    /* font-family: 'Rubik Beastly', cursive; */
+    font-family: 'Roboto Mono', monospace;
+    margin: 30px;
+    font-size: 50px;
+    /* color: purple; */
+    /* color: rgb(107, 146, 140); */
+    color: rgb(77, 105, 101);
    }
 
   .login {
-    margin: 20px;
-    font-family: Helvetica;
-    color: white;
+    
+    margin-left: 40px;
+    margin-right: 10px;
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
+    /* color: white; */
   }
 
   .login:hover{
-    margin: 20px;
-    font-family: Helvetica;
+    margin-left: 40px;
+    margin-right: 10px;
+
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
     color: pink;
   }
 
   .signUp {
-    margin: 20px;
-    font-family: Helvetica;
-    color: white;
+    margin-right: 20px;
+    margin-left: 10px;
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
+    /* color: white; */
+  }
+
+  .slash {
+    font-family: 'Roboto Mono', monospace;
   }
 
   .signUp:hover{
-    margin: 20px;
-    font-family: Helvetica;
+    margin-right: 20px;
+    margin-left: 10px;
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
     color: pink;
   }
 
@@ -45,29 +74,45 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
+  .headerTitle {
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(77, 105, 101);
+    /* color: rgb(107, 146, 140); */
+    /* font-family: 'Rubik Beastly', cursive; */
+   }
+
   .login {
-    margin: 20px;
-    font-family: Helvetica;
-    color: white;
+    margin: 15px;
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
+    /* color: white; */
   }
 
   .login :hover{
     margin: 20px;
-    font-family: Helvetica;
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
     color: pink;
   }
 
   .signUp {
     margin: 20px;
-    font-family: Helvetica;
-    color: white;
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
+    /* color: white; */
   }
 
   .signUp :hover{
     margin: 20px;
-    font-family: Helvetica;
+    font-family: 'Roboto Mono', monospace;
+
+    /* font-family: Helvetica; */
     color: pink;
   }
 

@@ -9,8 +9,14 @@ import '../styles/loggedOutOptions.css'
 const LoggedOutOptions = () => {
   return (
     <div className="container">
-      <div className="left-side-navbar"></div>
-      <div className="middle-navbar"></div>
+      <div className="left-side-navbar">
+      <p className="headerTitle">QUIZMAKER 5000</p>
+      </div>
+      <div className="middle-navbar">
+      
+       
+      
+      </div>
       <div className="right-side-navbar">
         <div>
           <Link
@@ -32,6 +38,7 @@ const LoggedOutOptions = () => {
             </p>
           </Link>
         </div>
+        <div><p className="slash">/</p></div>
         <div>
           <Link
             className="link"

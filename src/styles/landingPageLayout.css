@@ -16,8 +16,9 @@
     /* justify-content: flex-start; */
     align-items: center;
     width: 100vw;
-    height: 100px;
-    background-color: rgb(206, 175, 108);
+    /* height: 100px; */
+    /* background-color: rgb(206, 175, 108); */
+    background-color: rgb(181, 247, 236)
   }
 
   .item-listOfQuizzes {
@@ -26,7 +27,8 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    background-color: rgb(142, 164, 123);
+    /* background-color: rgb(142, 164, 123); */
+    background-color: rgb(181, 247, 236)
   }
 }
 
@@ -48,8 +50,9 @@
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    height: 100px;
-    background-color: rgb(206, 175, 108);
+    /* height: 100px; */
+    background-color: rgb(181, 247, 236)
+    /* rgb(206, 175, 108); */
   }
 
   .item-listOfQuizzes {
@@ -58,6 +61,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    background-color: rgb(142, 164, 123);
+    background-color: rgb(181, 247, 236)
+    /* rgb(142, 164, 123); */
   }
 }

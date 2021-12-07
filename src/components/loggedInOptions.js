@@ -30,6 +30,20 @@ const LoggedInOptions = () => {
   return (
     <div className="container">
       <div className="left-side-navbar">
+      <div className="middle-navbar">
+        <p className="headerTitle">QUIZMAKER 5000</p>
+      </div>
+        {/* <Link className="link" to="/myQuizzes">
+
+        </Link> */}
+        {/* <div>
+          <p className="greeting">
+            {`Hello ${JSON.parse(localStorage.getItem('QuizUser')).payload.user}`}
+          </p>
+        </div> */}
+      </div>
+      
+      <div className="right-side-navbar">
         <Link className="link" to="/myQuizzes">
           <div onClick={verify}>
             <p className="greeting">
@@ -37,14 +51,6 @@ const LoggedInOptions = () => {
             </p>
           </div>
         </Link>
-        {/* <div>
-          <p className="greeting">
-            {`Hello ${JSON.parse(localStorage.getItem('QuizUser')).payload.user}`}
-          </p>
-        </div> */}
-      </div>
-      <div className="middle-navbar"></div>
-      <div className="right-side-navbar">
         {/* <Link className="link" to="/myQuizzes">
           <div onClick={verify}>
             <p className="myQuizzes">
