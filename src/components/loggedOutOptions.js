@@ -10,7 +10,14 @@ const LoggedOutOptions = () => {
   return (
     <div className="container">
       <div className="left-side-navbar">
-      <p className="headerTitle">QUIZMAKER 5000</p>
+      <div className="headerTitle">
+            <p>QUIZMAKER</p>
+            <p className="blue">5</p>
+            <p className="green">0</p>
+            <p className="yellow">0</p>
+            {/* <p className="orange">0</p> */}
+            <p className="pink">0</p>
+          </div>
       </div>
       <div className="middle-navbar">
       

@@ -18,6 +18,7 @@ const LandingPage = () => {
             <LoggedOutOptions className="item-navbar" />
         }
       </div>
+      <div style={{margin: '5px'}}></div>
       <div className="item-listOfQuizzes">
         <ListOfQuizzes className="item-listOfQuizzes" />
       </div>

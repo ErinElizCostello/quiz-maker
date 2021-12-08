@@ -34,6 +34,7 @@ const ListOfQuizzes = () => {
 
   return (
     <div>
+      
       {
         quizzesList.map(quiz => (
           <Link
