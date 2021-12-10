@@ -39,40 +39,52 @@ const Login = () => {
   }
 
   return (
-    <div className="background">
+    <div className="background-login">
       {redirectToHomePage && <Redirect to={{ pathname: '/' }} />}
 
-      <div className="everything">
-        <div className="backButton">
-          <BackButton backTo="home" />
+      <div className="everything-login">
+        <div className="backButton-login">
+          <BackButton />
         </div>
-
+        <div className="spacer-login"></div>
         <div className="formAndSignUpLink">
-        <p className="title">Login</p>
+          {/* <p className="title-login">login</p> */}
           <div>
-            {userDoesNotExistMessage && <p>user does not exist</p>}
-            {wrongPasswordMessage && <p>wrong password!</p>}
-            <label className="label">
-              Username
+            {userDoesNotExistMessage && <p className="userDoesNotExist">user does not exist</p>}
+            {wrongPasswordMessage && <p className="wrongPassword">wrong password!</p>}
+            <label for="login-input" className="label-login">
+              <span className="label-display">
+                <p>user</p>
+                <p className="blue-login">n</p>
+                <p className="green-login">a</p>
+                <p className="yellow-login">m</p>
+                <p className="pink-login">e</p>
+              </span>
             </label>
-            <br />
-            <input className="input" onChange={usernameText} />
+            <input id="login-input" className="input-login" onChange={usernameText} />
+            {/* <br /> */}
+
           </div>
           <div>
-            <label className="label">
-              Password
+            <label for="password-input" className="label-login">
+              <span className="label-display">
+                <p>pass</p>
+                <p className="blue-login">w</p>
+                <p className="green-login">o</p>
+                <p className="yellow-login">r</p>
+                <p className="pink-login">d</p>
+              </span>
             </label>
-            <br />
-            <input className="input" onChange={passwordText} />
+            <input id="password-input" className="input-login" onChange={passwordText} />
           </div>
           <div>
-            <button onClick={loginTheUser}>
-              Login
+            <button className="login-button" onClick={loginTheUser}>
+              login
             </button>
           </div>
           <Link className="link" to='/signUp'>
             <p className="signUpLink">
-              sign up!
+              Don't have an account? Sign up here
             </p>
           </Link>
         </div>

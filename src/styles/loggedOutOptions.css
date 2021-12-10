@@ -40,7 +40,8 @@
     margin-left: 40px;
     margin-right: 10px;
     font-family: 'Roboto Mono', monospace;
-    color: rgb(168, 167, 167)
+    color: rgb(119, 118, 118)
+    /* rgb(168, 167, 167) */
     /* font-family: Helvetica; */
     /* color: white; */
   }
@@ -59,14 +60,16 @@
     margin-right: 20px;
     margin-left: 10px;
     font-family: 'Roboto Mono', monospace;
-    color: rgb(168, 167, 167)
+    color: rgb(119, 118, 118)
+    /* rgb(168, 167, 167) */
     /* font-family: Helvetica; */
     /* color: white; */
   }
 
   .slash {
     font-family: 'Roboto Mono', monospace;
-    color: rgb(168, 167, 167)
+    color: rgb(119, 118, 118)
+    /* rgb(168, 167, 167) */
   }
 
   .signUp:hover{
@@ -128,7 +131,8 @@
   .login {
     margin: 15px;
     font-family: 'Roboto Mono', monospace;
-    color: rgb(168, 167, 167)
+    color: rgb(119, 118, 118)
+    /* rgb(168, 167, 167) */
     
     /* font-family: Helvetica; */
     /* color: white; */
@@ -144,13 +148,15 @@
 
   .slash {
     font-family: 'Roboto Mono', monospace;
-    color: rgb(168, 167, 167)
+    color: rgb(119, 118, 118)
+    /* rgb(168, 167, 167) */
   }
 
   .signUp {
     margin: 20px;
     font-family: 'Roboto Mono', monospace;
-    color: rgb(168, 167, 167)
+    color: rgb(119, 118, 118)
+    /* rgb(168, 167, 167) */
     /* font-family: Helvetica; */
     /* color: white; */
   }

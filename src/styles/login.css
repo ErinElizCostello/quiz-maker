@@ -1,13 +1,13 @@
- /* 'Monoton', cursive; */
-  /* 'Lobster', cursive; */
-  /* 'Rampart One', cursive; */
-  /* 'Poppins', sans-serif; */
-  /* "Rubik Beastly", cursive; */
+/* 'Monoton', cursive; */
+/* 'Lobster', cursive; */
+/* 'Rampart One', cursive; */
+/* 'Poppins', sans-serif; */
+/* "Rubik Beastly", cursive; */
 
 @media screen and (min-width: 601px) {
-
-  .background {
-    background-color: #fdcbcb;
+  .background-login {
+    background-color: white;
+    /* #fdcbcb; */
     position: absolute;
     top: 0;
     right: 0;
@@ -16,14 +16,18 @@
     overflow: hidden;
   }
 
-  .everything {
+  .everything-login {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .backButton {
-    margin: 10px
+  .backButton-login {
+    margin: 10px;
+  }
+
+  .spacer-login {
+    margin: 100px;
   }
 
   .formAndSignUpLink {
@@ -31,44 +35,118 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
   }
 
-  .title {
-    font-family: Helvetica;
-    color: #937983;
-    font-size: 35px;
+  .title-login {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+    /* #937983; */
+    font-size: 30px;
   }
 
-  .label {
-    font-family: Helvetica;
-    color: #937983;
-    font-size: 35px;
+  .label-login {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+    /* #937983; */
+    font-size: 25px;
   }
 
-  .input {
+  .label-display {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .blue-login {
+    color: rgb(83, 165, 196);
+  }
+
+  .green-login {
+    color: rgb(129, 231, 184);
+  }
+
+  .yellow-login {
+    color: rgb(235, 214, 113);
+  }
+
+  .pink-login {
+    color: rgb(207, 152, 183);
+  }
+
+  .userDoesNotExist {
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+  }
+
+  .userDoesNotExist {
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    color:rgb(119, 118, 118)
+  }
+
+  .input-login {
     width: 350px;
     height: 40px;
-    border: 2px solid #937983;
+    border: 0.5px solid rgb(119, 118, 118);
+    /* #937983; */
     border-radius: 10px;
     box-sizing: border-box;
     outline: none;
     margin: 10px;
+    padding: 10px;
+    font-family: "Roboto Mono", monospace;
   }
 
   .signUpLink {
-    font-family: Helvetica;
-    color: #937983;
-    font-size: 35px;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+    /* #937983; */
+    font-size: 20px;
     text-decoration: none;
+    margin: 30px;
   }
 
   .signUpLink:hover {
-    font-family: "Rubik Beastly", cursive;
-    color: #71b5ac;
-    font-size: 35px;
+    font-family: "Roboto Mono", monospace;
+    /* font-family: "Rubik Beastly", cursive; */
+    color: pink;
+    /* #71b5ac; */
+    font-size: 20px;
     text-decoration: none;
+  }
+
+  .login-button {
+    /* display: inline-block; */
+    /* padding: 0.35em 1.2em; */
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(179, 178, 178)
+    
+  }
+
+  .login-button:hover {
+    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 35%, rgba(248,233,160,1) 85%, 
+    rgba(250,221,188,1) 97%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
   }
 
   .link {
@@ -76,15 +154,12 @@
   }
 }
 
-
-
-
-
 /* small screen */
 
 @media screen and (max-width: 601px) {
-  .background {
-    background-color: #fdcbcb;
+  .background-login {
+    background-color: white;
+    /* #fdcbcb; */
     position: absolute;
     top: 0;
     right: 0;
@@ -93,7 +168,7 @@
     overflow: hidden;
   }
 
-  .everything {
+  .everything-login {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -101,8 +176,12 @@
     padding: 0; */
   }
 
-  .backButton {
-    margin: 10px
+  .backButton-login {
+    margin: 10px;
+  }
+
+  .spacer-login {
+    margin: 100px;
   }
 
   .formAndSignUpLink {
@@ -110,44 +189,126 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
   }
 
-  .title {
-    font-family: Helvetica;
-    color: #937983;
+  .title-login {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+    /* #937983; */
     font-size: 35px;
   }
 
-  .label {
-    font-family: Helvetica;
-    color: #937983;
-    font-size: 35px;
+  .label-login {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+    /* #937983; */
+    font-size: 25px;
   }
 
-  .input {
+  .label-display {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .blue-login {
+    color: rgb(83, 165, 196);
+  }
+
+  .green-login {
+    color: rgb(129, 231, 184);
+  }
+
+  .yellow-login {
+    color: rgb(235, 214, 113);
+  }
+
+  .pink-login {
+    color: rgb(207, 152, 183);
+  }
+
+  .userDoesNotExist {
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+  }
+
+  .userDoesNotExist {
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    color:rgb(119, 118, 118)
+  }
+
+  .wrongPassword {
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    color:rgb(119, 118, 118)
+  }
+
+
+  .input-login {
     width: 300px;
     height: 40px;
-    border: 2px solid #937983;
+    border: 1px solid rgb(119, 118, 118);
+    /* #937983; */
     border-radius: 10px;
     box-sizing: border-box;
     outline: none;
     margin: 10px;
+    font-family: "Roboto Mono", monospace;
+    padding: 10px;
+  }
+
+  .login-button {
+    /* display: inline-block; */
+    /* padding: 0.35em 1.2em; */
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(179, 178, 178)
+    
+  }
+
+  .login-button:hover {
+    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 35%, rgba(248,233,160,1) 85%, 
+    rgba(250,221,188,1) 97%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
   }
 
   .signUpLink {
-    font-family: Helvetica;
-    color: #937983;
-    font-size: 35px;
+    
+    align-items: center;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+    /* #937983; */
+    font-size: 20px;
     text-decoration: none;
+    margin: 30px;
   }
 
   .signUpLink:hover {
-    font-family: "Rubik Beastly", cursive;
-    color: #71b5ac;
-    font-size: 35px;
+    font-family: "Roboto Mono", monospace;
+    color: pink;
+    font-size: 20px;
     text-decoration: none;
+    margin: 30px;
   }
 
   .link {

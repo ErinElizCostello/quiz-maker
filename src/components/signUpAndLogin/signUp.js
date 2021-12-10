@@ -30,45 +30,56 @@ const SignUp = () => {
   }
 
   return (
-    <div className="background">
+    <div className="background-signUp">
       {redirectToLogin && <Redirect to={{ pathname: '/login' }} />}
-      <div className="everything">
+      <div className="everything-signUp">
         <div className="backButton">
           <BackButton />
         </div>
-        
+        <div className="spacer-signUp"></div>
+
         <div className="formAndLoginLink">
-          <p className="title">Sign Up</p>
-        {
+          {/* <p className="title-signUp">Sign Up</p> */}
+          {
             usernameAlreadyExistsMessage &&
-            <p>
+            <p className="usernameAlreadyExists">
               username already exists, pick another one
             </p>
           }
           <div>
-          <label className="label">
-            Username
-          </label>
-          <br />
-          <input className="input" onChange={usernameText} />
+            <label for="signUp-input" className="label-signUp">
+              <span className="label-display">
+                <p>user</p>
+                <p className="blue-signUp">n</p>
+                <p className="green-signUp">a</p>
+                <p className="yellow-signUp">m</p>
+                <p className="pink-signUp">e</p>
+              </span>
+            </label>
+            <input id="signUp-input" className="input-signUp" onChange={usernameText} />
           </div>
 
           <div>
-            <label className="label">
-              Password
+            <label for="password-input" className="label-signUp">
+              <span className="label-display">
+                <p>pass</p>
+                <p className="blue-signUp">w</p>
+                <p className="green-signUp">o</p>
+                <p className="yellow-signUp">r</p>
+                <p className="pink-signUp">d</p>
+              </span>
             </label>
-            <br />
-            <input className="input" onChange={passwordText} />
+            <input id="password-input" className="input-signUp" onChange={passwordText} />
           </div>
           <br />
           <div>
-            <button onClick={createNewAccount}>
+            <button className="signUp-button" onClick={createNewAccount}>
               Sign Up
             </button>
           </div>
           <Link className="link" to='/login'>
             <p className="loginLink">
-              Login!
+              Already have an account? Login here
             </p>
           </Link>
         </div>
