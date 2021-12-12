@@ -3,29 +3,47 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
     font-size: 30px;
     text-align: center;
     flex-wrap: wrap;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118)
+
   }
 
   .numberOfAnswers {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    
   }
 
   .labelNumberOfAnswers {
     margin: 10px;
-    font-family: Helvetica;
-    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 30px;
+    color: rgb(119, 118, 118)
+
   }
 
   .selectNumberOfAnswers {
-    width: 150px;
-    height: 50px;
+    width: 175px;
+    height: 75px;
     text-align: center;
+    font-family: "Roboto Mono", monospace;
+    border-radius: 10px;
+    padding: 10px;
+    appearance: none;
+    font-size: 20px;       /* Remove default arrow */
+    color: rgb(119, 118, 118)
+
   }
+
+  .selectNumberOfAnswers:focus {
+    outline: none !important;
+}
 
   .nextButtonHowManyPossibleAnswersLayout {
     margin: 20px;
@@ -34,8 +52,26 @@
     justify-content: center;
   }
 
-  #non-disabled-button {
-    background-color: #6bceb4;
+  #non-disabled-button-answers-number{
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(119, 118, 118)
+    /* background-color: #6bceb4;
     border: none;
     border-radius: 10px;
     color: white;
@@ -45,11 +81,39 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
   }
 
-  #disabled-button {
-    background-color: #a4cec3;
+    
+  
+
+  #non-disabled-button-answers-number:hover {
+    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
+    rgba(250,221,188,1) 60%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
+  }
+
+  #disabled-button-answers-number {
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(207, 206, 206)
+    /* background-color: #a4cec3;
     border: none;
     border-radius: 10px;
     color: white;
@@ -59,20 +123,28 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
+  }
+
+  #spacer-answers-number {
+    margin: 100px;
   }
 }
+
+
+/* ////////// */
 
 @media screen and (max-width: 601px) {
   .titleHowManyPossibleAnswers {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: Helvetica;
-    font-size: 30px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
     text-align: center;
     flex-wrap: wrap;
     margin: 20px;
+    color: rgb(119, 118, 118)
   }
 
   .numberOfAnswers {
@@ -85,20 +157,29 @@
 
   .labelNumberOfAnswers {
     margin: 10px;
-    font-family: Helvetica;
-    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: rgb(119, 118, 118)
     /* margin: 15px; */
   }
 
   .selectNumberOfAnswers {
-    width: 175px;
-    height: 60px;
+    width: 225px;
+    height: 80px;
     text-align: center;
     margin: 25px;
-    border: 1px solid black;
-    border-radius: 5px;
-
+    border: 1px solid rgb(119, 118, 118);
+    border-radius: 10px;
+    color: rgb(119, 118, 118);
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    appearance: none;
+    padding: 10px;
   }
+
+  .selectNumberOfAnswers:focus {
+    outline: none !important;
+}
 
   .nextButtonHowManyPossibleAnswersLayout {
     margin: 20px;
@@ -107,8 +188,26 @@
     justify-content: center;
   }
 
-  #non-disabled-button {
-    background-color: #6bceb4;
+  #non-disabled-button-answers-number {
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(119, 118, 118)
+    /* background-color: #6bceb4;
     border: none;
     border-radius: 10px;
     color: white;
@@ -118,11 +217,37 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
   }
 
-  #disabled-button {
-    background-color: #a4cec3;
+  #non-disabled-button-answers-number:hover {
+    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
+    rgba(250,221,188,1) 60%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
+  }
+
+
+  #disabled-button-answers-number {
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(207, 206, 206)
+    /* background-color: #a4cec3;
     border: none;
     border-radius: 10px;
     color: white;
@@ -132,6 +257,6 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
   }
 }
