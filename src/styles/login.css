@@ -143,8 +143,8 @@
   }
 
   .login-button:hover {
-    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 35%, rgba(248,233,160,1) 85%, 
-    rgba(250,221,188,1) 97%,
+    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
+    rgba(250,221,188,1) 60%,
      rgba(248,191,222,1) 100%);
      cursor: pointer;
   }

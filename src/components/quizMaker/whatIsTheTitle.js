@@ -25,6 +25,7 @@ const WhatIsTheTitle = () => {
       <div>
         <BackButton />
       </div>
+      <div id="spacer-title-small-screen"></div>
       <div className="layoutWhatIsTheTitle">
         <div>
           <label className="whatIsTheTitleLabel">
@@ -44,12 +45,12 @@ const WhatIsTheTitle = () => {
           {
             titleText ?
               <Link to="/numberOfAnswers">
-                <button id="non-disabled-button" onClick={saveTitle}>
+                <button id="non-disabled-button-title" onClick={saveTitle}>
                   next...
                 </button>
               </Link>
               :
-              <button id="disabled-button" disabled>
+              <button id="disabled-button-title" disabled>
                 next...
               </button>
           }
