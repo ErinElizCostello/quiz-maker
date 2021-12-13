@@ -65,7 +65,7 @@ const ResultsForm = () => {
             {
               resultsLetters.map(letter => (
                 <div key={letter}>
-                  <label>
+                  <label id="label-mostly-letter">
                     {`If the quiz taker gets mostly ${letter.toUpperCase()}s...`}
                   </label>
                   <textarea

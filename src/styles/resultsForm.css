@@ -6,8 +6,12 @@
     align-items: center;
   }
 
+  #label-mostly-letter {
+    color: rgb(139, 138, 138);
+  }
+
   .resultsFormBox {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     border-radius: 40px;
     width: 400px;
     height: 300px;
@@ -19,12 +23,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
     padding: 60px;
   }
 
   .resultsDisplay {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     width: 500px;
     height: 500px;
     /* text-align: center; */
@@ -35,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
   }
 
   .resultsFormLayout {
@@ -45,6 +49,67 @@
   }
 
   .createQuizNonDisabledButton {
+    height: 40px;
+    width: 190px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(119, 118, 118)
+    /* background-color: #f9dc74;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer; */
+  }
+
+  .createQuizNonDisabledButton:hover{
+  background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
+    rgba(250,221,188,1) 60%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
+}
+
+  .createQuizDisabledButton {
+    height: 40px;
+    width: 190px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(207, 206, 206)
+  }
+
+
+  /* .createQuizNonDisabledButton {
     background-color: #f9dc74;
     border: none;
     border-radius: 10px;
@@ -56,9 +121,9 @@
     font-size: 16px;
     margin: 20px;
     cursor: pointer;
-  }
+  } */
 
-  .createQuizDisabledButton {
+   /* .createQuizDisabledButton {
     background-color: #b1a784;
     border: none;
     border-radius: 10px;
@@ -69,10 +134,28 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-  }
+  } */
 
-  .previewQuizNonDisabledButton {
-    background-color: #74f9c6;
+ .previewQuizNonDisabledButton {
+  height: 50px;
+  width: 200px;
+  border: 0px solid rgb(119, 118, 118);
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 10px;
+  /* 0.12em; */
+  /* box-sizing: border-box; */
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  /* font-weight: 300; */
+  
+  text-align: center;
+  transition: all 0.2s;
+  color: white;
+  /* rgb(119, 118, 118); */
+  margin: 20px;
+  background: rgb(119, 118, 118)
+    /* background-color: #74f9c6;
     border: none;
     border-radius: 10px;
     color: white;
@@ -82,11 +165,36 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
+  } 
+
+  .previewQuizNonDisabledButton:hover {
+    background: rgb(192, 178, 105);
+    /* linear-gradient(144deg, rgb(113, 172, 144,1) 50%, rgb(192, 178, 105,1) 50%); */
+  
+     cursor: pointer;
   }
 
   .previewQuizDisabledButton {
-    background-color: #92b184;
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 20px;
+    background: rgb(207, 206, 206)
+    /* background-color: #92b184;
     border: none;
     border-radius: 10px;
     color: white;
@@ -95,8 +203,8 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 20px;
-  }
+    margin: 20px; */
+  } 
 
   .textAreaResult {
     resize: none;
@@ -105,6 +213,9 @@
     border-radius: 10px;
     outline: none;
     padding: 5px;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+
   }
 
   .resultsDisplayMostlys {
@@ -126,7 +237,7 @@
   }
 
   .resultsFormBox {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     border-radius: 40px;
     width: 300px;
     height: 250px;
@@ -138,14 +249,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
     padding: 20px;
   }
 
   .resultsDisplay {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     width: 275px;
-    height: 250px;
+    height: 225px;
     /* text-align: center; */
     padding: 30px;
     /* padding-bottom: 50px; */
@@ -154,11 +265,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
   }
+  
 
   .createQuizNonDisabledButton {
-    background-color: #f9dc74;
+    height: 40px;
+    width: 190px;
+    border: 0px; 
+    /* solid rgb(119, 118, 118); */
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(119, 118, 118)
+    /* background-color: #f9dc74;
     border: none;
     border-radius: 10px;
     color: white;
@@ -168,23 +299,108 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
   }
 
+  .createQuizNonDisabledButton:hover{
+  background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
+    rgba(250,221,188,1) 60%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
+}
+
   .createQuizDisabledButton {
-    background-color: #b1a784;
-    border: none;
+    height: 40px;
+    width: 190px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
     border-radius: 10px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(207, 206, 206)
   }
 
   .previewQuizNonDisabledButton {
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 20px;
+    background: rgb(119, 118, 118)
+      /* background-color: #74f9c6;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 20px;
+      cursor: pointer; */
+    } 
+  
+    .previewQuizNonDisabledButton:hover {
+      background: rgb(192, 178, 105);
+      /* linear-gradient(144deg, rgb(113, 172, 144,1) 50%, rgb(192, 178, 105,1) 50%); */
+    
+       cursor: pointer;
+    }
+  
+    .previewQuizDisabledButton {
+      height: 50px;
+      width: 200px;
+      border: 0px solid rgb(119, 118, 118);
+      margin: 0 0.3em 0.3em 0;
+      border-radius: 10px;
+      /* 0.12em; */
+      /* box-sizing: border-box; */
+      text-decoration: none;
+      font-family: "Roboto Mono", monospace;
+      font-size: 20px;
+      /* font-weight: 300; */
+      
+      text-align: center;
+      transition: all 0.2s;
+      color: white;
+      /* rgb(119, 118, 118); */
+      margin: 20px;
+      background: rgb(207, 206, 206)
+      /* background-color: #92b184;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 20px; */
+    } 
+
+  /* .previewQuizNonDisabledButton {
     background-color: #74f9c6;
     border: none;
     border-radius: 10px;
@@ -209,7 +425,7 @@
     display: inline-block;
     font-size: 16px;
     margin: 5px;
-  }
+  } */
 
   .textAreaResult {
     resize: none;

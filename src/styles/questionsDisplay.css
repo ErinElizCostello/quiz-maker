@@ -1,17 +1,17 @@
 @media screen and (min-width: 1170px) {
   .questionsDisplay {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     width: 500px;
     height: 500px;
-    /* text-align: center; */
+    text-align:left;
     padding: 30px;
     /* padding-bottom: 50px; */
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    font-family: Helvetica;
+    /* justify-content: flex-start; */
+    font-family: "Roboto Mono", monospace;
 
     /* position: fixed;
   top: 5;
@@ -20,10 +20,12 @@
 
   .aQuestion {
     margin: 5px;
+    /* display: flex;
+    flex-direction: column; */
   }
 
   .xButton {
-    background-color: #f98f6f;
+    background-color: pink;
     border: none;
     border-radius: 10px;
     color: white;
@@ -34,6 +36,7 @@
     font-size: 16px;
     margin: 20px;
     cursor: pointer;
+    font-family: "Roboto Mono", monospace;
   }
 
   .questionAndDeleteButton {
@@ -47,7 +50,7 @@
 
 @media screen and (max-width: 1169px) {
   .questionsDisplay {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     width: 275px;
     height: 250px;
     /* text-align: center; */
@@ -58,7 +61,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
 
     /* position: fixed;
   top: 5;
@@ -70,7 +73,7 @@
   }
 
   .xButton {
-    background-color: #f98f6f;
+    background-color: pink;
     border: none;
     border-radius: 10px;
     color: white;

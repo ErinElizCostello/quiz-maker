@@ -1,10 +1,22 @@
 @media screen and (min-width: 1170px) {
   .questionsFormText {
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  #label-question-form {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
+    font-size: 20px;
+  }
+
+  #label-question-letter {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
   }
 
   .textAreaQuestion {
@@ -12,18 +24,40 @@
     margin: 15px;
     border-radius: 10px;
     outline: none;
-    padding: 5px;
+    padding: 10px;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
   }
 
   .textAreaAnswer {
     resize: none;
     border-radius: 10px;
     outline: none;
-    padding: 5px;
+    padding: 10px;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
   }
 
   #non-disabled-button-next {
-    background-color: #6bceb4;
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(119, 118, 118)
+    /* background-color: #6bceb4;
     border: none;
     border-radius: 10px;
     color: white;
@@ -33,11 +67,36 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
+  }
+
+  #non-disabled-button-next:hover {
+    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
+    rgba(250,221,188,1) 60%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
   }
 
   #disabled-button-next {
-    background-color: #a4cec3;
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(207, 206, 206)
+    /* background-color: #a4cec3;
     border: none;
     border-radius: 10px;
     color: white;
@@ -46,12 +105,30 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 20px;
+    margin: 20px; */
     /* cursor: pointer; */
   }
 
   #non-disabled-button-add-question {
-    background-color: #f9dc74;
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(119, 118, 118)
+    /* background-color: #f9dc74;
     border: none;
     border-radius: 10px;
     color: white;
@@ -61,11 +138,36 @@
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    cursor: pointer; */
+  }
+
+  #non-disabled-button-add-question:hover {
+    background: rgb(192, 178, 105);
+    /* linear-gradient(144deg, rgb(113, 172, 144,1) 50%, rgb(192, 178, 105,1) 50%); */
+  
+     cursor: pointer;
   }
 
   #disabled-button-add-question {
-    background-color: #b1a784;
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(207, 206, 206)
+    /* background-color: #b1a784;
     border: none;
     border-radius: 10px;
     color: white;
@@ -74,20 +176,22 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 20px;
+    margin: 20px; */
     /* cursor: pointer; */
   }
+
+  
 
   /* .spacerBottomQuestionsForm {
   margin: 20px;
 } */
 
-  .spacerTopQuestionsForm {
+  /* .spacerTopQuestionsForm { */
     /* margin: 20px; */
-  }
+  /* } */
 
   .questionsFormBox {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     border-radius: 40px;
     width: 400px;
     height: 300px;
@@ -99,7 +203,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
     padding: 60px;
   }
 }
@@ -107,7 +211,8 @@
 
 @media screen and (max-width: 1169px) {
   .questionsFormText {
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -115,7 +220,14 @@
   }
 
   .labelQuestion {
+    font-family: "Roboto Mono", monospace;
     margin-top: 30px;
+    font-size: 20px;
+  }
+
+  #label-question-letter {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
   }
 
   .textAreaQuestion {
@@ -125,6 +237,8 @@
     padding: 10px;
     width: 250px;
     margin: 5px;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
   }
 
   .textAreaAnswer {
@@ -134,10 +248,30 @@
     padding: 10px;
     width: 250px;
     margin: 3px;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(119, 118, 118);
   }
 
   #non-disabled-button-next {
-    background-color: #6bceb4;
+    height: 40px;
+    width: 190px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(119, 118, 118)
+    /* background-color: #6bceb4;
     border: none;
     border-radius: 10px;
     color: white;
@@ -150,11 +284,36 @@
     font-size: 16px;
     margin: 20px;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none; */
+  }
+
+  #non-disabled-button-next:hover {
+    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
+    rgba(250,221,188,1) 60%,
+     rgba(248,191,222,1) 100%);
+     cursor: pointer;
   }
 
   #disabled-button-next {
-    background-color: #a4cec3;
+    height: 40px;
+    width: 190px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 40px;
+    background: rgb(207, 206, 206)
+    /* background-color: #a4cec3;
     border: none;
     border-radius: 10px;
     color: white;
@@ -163,12 +322,30 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 20px;
+    margin: 20px; */
     /* cursor: pointer; */
   }
 
   #non-disabled-button-add-question {
-    background-color: #f9dc74;
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 20px;
+    background: rgb(119, 118, 118)
+    /* background-color: #f9dc74;
     border: none;
     border-radius: 10px;
     color: white;
@@ -178,11 +355,36 @@
     display: inline-block;
     font-size: 16px;
     margin: 5px;
-    cursor: pointer;
+    cursor: pointer; */
+  }
+
+  #non-disabled-button-add-question:hover {
+    background: rgb(192, 178, 105);
+    /* linear-gradient(144deg, rgb(113, 172, 144,1) 50%, rgb(192, 178, 105,1) 50%); */
+  
+     cursor: pointer;
   }
 
   #disabled-button-add-question {
-    background-color: #b1a784;
+    height: 50px;
+    width: 200px;
+    border: 0px solid rgb(119, 118, 118);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    /* 0.12em; */
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    /* rgb(119, 118, 118); */
+    margin: 20px;
+    background: rgb(207, 206, 206)
+    /* background-color: #b1a784;
     border: none;
     border-radius: 10px;
     color: white;
@@ -191,9 +393,11 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 5px;
+    margin: 5px; */
     /* cursor: pointer; */
   }
+
+  
 
   /* .spacerBottomQuestionsForm {
   margin: 20px;
@@ -204,7 +408,7 @@
   /* } */
 
   .questionsFormBox {
-    border: 2px solid grey;
+    border: 1px solid rgb(119, 118, 118);
     border-radius: 40px;
     width: 320px;
     height: 250px;

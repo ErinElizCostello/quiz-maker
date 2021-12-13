@@ -57,7 +57,7 @@ const QuestionsForm = () => {
       <div className="questionsFormBox">
         <div>
           <div className="labelQuestion">
-          <label >What is the question?</label><br />
+          <label id="label-question-form">What is the question?</label><br />
           </div>
           <textarea
             id="option"
@@ -72,7 +72,7 @@ const QuestionsForm = () => {
         {
           answerLetters.map(letter => (
             <div key={letter}>
-              <label>
+              <label id="label-question-letter">
                 {`${letter}.  `}
               </label>
               <textarea
