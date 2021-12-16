@@ -9,20 +9,30 @@
   .myQuizzesCard {
     height: 125px;
     width: 350px;
-    border: 1px solid black;
+    border: 1px solid rgb(119, 118, 118);
     margin: 20px;
     padding: 20px;
-    border-radius: 5px;
-    font-family: Helvetica;
+    border-radius: 10px;
+    font-family: "Roboto Mono", monospace;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: powderblue;
+    background-color: white;
+  }
+
+  .myQuizzesText-title {
+    margin: 5px;
+    color: rgb(119, 118, 118);
+  }
+
+  .myQuizzesText-title:hover {
+    color: pink
   }
 
   .myQuizzesText {
     margin: 5px;
+    color: rgb(119, 118, 118);
   }
 
   .areYouSureModal {
@@ -38,16 +48,44 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    background-color: rgba(147, 133, 153, 0.4); /* Black w/ opacity */
   }
 
   .myQuizzesPageTitle {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
     font-size: 50px;
     margin-bottom: 50px;
+    color: rgb(119, 118, 118);
+  }
+
+  #link-myQuizzes {
+    text-decoration: none;
+  }
+
+  #button-myQuizzes {
+    height: 40px;
+    width: 200px;
+    border: 0px;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    margin: 20px;
+    background: rgb(189, 133, 133)
+  }
+
+  #button-myQuizzes:hover {
+    background: linear-gradient(144deg, 
+    rgb(230, 177, 116) 30%,
+     rgb(241, 109, 116) 100%);
+     cursor: pointer;
   }
 }
 
@@ -62,16 +100,25 @@
   .myQuizzesCard {
     height: 125px;
     width: 275px;
-    border: 1px solid black;
+    border: 1px solid rgb(119, 118, 118);
     margin: 20px;
     padding: 20px;
-    border-radius: 5px;
-    font-family: Helvetica;
+    border-radius: 10px;
+    font-family: "Roboto Mono", monospace;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: powderblue;
+    background-color: white;
+  }
+
+  .myQuizzesText-title {
+    margin: 5px;
+    color: rgb(119, 118, 118);
+  }
+
+  .myQuizzesText-title:hover {
+    color: pink
   }
 
   .myQuizzesText {
@@ -98,8 +145,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
     font-size: 50px;
     margin-bottom: 50px;
+    color: rgb(119, 118, 118);
   }
 }

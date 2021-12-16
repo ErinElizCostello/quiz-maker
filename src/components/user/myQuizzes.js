@@ -63,24 +63,24 @@ const MyQuizzes = () => {
             <div>
               <div className="myQuizzesCard">
                 <div onClick={() => quizID(quiz._id)}>
-                  <Link to='/quiz'>
-                    <p className="myQuizzesText">
+                  <Link id="link-myQuizzes" to='/quiz'>
+                    <p className="myQuizzesText-title">
                       {quiz.title}
                     </p>
                   </Link>
                 </div>
-                <div>
+                {/* <div>
                   <p className="myQuizzesText">
                     {quiz.user}
                   </p>
-                </div>
+                </div> */}
                 <div>
                   <p className="myQuizzesText">
                     {moment(quiz.createdAt).format("MMM Do YYYY")}
                   </p>
                 </div>
-                <div className="myQuizzesText">
-                  <button onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}>
+                <div>
+                  <button id="button-myQuizzes" onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}>
                     Delete this quiz
                   </button>
                 </div>

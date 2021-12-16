@@ -1,6 +1,6 @@
 import React from 'react';
 import { deleteAQuiz } from '../../API/deleteAQuiz';
-
+import "../../styles/areYouSureYouWantToDeleteThisQuiz.css"
 
 
 const AreYouSureYouWantToDeleteThisQuiz = (props) => {
@@ -13,19 +13,34 @@ const AreYouSureYouWantToDeleteThisQuiz = (props) => {
   }
 
   return (
-    <div style={{ height: 100, width: 300, backgroundColor: 'red' }}>
+    <div className="background">
       <div>
-        <button onClick={cancel}>
+        <button id="x-button" onClick={cancel}>
           X
         </button>
       </div>
-      <div>
-        {
-          `Are you sure bitch?? That you want to delete ${props.quizInfo.deleteQuizTitle}`
-        }
+      <div id="text-areYouSure">
+        <div>
+          {
+            `CAREFUL`
+          }
+        </div>
+        <br />
+        <div>
+          {
+            `you are about to delete the quiz:`
+          }
+        </div>
+        <br />
+        <div id="quizTitle-areYouSure">
+          {
+            `${props.quizInfo.deleteQuizTitle}`
+          }
+        </div>
       </div>
-      <div>
-        <button onClick={deleteTheQuiz}>
+      <div id="buttonSpacer-areYouSure"></div>
+      <div id="buttonLayout-areYouSure">
+        <button id="button-deleteQuiz" onClick={deleteTheQuiz}>
           yes delete this quiz
         </button>
       </div>

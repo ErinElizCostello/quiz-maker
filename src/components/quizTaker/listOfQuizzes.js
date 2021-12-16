@@ -22,7 +22,7 @@ const ListOfQuizzes = () => {
     fetch('http://localhost:3001/quizzes')
       .then(response => response.json())
       .then(data => {
-        setQuizzesList(data.data)
+        setQuizzesList(data.data.reverse())
       })
   }, []);
 
