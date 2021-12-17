@@ -89,6 +89,10 @@
   }
 }
 
+
+/* /// */
+
+
 @media screen and (max-width: 601px) {
   .quizListLayout {
     display: flex;
@@ -98,8 +102,8 @@
   }
 
   .myQuizzesCard {
-    height: 125px;
-    width: 275px;
+    height: 160px;
+    width: 250px;
     border: 1px solid rgb(119, 118, 118);
     margin: 20px;
     padding: 20px;
@@ -123,6 +127,7 @@
 
   .myQuizzesText {
     margin: 5px;
+    color: rgb(119, 118, 118);
   }
 
   .areYouSureModal {
@@ -145,9 +150,37 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    /* flex-wrap: wrap; */
     font-family: "Roboto Mono", monospace;
-    font-size: 50px;
+    font-size: 35px;
     margin-bottom: 50px;
     color: rgb(119, 118, 118);
+  }
+
+  #link-myQuizzes {
+    text-decoration: none;
+  }
+
+  #button-myQuizzes {
+    height: 40px;
+    width: 200px;
+    border: 0px;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    text-align: center;
+    transition: all 0.2s;
+    color: white;
+    margin: 20px;
+    background: rgb(189, 133, 133)
+  }
+
+  #button-myQuizzes:hover {
+    background: linear-gradient(144deg, 
+    rgb(230, 177, 116) 30%,
+     rgb(241, 109, 116) 100%);
+     cursor: pointer;
   }
 }

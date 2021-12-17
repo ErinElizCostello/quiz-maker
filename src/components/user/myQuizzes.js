@@ -54,13 +54,15 @@ const MyQuizzes = () => {
       <div>
         <BackButton backTo="home" />
       </div>
-      <div className="myQuizzesPageTitle">
-        {`${theUser}'s Quizzes'`}
-      </div>
-      <div className="quizListLayout">
+      <div >
+        <div className="myQuizzesPageTitle">
+          <div>
+            {`${theUser}'s Quizzes'`}
+          </div>
+        </div>
         {
           usersQuizzes.map(quiz => (
-            <div>
+            <div className="quizListLayout">
               <div className="myQuizzesCard">
                 <div onClick={() => quizID(quiz._id)}>
                   <Link id="link-myQuizzes" to='/quiz'>
