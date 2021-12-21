@@ -31,27 +31,32 @@ const ResultsDisplay = () => {
   )
 
   return (
-    result.length && 
-    <div className={result.length && "resultsModal"}>
-      <div className="theResult">
+    result.length ?
+      <div className={result.length && "resultsModal"}>
 
-        {
-          result.length > 1 && `It's a tie!`
-        }
-        <br /><br />
-        {
-          result.length > 1 ?
-            result.map(aResult =>
-            (
-              <div>{aResult}<br /></div>
-            )
-            )
-            : <div>{result[0]}<br /></div>
-        }
-        <BackButton />
+        <div className="theResult">
+
+          {
+            result.length > 1 && `It's a tie!`
+          }
+          <br /><br />
+          {
+            result.length > 1 ?
+              result.map(aResult =>
+              (
+                <div>{aResult}<br /></div>
+              )
+              )
+              : <div>{result[0]}<br /></div>
+          }
+
+          <div className="results-backButton">
+            <BackButton />
+          </div>
+        </div>
+
       </div>
-    </div>
-      
+      : null
   );
 }
 

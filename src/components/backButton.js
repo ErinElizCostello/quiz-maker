@@ -16,7 +16,7 @@ const BackButton = () => {
         id="backButton"
         onClick={goBack}
       >
-        back
+       {`<`}
       </button>
     </div>
   );

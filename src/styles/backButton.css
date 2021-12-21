@@ -1,17 +1,28 @@
 #backButton {
-  background-color: #6bceb4;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 32px;
+  background: white;
+  /* rgba(255,255,255,0.5); */
+  border: 1px solid rgb(182, 181, 181);
+  /* border-radius: 10px; */
+  color: rgb(119, 118, 118);
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 25px;
   margin: 20px;
   cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+
 }
 
 #backButton:hover {
   cursor: pointer;
+  background: linear-gradient(
+    144deg,
+    rgb(189, 238, 255) 0%,
+    /* rgba(168, 233, 203, 1) 66%, */
+    rgb(255, 243, 183) 100%
+    /* rgba(250, 221, 188, 1) 60%,
+    rgba(248, 191, 222, 1) 100% */
+  );
 }

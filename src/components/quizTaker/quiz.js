@@ -65,11 +65,11 @@ const Quiz = () => {
         <div className="quizTitle">
           {theQuiz && theQuiz.title}
         </div>
-        <div>
+        <div className="quizQuestions-spacing">
           {
             theQuiz && theQuiz.quiz.map(thisQuiz => (
               <div className="quizTakerQuestionAndRadioButtons">
-                <div>
+                <div className="theQuizQuestion">
                   {thisQuiz.question}
                 </div>
                 <div className="quizTakerQuestionSpacers"></div>
@@ -79,6 +79,7 @@ const Quiz = () => {
                       <input
                         type="radio"
                         id="radioBtn"
+                        className="radioButtonCircle"
                         name={thisQuiz.question}
                         value={answer.letter}
                         onChange={answer => onChangeAnswer(answer, thisQuiz.id)}

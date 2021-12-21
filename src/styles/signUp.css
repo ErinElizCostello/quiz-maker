@@ -91,6 +91,8 @@
     box-sizing: border-box;
     outline: none;
     margin: 10px;
+    font-family: "Roboto Mono", monospace;
+
   }
 
   .signUp-button {

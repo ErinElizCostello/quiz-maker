@@ -4,13 +4,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
   }
+
+  .quizQuestions-spacing {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  /* label {
+    width: 1000
+  } */
 
   .quizTitle {
     font-size: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
+    color: rgb(119, 118, 118);
   }
 
   .quizTakerAnswers {
@@ -18,50 +28,85 @@
   }
 
   .seeMyResultsButton {
-    background-color: #f9dc74;
-    border: none;
+    background-color: white;
+    border: 1px solid rgb(119, 118, 118);
     border-radius: 10px;
-    color: white;
+    color: rgb(119, 118, 118);
+    font-family: "Roboto Mono", monospace;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 20px;
+    margin-bottom: 70px;
+    cursor: pointer;
+  }
+  .seeMyResultsButton:hover {
+    background-color: rgb(105, 206, 159);
+    border: 1px solid rgb(119, 118, 118);
+    border-radius: 10px;
+    color: rgb(119, 118, 118);
+    font-family: "Roboto Mono", monospace;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    margin-bottom: 70px;
     cursor: pointer;
   }
 
   .seeMyResultsButtonDisabled {
-    background-color: #d5c485;
-    border: none;
+    background-color: rgb(231, 228, 228);
+    border: 1px solid rgb(172, 170, 170);
     border-radius: 10px;
-    color: white;
+    color: rgb(119, 118, 118);
+    font-family: "Roboto Mono", monospace;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 20px;
-    cursor: pointer;
+    margin-bottom: 70px;
   }
 
   .quizTakerQuestionAndRadioButtons {
-    margin: 20
+    margin: 20;
+    color: rgb(119, 119, 118);
+    font-size: 22px;
+  }
+
+  .radioButtonCircle {
+    height: 20px;
+    width: 20px;
+    color: rgb(119, 118, 118);
+    margin-right: 20px;
   }
 
   .quizTakerQuestionSpacers {
     margin: 10
   }
 
+  .theQuizQuestion {
+    margin-bottom: 30px;
+  }
+
   .radioButtonWithAnswer {
     display: flex; 
     flex-direction: row;
+    color: rgb(119, 118, 118);
+    margin: 10px
   }
 
   .radioButtonLabel {
-    display: flex; 
+    display: inline-block;
+    /* display: flex; 
     flex-direction: row; 
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    color: rgb(119, 118, 118);
   } 
 }
 
@@ -71,7 +116,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Helvetica;
+    font-family: "Roboto Mono", monospace;
     margin: 30px
   }
 
@@ -79,6 +124,9 @@
     font-size: 40px;
     margin-bottom: 50px;
     text-align: center;
+  }
+  .theQuizQuestion {
+    margin-bottom: 20px;
   }
 
   .quizTakerAnswers {
@@ -99,13 +147,70 @@
     flex-direction: row;
   }
 
+  .radioButtonCircle {
+    /* height: 20px;
+    width: 20px; */
+    
+    color: rgb(119, 118, 118);
+    margin-right: 10px;
+  }
+
   .radioButtonLabel {
     display: flex; 
     flex-direction: row; 
     flex-wrap: wrap;
+    margin: 10px;
+    align-items: center;
   } 
 
   .seeMyResultsButton {
+    background-color: white;
+    border: 1px solid rgb(119, 118, 118);
+    border-radius: 10px;
+    color: rgb(119, 118, 118);
+    font-family: "Roboto Mono", monospace;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    margin-bottom: 70px;
+    cursor: pointer;
+  }
+  .seeMyResultsButton:hover {
+    background-color: rgb(105, 206, 159);
+    border: 1px solid rgb(119, 118, 118);
+    border-radius: 10px;
+    color: rgb(119, 118, 118);
+    font-family: "Roboto Mono", monospace;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    margin-bottom: 70px;
+    cursor: pointer;
+  }
+
+  .seeMyResultsButtonDisabled {
+    background-color: rgb(231, 228, 228);
+    border: 1px solid rgb(172, 170, 170);
+    border-radius: 10px;
+    color: rgb(119, 118, 118);
+    font-family: "Roboto Mono", monospace;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    margin-bottom: 70px;
+  }
+
+
+  /* .seeMyResultsButton {
     background-color: #f9dc74;
     border: none;
     border-radius: 10px;
@@ -117,5 +222,5 @@
     font-size: 16px;
     margin: 20px;
     cursor: pointer;
-  }
+  } */
 }
