@@ -13,12 +13,7 @@ app.use(cors())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World!')
-// })
-
 app.use('/', router)
-
 
 const PORT = process.env.PORT || 3001
 

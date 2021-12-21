@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
+
 import { deleteQuestion } from '../../state/actions/questions';
 
-
 import '../../styles/questionsDisplay.css'
+
 
 
 const QuestionsDisplay = () => {

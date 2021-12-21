@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom'
 
 import { setResults } from '../../state/actions/results';
 
+import { createAQuiz } from '../../API/createAQuiz';
 
 import BackButton from '../backButton'
 
 import '../../styles/resultsForm.css'
-
-import { Redirect } from 'react-router-dom'
-
-import { createAQuiz } from '../../API/createAQuiz';
 
 
 
@@ -43,10 +42,7 @@ const ResultsForm = () => {
   //only display a text area for each number of possible answers selected by the user
   const resultsLetters = possibleResultsLetters.slice(0, numberOfResults)
 
-
   const theUser = JSON.parse(localStorage.getItem('QuizUser')).payload.user
-
-
 
   let theQuiz = useSelector(state => state)
 

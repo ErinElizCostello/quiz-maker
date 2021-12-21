@@ -2,7 +2,6 @@
   .background {
     height: 400px;
     width: 450px;
-    /* background-color: rgb(243, 182, 182); */
     border: 1px solid rgb(119, 118, 118);
     border-radius: 10px;
     background: linear-gradient(
@@ -42,6 +41,8 @@
     font-family: "Roboto Mono", monospace;
     font-size: 35px;
     font-weight: 900;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   #buttonSpacer-areYouSure {
@@ -56,7 +57,6 @@
   }
 
   #button-deleteQuiz {
-    /* margin: 10px; */
     color: rgb(88, 88, 88);
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
@@ -68,7 +68,6 @@
   }
 
   #button-deleteQuiz:hover {
-    /* margin: 10px; */
     color: white;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
@@ -85,7 +84,6 @@
   .background {
     height: 375px;
     width: 325px;
-    /* background-color: rgb(243, 182, 182); */
     border: 1px solid rgb(119, 118, 118);
     border-radius: 10px;
     background: linear-gradient(
@@ -140,7 +138,6 @@
   }
 
   #button-deleteQuiz {
-    /* margin: 10px; */
     color: white;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
@@ -153,7 +150,6 @@
   }
 
   #button-deleteQuiz:hover {
-    /* margin: 10px; */
     color: white;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
@@ -161,7 +157,7 @@
     border: 1px solid rgb(119, 118, 118);
     border-radius: 10px;
     height: 65px;
-    width: 375px;
+    width: 275px;
     cursor: pointer;
   }
 }

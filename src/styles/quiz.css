@@ -12,10 +12,6 @@
     margin-right: 100px;
   }
 
-  /* label {
-    width: 1000
-  } */
-
   .quizTitle {
     font-size: 40px;
     margin-top: 50px;
@@ -42,6 +38,7 @@
     margin-bottom: 70px;
     cursor: pointer;
   }
+
   .seeMyResultsButton:hover {
     background-color: rgb(105, 206, 159);
     border: 1px solid rgb(119, 118, 118);
@@ -103,9 +100,6 @@
 
   .radioButtonLabel {
     display: inline-block;
-    /* display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap; */
     color: rgb(119, 118, 118);
   } 
 }
@@ -131,7 +125,6 @@
 
   .quizTakerAnswers {
     margin-bottom: 60px;
-    
   }
 
   .quizTakerQuestionAndRadioButtons {
@@ -148,9 +141,6 @@
   }
 
   .radioButtonCircle {
-    /* height: 20px;
-    width: 20px; */
-    
     color: rgb(119, 118, 118);
     margin-right: 10px;
   }
@@ -178,6 +168,7 @@
     margin-bottom: 70px;
     cursor: pointer;
   }
+
   .seeMyResultsButton:hover {
     background-color: rgb(105, 206, 159);
     border: 1px solid rgb(119, 118, 118);
@@ -208,19 +199,4 @@
     margin: 20px;
     margin-bottom: 70px;
   }
-
-
-  /* .seeMyResultsButton {
-    background-color: #f9dc74;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 20px;
-    cursor: pointer;
-  } */
 }

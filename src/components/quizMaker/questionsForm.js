@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { setQuestion } from '../../state/actions/questions';
 import { clearResults } from '../../state/actions/results';
 
-import BackButton from '../backButton';
-
 import '../../styles/questionsForm.css'
+
 
 
 const QuestionsForm = () => {
@@ -53,11 +53,13 @@ const QuestionsForm = () => {
 
   return (
     <div className="questionsFormText">
-      {/* <div className="spacerTopQuestionsForm"></div> */}
       <div className="questionsFormBox">
         <div>
           <div className="labelQuestion">
-          <label id="label-question-form">What is the question?</label><br />
+            <label id="label-question-form">
+              What is the question?
+            </label>
+            <br />
           </div>
           <textarea
             id="option"
@@ -90,7 +92,10 @@ const QuestionsForm = () => {
         <div>
           {
             Object.keys(answerText).filter(answer => answerText[answer] !== '').length === numberOfResults ?
-              <button id="non-disabled-button-add-question" onClick={addQuestion}>
+              <button
+                id="non-disabled-button-add-question"
+                onClick={addQuestion}
+              >
                 Add Question
               </button>
               :
@@ -103,7 +108,10 @@ const QuestionsForm = () => {
       <div className="spacerBottomQuestionsForm"></div>
       {
         quizQuestions.length ?
-          <Link to="/resultsForm" onClick={clearFormerResults}>
+          <Link
+            to="/resultsForm"
+            onClick={clearFormerResults}
+          >
             <div>
               <button id="non-disabled-button-next">
                 next...

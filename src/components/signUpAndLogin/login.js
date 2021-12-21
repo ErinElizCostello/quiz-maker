@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { Link, Redirect } from 'react-router-dom'
 import '../../styles/login.css'
 
@@ -41,14 +42,12 @@ const Login = () => {
   return (
     <div className="background-login">
       {redirectToHomePage && <Redirect to={{ pathname: '/' }} />}
-
       <div className="everything-login">
         <div className="backButton-login">
           <BackButton />
         </div>
         <div className="spacer-login"></div>
         <div className="formAndSignUpLink">
-          {/* <p className="title-login">login</p> */}
           <div>
             {userDoesNotExistMessage && <p className="userDoesNotExist">user does not exist</p>}
             {wrongPasswordMessage && <p className="wrongPassword">wrong password!</p>}
@@ -62,8 +61,6 @@ const Login = () => {
               </span>
             </label>
             <input id="login-input" className="input-login" onChange={usernameText} />
-            {/* <br /> */}
-
           </div>
           <div>
             <label for="password-input" className="label-login">

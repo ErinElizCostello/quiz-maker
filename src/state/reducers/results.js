@@ -1,7 +1,6 @@
 import { SET_RESULTS, CLEAR_RESULTS } from '../constants'
 
 
-
 export const setResults = (state = [], action) => {
   switch (action.type) {
     case SET_RESULTS:

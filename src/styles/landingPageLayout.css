@@ -13,13 +13,9 @@
   .item-navbar {
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-start; */
     align-items: center;
     width: 100vw;
-    /* height: 100px; */
-    /* background-color: rgb(206, 175, 108); */
     background-color: white;
-    /* background-color: rgb(164, 164, 164) */
   }
 
   .item-listOfQuizzes {
@@ -29,9 +25,10 @@
     align-items: center;
     width: 100vw;
     background-color: white;
-    /* background-color: rgb(142, 164, 123); */
-    /* background-color: rgb(181, 247, 236) */
-    /* background-color: rgb(164, 164, 164) */
+  }
+
+  .landingPageSpacing {
+    margin: '5px'
   }
 }
 
@@ -53,11 +50,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    /* height: 100px; */
-    /* background-color: rgb(164, 164, 164) */
     background-color: white;
-    /* background-color: rgb(181, 247, 236) */
-    /* rgb(206, 175, 108); */
   }
 
   .item-listOfQuizzes {
@@ -67,8 +60,9 @@
     align-items: center;
     width: 100vw;
     background-color: white;
-    /* background-color: rgb(164, 164, 164) */
-    /* background-color: rgb(181, 247, 236) */
-    /* rgb(142, 164, 123); */
+  }
+
+  .landingPageSpacing {
+    margin: '5px'
   }
 }

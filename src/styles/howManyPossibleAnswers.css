@@ -8,8 +8,7 @@
     text-align: center;
     flex-wrap: wrap;
     font-family: "Roboto Mono", monospace;
-    color: rgb(119, 118, 118)
-
+    color: rgb(119, 118, 118);
   }
 
   .numberOfAnswers {
@@ -17,15 +16,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
   }
 
   .labelNumberOfAnswers {
     margin: 10px;
     font-family: "Roboto Mono", monospace;
     font-size: 30px;
-    color: rgb(119, 118, 118)
-
+    color: rgb(119, 118, 118);
   }
 
   .selectNumberOfAnswers {
@@ -36,14 +33,13 @@
     border-radius: 10px;
     padding: 10px;
     appearance: none;
-    font-size: 20px;       /* Remove default arrow */
-    color: rgb(119, 118, 118)
-
+    font-size: 20px;
+    color: rgb(119, 118, 118);
   }
 
   .selectNumberOfAnswers:focus {
     outline: none !important;
-}
+  }
 
   .nextButtonHowManyPossibleAnswersLayout {
     margin: 20px;
@@ -52,46 +48,32 @@
     justify-content: center;
   }
 
-  #non-disabled-button-answers-number{
+  #non-disabled-button-answers-number {
     height: 50px;
     width: 200px;
     border: 0px solid rgb(119, 118, 118);
     margin: 0 0.3em 0.3em 0;
     border-radius: 10px;
-    /* 0.12em; */
-    /* box-sizing: border-box; */
     text-decoration: none;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
-    /* font-weight: 300; */
-    
     text-align: center;
     transition: all 0.2s;
     color: white;
-    /* rgb(119, 118, 118); */
     margin: 40px;
-    background: rgb(119, 118, 118)
-    /* background-color: #6bceb4;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 20px;
-    cursor: pointer; */
+    background: rgb(119, 118, 118);
   }
 
-    
-  
-
   #non-disabled-button-answers-number:hover {
-    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
-    rgba(250,221,188,1) 60%,
-     rgba(248,191,222,1) 100%);
-     cursor: pointer;
+    background: linear-gradient(
+      144deg,
+      rgba(137, 215, 243, 1) 0%,
+      rgba(168, 233, 203, 1) 20%,
+      rgba(248, 233, 160, 1) 40%,
+      rgba(250, 221, 188, 1) 60%,
+      rgba(248, 191, 222, 1) 100%
+    );
+    cursor: pointer;
   }
 
   #disabled-button-answers-number {
@@ -100,30 +82,14 @@
     border: 0px solid rgb(119, 118, 118);
     margin: 0 0.3em 0.3em 0;
     border-radius: 10px;
-    /* 0.12em; */
-    /* box-sizing: border-box; */
     text-decoration: none;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
-    /* font-weight: 300; */
-    
     text-align: center;
     transition: all 0.2s;
     color: white;
-    /* rgb(119, 118, 118); */
     margin: 40px;
-    background: rgb(207, 206, 206)
-    /* background-color: #a4cec3;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 20px;
-    cursor: pointer; */
+    background: rgb(207, 206, 206);
   }
 
   #spacer-answers-number {
@@ -131,8 +97,6 @@
   }
 }
 
-
-/* ////////// */
 
 @media screen and (max-width: 601px) {
   .titleHowManyPossibleAnswers {
@@ -144,7 +108,7 @@
     text-align: center;
     flex-wrap: wrap;
     margin: 20px;
-    color: rgb(119, 118, 118)
+    color: rgb(119, 118, 118);
   }
 
   .numberOfAnswers {
@@ -152,15 +116,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
 
   .labelNumberOfAnswers {
     margin: 10px;
     font-family: "Roboto Mono", monospace;
     font-size: 25px;
-    color: rgb(119, 118, 118)
-    /* margin: 15px; */
+    color: rgb(119, 118, 118);
   }
 
   .selectNumberOfAnswers {
@@ -179,7 +141,7 @@
 
   .selectNumberOfAnswers:focus {
     outline: none !important;
-}
+  }
 
   .nextButtonHowManyPossibleAnswersLayout {
     margin: 20px;
@@ -194,39 +156,27 @@
     border: 0px solid rgb(119, 118, 118);
     margin: 0 0.3em 0.3em 0;
     border-radius: 10px;
-    /* 0.12em; */
-    /* box-sizing: border-box; */
     text-decoration: none;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
-    /* font-weight: 300; */
-    
     text-align: center;
     transition: all 0.2s;
     color: white;
-    /* rgb(119, 118, 118); */
     margin: 40px;
-    background: rgb(119, 118, 118)
-    /* background-color: #6bceb4;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 20px;
-    cursor: pointer; */
+    background: rgb(119, 118, 118);
   }
 
   #non-disabled-button-answers-number:hover {
-    background: linear-gradient(144deg, rgba(137,215,243,1) 0%, rgba(168,233,203,1) 20%, rgba(248,233,160,1) 40%, 
-    rgba(250,221,188,1) 60%,
-     rgba(248,191,222,1) 100%);
-     cursor: pointer;
+    background: linear-gradient(
+      144deg,
+      rgba(137, 215, 243, 1) 0%,
+      rgba(168, 233, 203, 1) 20%,
+      rgba(248, 233, 160, 1) 40%,
+      rgba(250, 221, 188, 1) 60%,
+      rgba(248, 191, 222, 1) 100%
+    );
+    cursor: pointer;
   }
-
 
   #disabled-button-answers-number {
     height: 50px;
@@ -234,29 +184,13 @@
     border: 0px solid rgb(119, 118, 118);
     margin: 0 0.3em 0.3em 0;
     border-radius: 10px;
-    /* 0.12em; */
-    /* box-sizing: border-box; */
     text-decoration: none;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
-    /* font-weight: 300; */
-    
     text-align: center;
     transition: all 0.2s;
     color: white;
-    /* rgb(119, 118, 118); */
     margin: 40px;
-    background: rgb(207, 206, 206)
-    /* background-color: #a4cec3;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 20px;
-    cursor: pointer; */
+    background: rgb(207, 206, 206);
   }
 }

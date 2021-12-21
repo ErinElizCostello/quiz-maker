@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getQuizByID } from '../../API/getQuizByID';
@@ -8,6 +9,7 @@ import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken';
 import BackButton from '../backButton';
 
 import '../../styles/quiz.css'
+
 
 
 const Quiz = () => {
@@ -114,65 +116,3 @@ const Quiz = () => {
 }
 
 export default Quiz;
-
-
-
-
-
-// let differentUpdatedSelections = []
-
-    // if (!selection.length) {
-    //   updatedSelections.push(item)
-    // }
-
-    // if (selection.length) {
-    //   selection.forEach(answer =>
-    //     answer.id === id ? updatedSelections.push(item) : updatedSelections.push(answer)
-    //   )
-    // }
-
-    // setSelection(updatedSelections)
-    // setSelection([...selection, item])
-    // console.log('selectionsInside', selection)
-
-
-
-
-
-// console.log('updatedSelection', updatedSelections)
-
-    // !selection.length && setSelection([...selection, {id: id, letter: letter}])
-
-    // selection.length &&
-    // selection.forEach(answer => answer && answer.id === id ?
-    //   updatedSelections.push(item) : updatedSelections.push(answer)
-    // )
-
-
-
-    // selection.map(answer => answer.id === id ?
-    // {id: id, letter: letter} : {id: id, letter: letter}
-    // )
-
-    // console.log('updatedSelections', updatedSelections)
-    // setSelection(updatedSelections)
-    // let question = aQuestion
-    // let selectionsCopy = selection
-
-    // console.log('selectionsCopy', selectionsCopy)
-
-    // !selection.length ?
-    // selectionsCopy.forEach(theQuestion => question === theQuestion[0] ?
-      // theQuestion[1] = letter
-    //   updatedSelections.push([theQuestion[0], letter])
-    //   : 
-    //   updatedSelections.push([question, letter])
-    // )
-
-    // : updatedSelections.push([question, letter])
-
-    // setSelection(updatedSelections)
-  // :
-  // setSelection()
-
-    // setSelection([...selection, letter])

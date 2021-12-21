@@ -12,6 +12,7 @@ import '../styles/loggedInOptions.css'
 
 
 const LoggedInOptions = () => {
+
   const dispatch = useDispatch()
 
   const verify = () => {
@@ -36,18 +37,9 @@ const LoggedInOptions = () => {
             <p className="blue">5</p>
             <p className="green">0</p>
             <p className="yellow">0</p>
-            {/* <p className="orange">0</p> */}
             <p className="pink">0</p>
           </div>
         </div>
-        {/* <Link className="link" to="/myQuizzes">
-
-        </Link> */}
-        {/* <div>
-          <p className="greeting">
-            {`Hello ${JSON.parse(localStorage.getItem('QuizUser')).payload.user}`}
-          </p>
-        </div> */}
       </div>
 
       <div className="right-side-navbar">
@@ -58,13 +50,7 @@ const LoggedInOptions = () => {
             </p>
           </div>
         </Link>
-        {/* <Link className="link" to="/myQuizzes">
-          <div onClick={verify}>
-            <p className="myQuizzes">
-              My quizzes
-            </p>
-          </div>
-        </Link> */}
+
         {
           JSON.parse(localStorage.getItem('QuizUser')).payload.user === process.env.REACT_APP_ADMIN &&
           <div>
@@ -88,19 +74,10 @@ const LoggedInOptions = () => {
           </Link>
         </div>
         <div onClick={logOutUser}>
-          {/* <button onClick={logOutUser}> */}
           <p className="logOut">
             Log Out
           </p>
-          {/* </button> */}
         </div>
-        {/* <div>
-          <Link className="link" to='/deleteUserAccount'>
-            <p className="settings">
-              Settings
-            </p>
-          </Link>
-        </div> */}
       </div>
     </div>
   );

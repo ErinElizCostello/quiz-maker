@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
 import { getAllUsers } from '../API/admin'
 import { deleteAUserAccount } from '../API/deleteAUserAccount'
 
 import '../styles/adminPage.css'
+
 
 
 const AdminPage = () => {
@@ -11,19 +13,16 @@ const AdminPage = () => {
 
   useEffect(() => {
     getAllUsers().then(users => {
-      console.log(users)
       setUsers(users.data)
     })
   }, []);
 
   const deleteThisUser = (username) => {
-    console.log('userToDelete', username)
     deleteAUserAccount(username).then(data => console.log(data))
   }
 
   return (
     <div>
-
       {
         <ul>
           {
@@ -34,7 +33,8 @@ const AdminPage = () => {
                     {user.username}
                   </div>
                   <div className="theMargin">
-                    <button onClick={() => deleteThisUser(user.username)}>
+                    <button onClick={() => deleteThisUser(user.username)}
+                    >
                       delete
                     </button>
                   </div>
@@ -44,7 +44,6 @@ const AdminPage = () => {
           }
         </ul>
       }
-
     </div>
   );
 }

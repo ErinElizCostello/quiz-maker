@@ -22,7 +22,6 @@ getUser = async (req, res) => {
 
     bcrypt.compare(req.body.password, user.password, function (err, theUser) {
       if (err) {
-        // handle error
         return err
       }
       if (theUser) {

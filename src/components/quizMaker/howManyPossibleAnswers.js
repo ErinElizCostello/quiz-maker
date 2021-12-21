@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -60,24 +61,24 @@ const HowManyPossibleAnswers = () => {
           <option value="11">11 answers</option>
           <option value="12">12 answers</option>
         </select>
-        
+
       </div>
       <div className="nextButtonHowManyPossibleAnswersLayout">
-          {
-            number ?
-              <Link to='/questions'>
-                <button
+        {
+          number ?
+            <Link to='/questions'>
+              <button
                 id="non-disabled-button-answers-number"
                 onClick={chooseNumberOfAnswers}>
-                  next...
-                </button>
-              </Link>
-              :
-              <button id="disabled-button-answers-number" disabled>
                 next...
               </button>
-          }
-        </div>
+            </Link>
+            :
+            <button id="disabled-button-answers-number" disabled>
+              next...
+            </button>
+        }
+      </div>
     </div>
   );
 }

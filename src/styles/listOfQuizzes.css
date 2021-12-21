@@ -1,112 +1,30 @@
 @media screen and (min-width: 601px) {
   .quizCard {
-    height: 125px; 
-    width: 500px; 
-    /* border: 1px solid rgba(180, 150, 109, 0.4); */
-    
-    box-shadow: rgb(137, 215, 243) 0px 0px 0px 3px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(168, 233, 203) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(248, 233, 160) 20px -20px, 
-     rgb(255, 255, 255) 30px -30px 0px -3px, 
-    rgb(250, 218, 195) 30px -30px,  
-    rgb(255, 255, 255) 40px -40px 0px -3px, rgb(248, 191, 222) 40px -40px;
-    /* box-shadow: rgba(247, 186, 100, 0.4) 10px 10px, rgba(247, 186, 100, 0.3) 20px 20px, rgba(247, 186, 100, 0.2) 30px 30px, rgba(247, 186, 100, 0.1) 40px 40px, rgba(180, 150, 109, 0.05) 50px 50px; */
+    height: 125px;
+    width: 500px;
+    box-shadow: rgb(137, 215, 243) 0px 0px 0px 3px inset,
+      rgb(255, 255, 255) 10px -10px 0px -3px, rgb(168, 233, 203) 10px -10px,
+      rgb(255, 255, 255) 20px -20px 0px -3px, rgb(248, 233, 160) 20px -20px,
+      rgb(255, 255, 255) 30px -30px 0px -3px, rgb(250, 218, 195) 30px -30px,
+      rgb(255, 255, 255) 40px -40px 0px -3px, rgb(248, 191, 222) 40px -40px;
     margin: 75px;
     padding: 30px;
     border-radius: 30px;
     font-family: "Roboto Mono", monospace;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(238, 236, 229); */
     background-color: white;
-    /* rgb(247, 230, 240) */
-    /* powderblue; */
-    
-  }
-  /* .quizCard {
-  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
-  } */
-  
-
-  .quizCard:hover {
-    background-color: rgb(243, 233, 212);
-    
   }
 
-  .quizCardTitle {
-    font-size: 25px;
-    color:rgb(119, 118, 118)
-     /* rgb(128, 128, 128) */
-  }
-
-  .quizCardTitle:hover {
-    font-size: 25px;
-    color: rgb(142, 126, 94);
-  }
-
- .username {
-  color: rgb(119, 118, 118)
-  /* rgb(168, 167, 167) */
- } 
-
- .username:hover {
-  color: rgb(142, 126, 94);
- } 
-
-
-}
-
-@media screen and (max-width: 601px) {
-  .quizCard {
-    height: 110px; 
-    width: 200px; 
-    
-    
-    box-shadow: rgb(137, 215, 243) 0px 0px 0px 3px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(168, 233, 203) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(248, 233, 160) 20px -20px, 
-    /* rgb(255, 255, 255) 30px -30px 0px -3px, */
-     /* rgb(250, 218, 195) 30px -30px,  */
-     rgb(255, 255, 255) 30px -30px 0px -3px, 
-     rgb(248, 191, 222) 30px -30px;
-    /* box-shadow: rgba(247, 186, 100, 0.4) 10px 10px, rgba(247, 186, 100, 0.3) 20px 20px, rgba(247, 186, 100, 0.2) 30px 30px, rgba(247, 186, 100, 0.1) 40px 40px, rgba(180, 150, 109, 0.05) 50px 50px; */
-    margin: 75px;
-    padding: 30px;
-    border-radius: 30px;
-    font-family: "Roboto Mono", monospace;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: rgb(238, 236, 229); */
-    background-color: white;
-    /* rgb(247, 230, 240) */
-    /* powderblue; */
-    
-    
-    
-    /* border: 1px solid black;
-    margin: 30px;
-    padding: 15px;
-    padding-top: 25px;
-    border-radius: 5px;
-    font-family: Helvetica;
-    display: flex;
-    flex-direction: column; */
-    /* justify-content: center;
-    align-items: center; */
-    /* background-color: powderblue;
-    text-align: center; */
-  }
   .quizCard:hover {
     background-color: rgb(243, 233, 212);
   }
 
   .quizCardTitle {
-    font-size: 20px;
-    margin: auto;
-    color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
+    font-size: 25px;
+    color: rgb(119, 118, 118);
   }
 
   .quizCardTitle:hover {
@@ -115,12 +33,53 @@
   }
 
   .username {
-    color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-   } 
+    color: rgb(119, 118, 118);
+  }
 
-   .username:hover {
+  .username:hover {
     color: rgb(142, 126, 94);
-   }
-  
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .quizCard {
+    height: 110px;
+    width: 200px;
+    box-shadow: rgb(137, 215, 243) 0px 0px 0px 3px inset,
+      rgb(255, 255, 255) 10px -10px 0px -3px, rgb(168, 233, 203) 10px -10px,
+      rgb(255, 255, 255) 20px -20px 0px -3px, rgb(248, 233, 160) 20px -20px,
+      rgb(255, 255, 255) 30px -30px 0px -3px, rgb(248, 191, 222) 30px -30px;
+    margin: 75px;
+    padding: 30px;
+    border-radius: 30px;
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .quizCard:hover {
+    background-color: rgb(243, 233, 212);
+  }
+
+  .quizCardTitle {
+    font-size: 20px;
+    margin: auto;
+    color: rgb(119, 118, 118);
+  }
+
+  .quizCardTitle:hover {
+    font-size: 25px;
+    color: rgb(142, 126, 94);
+  }
+
+  .username {
+    color: rgb(119, 118, 118);
+  }
+
+  .username:hover {
+    color: rgb(142, 126, 94);
+  }
 }

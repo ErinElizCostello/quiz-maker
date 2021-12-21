@@ -7,7 +7,9 @@ import LoggedOutOptions from './loggedOutOptions';
 import '../styles/landingPageLayout.css'
 
 
+
 const LandingPage = () => {
+  
   return (
     <div className="container">
       <div className="item-navbar">
@@ -18,22 +20,10 @@ const LandingPage = () => {
             <LoggedOutOptions className="item-navbar" />
         }
       </div>
-      <div style={{margin: '5px'}}></div>
+      <div className="landingPageSpacing"></div>
       <div className="item-listOfQuizzes">
         <ListOfQuizzes className="item-listOfQuizzes" />
       </div>
-      {/* <div className="item-navbar">
-        {
-          localStorage.getItem('QuizUser') ?
-            <LoggedInOptions />
-            :
-            <LoggedOutOptions />
-        }
-      </div> */}
-
-      {/* <div className='item-listOfQuizzes'>
-        <ListOfQuizzes />
-      </div> */}
     </div>
   );
 }

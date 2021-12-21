@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+
 import { useSelector } from 'react-redux';
 
 import { getQuizByID } from '../../API/getQuizByID';
 
 import '../../styles/resultsDisplay.css'
+
 import BackButton from '../backButton';
+
 
 
 const ResultsDisplay = () => {
@@ -33,9 +36,7 @@ const ResultsDisplay = () => {
   return (
     result.length ?
       <div className={result.length && "resultsModal"}>
-
         <div className="theResult">
-
           {
             result.length > 1 && `It's a tie!`
           }
@@ -54,7 +55,6 @@ const ResultsDisplay = () => {
             <BackButton />
           </div>
         </div>
-
       </div>
       : null
   );

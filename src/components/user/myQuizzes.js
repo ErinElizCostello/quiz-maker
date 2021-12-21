@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -18,6 +19,7 @@ import '../../styles/myQuizzes.css'
 
 
 const MyQuizzes = () => {
+
   const dispatch = useDispatch()
 
   const theUser = localStorage.getItem('QuizUser')
@@ -45,9 +47,7 @@ const MyQuizzes = () => {
     setDeleteQuizId(id)
     setDeleteQuizTitle(title)
     setAreYouSureMessage(true)
-
   }
-
 
   return (
     <div>
@@ -65,24 +65,25 @@ const MyQuizzes = () => {
             <div className="quizListLayout">
               <div className="myQuizzesCard">
                 <div onClick={() => quizID(quiz._id)}>
-                  <Link id="link-myQuizzes" to='/quiz'>
+                  <Link
+                    id="link-myQuizzes"
+                    to='/quiz'
+                  >
                     <p className="myQuizzesText-title">
                       {quiz.title}
                     </p>
                   </Link>
                 </div>
-                {/* <div>
-                  <p className="myQuizzesText">
-                    {quiz.user}
-                  </p>
-                </div> */}
                 <div>
                   <p className="myQuizzesText">
                     {moment(quiz.createdAt).format("MMM Do YYYY")}
                   </p>
                 </div>
                 <div>
-                  <button id="button-myQuizzes" onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}>
+                  <button
+                    id="button-myQuizzes"
+                    onClick={() => theAreYouSureMessage(quiz._id, quiz.title)}
+                  >
                     Delete this quiz
                   </button>
                 </div>

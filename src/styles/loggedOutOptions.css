@@ -7,52 +7,41 @@
    }
 
    .headerTitle {
-    /* font-family: 'Rubik Beastly', cursive; */
     font-family: 'Roboto Mono', monospace;
     margin: 30px;
     font-size: 50px;
-    /* color: purple; */
-    /* color: rgb(107, 146, 140); */
     color: rgb(168, 167, 167);
     display: flex;
     flex-direction: row;
-    /* color: rgb(77, 105, 101); */
    }
 
    .blue {
     color: rgb(137, 215, 243)
   }
+
   .green {
     color: rgb(168, 233, 203)
   }
+
   .yellow {
     color: rgb(248, 233, 160)
   }
-  /* .orange {
-    color: rgb(250, 218, 195)
-  } */
+  
   .pink {
     color: rgb(248, 191, 222)
   }
 
   .login {
-    
     margin-left: 40px;
     margin-right: 10px;
     font-family: 'Roboto Mono', monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .login:hover{
     margin-left: 40px;
     margin-right: 10px;
-
     font-family: 'Roboto Mono', monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
   }
 
@@ -61,23 +50,17 @@
     margin-left: 10px;
     font-family: 'Roboto Mono', monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .slash {
     font-family: 'Roboto Mono', monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
   }
 
   .signUp:hover{
     margin-right: 20px;
     margin-left: 10px;
     font-family: 'Roboto Mono', monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
   }
 
@@ -85,11 +68,6 @@
     text-decoration: none;
   }
 }
-
-
-
-/* /////// */
-
 
 
 @media screen and (max-width: 601px) {
@@ -102,28 +80,23 @@
 
   .headerTitle {
     font-family: 'Roboto Mono', monospace;
-    /* color: rgb(77, 105, 101); */
-    /* color: rgb(126, 126, 126); */
     color: rgb(168, 167, 167);
     display: flex;
     flex-direction: row;
-
-    /* color: rgb(107, 146, 140); */
-    /* font-family: 'Rubik Beastly', cursive; */
    }
 
    .blue {
     color: rgb(137, 215, 243)
   }
+
   .green {
     color: rgb(168, 233, 203)
   }
+
   .yellow {
     color: rgb(248, 233, 160)
   }
-  /* .orange {
-    color: rgb(250, 218, 195)
-  } */
+  
   .pink {
     color: rgb(248, 191, 222)
   }
@@ -132,40 +105,28 @@
     margin: 15px;
     font-family: 'Roboto Mono', monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .login :hover{
     margin: 20px;
     font-family: 'Roboto Mono', monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
   }
 
   .slash {
     font-family: 'Roboto Mono', monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
   }
 
   .signUp {
     margin: 20px;
     font-family: 'Roboto Mono', monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .signUp :hover{
     margin: 20px;
     font-family: 'Roboto Mono', monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
   }
 

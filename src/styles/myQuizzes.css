@@ -27,7 +27,7 @@
   }
 
   .myQuizzesText-title:hover {
-    color: pink
+    color: pink;
   }
 
   .myQuizzesText {
@@ -40,15 +40,15 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(147, 133, 153, 0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(147, 133, 153, 0.4);
   }
 
   .myQuizzesPageTitle {
@@ -78,20 +78,18 @@
     transition: all 0.2s;
     color: white;
     margin: 20px;
-    background: rgb(189, 133, 133)
+    background: rgb(189, 133, 133);
   }
 
   #button-myQuizzes:hover {
-    background: linear-gradient(144deg, 
-    rgb(230, 177, 116) 30%,
-     rgb(241, 109, 116) 100%);
-     cursor: pointer;
+    background: linear-gradient(
+      144deg,
+      rgb(230, 177, 116) 30%,
+      rgb(241, 109, 116) 100%
+    );
+    cursor: pointer;
   }
 }
-
-
-/* /// */
-
 
 @media screen and (max-width: 601px) {
   .quizListLayout {
@@ -122,7 +120,7 @@
   }
 
   .myQuizzesText-title:hover {
-    color: pink
+    color: pink;
   }
 
   .myQuizzesText {
@@ -135,22 +133,21 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4); 
   }
 
   .myQuizzesPageTitle {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* flex-wrap: wrap; */
     font-family: "Roboto Mono", monospace;
     font-size: 35px;
     margin-bottom: 50px;
@@ -174,13 +171,15 @@
     transition: all 0.2s;
     color: white;
     margin: 20px;
-    background: rgb(189, 133, 133)
+    background: rgb(189, 133, 133);
   }
 
   #button-myQuizzes:hover {
-    background: linear-gradient(144deg, 
-    rgb(230, 177, 116) 30%,
-     rgb(241, 109, 116) 100%);
-     cursor: pointer;
+    background: linear-gradient(
+      144deg,
+      rgb(230, 177, 116) 30%,
+      rgb(241, 109, 116) 100%
+    );
+    cursor: pointer;
   }
 }

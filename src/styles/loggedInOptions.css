@@ -23,41 +23,35 @@
     margin: 20px;
     font-family: "Roboto Mono", monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* color: grey; */
   }
 
   .greeting:hover {
     margin: 20px;
     font-family: "Roboto Mono", monospace;
     color: pink
-    /* color: grey; */
   }
 
   .headerTitle {
     font-family: "Roboto Mono", monospace;
     margin: 30px;
     font-size: 50px;
-    /* color: purple; */
     color: rgb(168, 167, 167);
-    /* color: rgb(107, 146, 140); */
     display: flex;
     flex-direction: row;
-
   }
 
   .blue {
     color: rgb(137, 215, 243)
   }
+
   .green {
     color: rgb(168, 233, 203)
   }
+
   .yellow {
     color: rgb(248, 233, 160)
   }
-  /* .orange {
-    color: rgb(250, 218, 195)
-  } */
+
   .pink {
     color: rgb(248, 191, 222)
   }
@@ -66,16 +60,11 @@
     margin: 20px;
     font-family: "Roboto Mono", monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .logOut:hover {
     margin: 20px;
     font-family: "Roboto Mono", monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
     cursor: pointer;
   }
@@ -84,16 +73,11 @@
     margin: 20px;
     font-family: "Roboto Mono", monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .myQuizzes:hover {
     margin: 20px;
     font-family: "Roboto Mono", monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
   }
 
@@ -101,41 +85,19 @@
     margin: 20px;
     font-family: "Roboto Mono", monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .createAQuiz:hover {
     margin: 20px;
-    /* font-family: Helvetica; */
     font-family: "Roboto Mono", monospace;
-
     color: pink;
   }
-
-  /* .settings {
-    margin: 20px;
-    font-family: "Roboto Mono", monospace;
-    color: rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
-  /* } */
-
-  /* .settings:hover {
-    margin: 20px;
-    font-family: "Roboto Mono", monospace; */
-
-    /* font-family: Helvetica; */
-    /* color: pink;
-  } */
 
   .link {
     text-decoration: none;
   }
 }
 
-/* /////// */
 
 @media screen and (max-width: 601px) {
   .container {
@@ -149,22 +111,18 @@
   .left-side-navbar {
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-start; */
     margin-left: 20px;
   }
 
   .right-side-navbar {
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-end; */
     margin-right: 20px;
   }
 
   .greeting {
     margin: 10px;
     font-family: "Roboto Mono", monospace;
-
-    /* font-family: Helvetica; */
     color: grey;
   }
 
@@ -172,33 +130,28 @@
     font-family: "Roboto Mono", monospace;
     margin: 30px;
     font-size: 30px;
-    /* color: purple; */
     color: rgb(168, 167, 167)
-    
-    /* color: rgb(107, 146, 140); */
   }
 
   .blue {
     color: rgb(137, 215, 243)
   }
+
   .green {
     color: rgb(168, 233, 203)
   }
+
   .yellow {
     color: rgb(248, 233, 160)
   }
-  /* .orange {
-    color: rgb(250, 218, 195)
-  } */
+  
   .pink {
     color: rgb(248, 191, 222)
   }
 
   .greeting:hover {
     margin: 10px;
-    /* font-family: Helvetica; */
     font-family: "Roboto Mono", monospace;
-
     color: pink;
     cursor: pointer;
   }
@@ -207,16 +160,11 @@
     margin: 10px;
     font-family: "Roboto Mono", monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .logOut:hover {
     margin: 10px;
     font-family: "Roboto Mono", monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
     cursor: pointer;
   }
@@ -225,16 +173,11 @@
     margin: 10px;
     font-family: "Roboto Mono", monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-        /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .myQuizzes:hover {
     margin: 10px;
     font-family: "Roboto Mono", monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
   }
 
@@ -242,41 +185,20 @@
     margin: 10px;
     font-family: "Roboto Mono", monospace;
     color: rgb(119, 118, 118)
-    /* rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
   }
 
   .createAQuiz:hover {
     margin: 10px;
     font-family: "Roboto Mono", monospace;
-
-    /* font-family: Helvetica; */
     color: pink;
   }
-
-  /* .settings {
-    margin: 10px;
-    font-family: "Roboto Mono", monospace;
-    color: rgb(168, 167, 167) */
-    /* font-family: Helvetica; */
-    /* color: white; */
-  /* }
-
-  .settings:hover {
-    margin: 10px;
-    font-family: "Roboto Mono", monospace; */
-
-    /* font-family: Helvetica; */
-    /* color: pink;
-  } */
 
   .link {
     text-decoration: none;
   }
 }
 
-/* @media screen and (max-width: 601px) {
+@media screen and (max-width: 601px) {
     .container {
       display: flex;
       flex-direction: row;
@@ -310,4 +232,4 @@
     .link {
       text-decoration: none;
     }
-  } */
+  }

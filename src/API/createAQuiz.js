@@ -12,5 +12,4 @@ export const createAQuiz = (title, quiz, user, results) => {
     }
   })
     .then(response => response.json())
-    // .then(data => console.log('data', data))
 }

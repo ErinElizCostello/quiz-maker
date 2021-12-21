@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+
 import { Link, Redirect } from 'react-router-dom'
-import '../../styles/signUp.css'
 
 import { signUpUser } from '../../API/signUpUser';
 
 import BackButton from '../backButton'
+
+import '../../styles/signUp.css'
 
 
 
@@ -39,7 +41,6 @@ const SignUp = () => {
         <div className="spacer-signUp"></div>
 
         <div className="formAndLoginLink">
-          {/* <p className="title-signUp">Sign Up</p> */}
           {
             usernameAlreadyExistsMessage &&
             <p className="usernameAlreadyExists">
@@ -47,7 +48,10 @@ const SignUp = () => {
             </p>
           }
           <div>
-            <label for="signUp-input" className="label-signUp">
+            <label
+              for="signUp-input"
+              className="label-signUp"
+            >
               <span className="label-display">
                 <p>user</p>
                 <p className="blue-signUp">n</p>
@@ -56,11 +60,17 @@ const SignUp = () => {
                 <p className="pink-signUp">e</p>
               </span>
             </label>
-            <input id="signUp-input" className="input-signUp" onChange={usernameText} />
+            <input
+              id="signUp-input"
+              className="input-signUp"
+              onChange={usernameText}
+            />
           </div>
-
           <div>
-            <label for="password-input" className="label-signUp">
+            <label
+              for="password-input"
+              className="label-signUp"
+            >
               <span className="label-display">
                 <p>pass</p>
                 <p className="blue-signUp">w</p>
@@ -69,15 +79,25 @@ const SignUp = () => {
                 <p className="pink-signUp">d</p>
               </span>
             </label>
-            <input id="password-input" className="input-signUp" onChange={passwordText} />
+            <input
+              id="password-input"
+              className="input-signUp"
+              onChange={passwordText}
+            />
           </div>
           <br />
           <div>
-            <button className="signUp-button" onClick={createNewAccount}>
+            <button
+              className="signUp-button"
+              onClick={createNewAccount}
+            >
               Sign Up
             </button>
           </div>
-          <Link className="link" to='/login'>
+          <Link
+            className="link"
+            to='/login'
+          >
             <p className="loginLink">
               Already have an account? Login here
             </p>

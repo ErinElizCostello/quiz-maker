@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
+
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { setQuizID } from '../../state/actions/quizID';
 import { setResultOfQuizTaken } from '../../state/actions/resultOfQuizTaken'
 import { setResults } from '../../state/actions/results'
-
-import moment from 'moment'
 
 import '../../styles/listOfQuizzes.css'
 
@@ -34,7 +33,6 @@ const ListOfQuizzes = () => {
 
   return (
     <div>
-      
       {
         quizzesList.map(quiz => (
           <Link
@@ -53,21 +51,7 @@ const ListOfQuizzes = () => {
                   {`created by ${quiz.user}`}
                 </p>
               </div>
-              {/* <div>
-                <p className="username">
-                  {moment(quiz.createdAt).format("MMM Do YYYY")}
-                </p>
-              </div> */}
               <div>
-                {/* <Link
-                className="link"
-                to='/quiz'
-                onClick={() => quizID(quiz._id)}
-              >
-                <p className="linkToQuiz">
-                  Take quiz
-                </p>
-              </Link> */}
               </div>
             </div>
           </Link>
