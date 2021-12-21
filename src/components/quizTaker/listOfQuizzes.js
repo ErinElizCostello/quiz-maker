@@ -18,7 +18,8 @@ const ListOfQuizzes = () => {
   const [quizzesList, setQuizzesList] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3001/quizzes')
+    fetch('https://quizmaker5000.herokuapp.com/quizzes')
+    // http://localhost:3001/quizzes
       .then(response => response.json())
       .then(data => {
         setQuizzesList(data.data.reverse())
