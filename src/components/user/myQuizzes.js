@@ -62,7 +62,10 @@ const MyQuizzes = () => {
         </div>
         {
           usersQuizzes.map(quiz => (
-            <div className="quizListLayout">
+            <div
+              key={Math.random()}
+              className="quizListLayout"
+            >
               <div className="myQuizzesCard">
                 <div onClick={() => quizID(quiz._id)}>
                   <Link

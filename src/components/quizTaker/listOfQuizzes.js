@@ -36,6 +36,7 @@ const ListOfQuizzes = () => {
       {
         quizzesList.map(quiz => (
           <Link
+            key={Math.random()}
             className="link"
             to='/quiz'
             onClick={() => quizID(quiz._id)}

@@ -36,7 +36,7 @@ const Quiz = () => {
     selectionCopy[id] = letter
 
     setSelection(selectionCopy)
-    
+
     quizLength === Object.values(selection).length ? setDisabledButton(false) : setDisabledButton(true)
   }
 
@@ -70,14 +70,20 @@ const Quiz = () => {
         <div className="quizQuestions-spacing">
           {
             theQuiz && theQuiz.quiz.map(thisQuiz => (
-              <div className="quizTakerQuestionAndRadioButtons">
+              <div
+                key={Math.random()}
+                className="quizTakerQuestionAndRadioButtons"
+              >
                 <div className="theQuizQuestion">
                   {thisQuiz.question}
                 </div>
                 <div className="quizTakerQuestionSpacers"></div>
                 <div className="quizTakerAnswers">
                   {thisQuiz.answers.map(answer => (
-                    <div className="radioButtonWithAnswer">
+                    <div
+                      key={Math.random()}
+                      className="radioButtonWithAnswer"
+                    >
                       <input
                         type="radio"
                         id="radioBtn"
