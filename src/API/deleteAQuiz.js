@@ -1,5 +1,5 @@
 export const deleteAQuiz = id => {
-  return fetch(`http://localhost:3001/deleteQuiz/${id}`, {
+  return fetch('https://quiz-maker-5000-backend.herokuapp.com/deleteQuiz/${id}', {
     method: 'DELETE',
   })
     .then(response => response.json())

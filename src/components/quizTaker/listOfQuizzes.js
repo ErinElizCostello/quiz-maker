@@ -18,7 +18,7 @@ const ListOfQuizzes = () => {
   const [quizzesList, setQuizzesList] = useState([])
 
   useEffect(() => {
-    fetch('https://quizmaker5000.herokuapp.com/quizzes')
+    fetch('https://quiz-maker-5000-backend.herokuapp.com/quizzes')
     // http://localhost:3001/quizzes
       .then(response => response.json())
       .then(data => {
