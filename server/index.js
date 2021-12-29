@@ -16,18 +16,18 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.use('/', router)
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/build')))
-    // 'src/build'
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '/build')))
+//     // 'src/build'
     
-  app.get('*', () => (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
-  })
-} else {
-  app.get("/", (req, res) => {
-    res.send("api running")
-  })
-}
+//   app.get('*', () => (req, res) => {
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'))
+//   })
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("api running")
+//   })
+// }
 
 const PORT = process.env.PORT || 3001
 

@@ -1,5 +1,5 @@
 export const loginUser = (username, password) => {
-  return fetch('https://quiz-maker-5000-backend.herokuapp.com/login', {
+  return fetch('https://quizmaker-backend.herokuapp.com/login', {
     method: 'POST',
     body: JSON.stringify({
       username,
