@@ -19,12 +19,12 @@ const ListOfQuizzes = () => {
 
   useEffect(() => {
     fetch('https://quizmaker-backend.herokuapp.com/quizzes')
-    // http://localhost:3001/quizzes
       .then(response => response.json())
       .then(data => {
         setQuizzesList(data.data.reverse())
       })
   }, []);
+  
 
   const quizID = id => {
     dispatch(setResultOfQuizTaken([]))
