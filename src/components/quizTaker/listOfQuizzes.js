@@ -18,7 +18,12 @@ const ListOfQuizzes = () => {
   const [quizzesList, setQuizzesList] = useState([])
 
   useEffect(() => {
-    fetch('https://quizmaker-backend.herokuapp.com/quizzes')
+    fetch('https://quizmaker-backend.herokuapp.com/quizzes', {
+      mode: 'no-cors',
+      header: {
+        'Access-Control-Allow-Origin':'*',
+      }
+    })
       .then(response => response.json())
       .then(data => {
         setQuizzesList(data.data.reverse())
