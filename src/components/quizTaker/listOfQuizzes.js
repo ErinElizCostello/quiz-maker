@@ -17,18 +17,18 @@ const ListOfQuizzes = () => {
 
   const [quizzesList, setQuizzesList] = useState([])
 
-  // useEffect(() => {
-  //   fetch('https://quizmaker-backend.herokuapp.com/quizzes', {
+  useEffect(() => {
+    fetch('https://quizmaker-backend.herokuapp.com/quizzes', {
       // mode: 'no-cors',
-  //     header: {
-  //       'Access-Control-Allow-Origin':'*',
-  //     }
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setQuizzesList(data.data.reverse())
-  //     })
-  // }, []);
+      header: {
+        'Access-Control-Allow-Origin':'*',
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        setQuizzesList(data.data.reverse())
+      })
+  }, []);
 
 
   const quizID = id => {
