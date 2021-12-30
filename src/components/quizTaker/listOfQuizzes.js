@@ -19,7 +19,7 @@ const ListOfQuizzes = () => {
 
   useEffect(() => {
     fetch('https://quizmaker-backend.herokuapp.com/quizzes', {
-      mode: 'no-cors',
+      // mode: 'no-cors',
       header: {
         'Access-Control-Allow-Origin':'*',
       }
