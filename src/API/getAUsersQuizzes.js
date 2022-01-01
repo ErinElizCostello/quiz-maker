@@ -1,5 +1,5 @@
 export const getAUsersQuizzes = (username) => {
-  return fetch('http://quizmaker-backend.herokuapp.com/myQuizzes', {
+  return fetch('https://quizmaker-backend.herokuapp.com/myQuizzes', {
     method: 'POST',
     body: JSON.stringify({
       username,
