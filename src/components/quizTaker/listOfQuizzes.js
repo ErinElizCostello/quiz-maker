@@ -18,7 +18,7 @@ const ListOfQuizzes = () => {
   const [quizzesList, setQuizzesList] = useState([])
 
   useEffect(() => {
-    fetch('https://quizmaker-backend.herokuapp.com/quizzes', {
+    fetch('http://quizmaker-backend.herokuapp.com/quizzes', {
       // mode: 'no-cors',
       header: {
         'Access-Control-Allow-Origin':'*',
