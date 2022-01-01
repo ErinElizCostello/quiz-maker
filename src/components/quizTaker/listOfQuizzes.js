@@ -21,7 +21,7 @@ const ListOfQuizzes = () => {
     fetch(`https://quizmaker-backend.herokuapp.com/quizzes`, {
       header: {
         mode: 'no-cors',
-        'Access-Control-Allow-Origin':'*',
+        header: 'Access-Control-Allow-Origin',
       }
     })
       .then(response => response.json())
