@@ -9,8 +9,5 @@ export const signUpUser = (username, password) => {
       'Content-Type': 'application/json',
     }
   })
-    .then(response => {
-      console.log('responseeee', response)
-      response.json()
-    }) 
+    .then(response => response.json()) 
 }
