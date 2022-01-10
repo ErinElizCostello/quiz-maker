@@ -20,10 +20,10 @@ const ListOfQuizzes = () => {
   useEffect(() => {
     fetch(`https://quizmaker-backend.herokuapp.com/quizzes`)
       .then(response => response.json())
-      // .then(data => {
-      //   console.log("datat", data)
-      //   setQuizzesList(data.data.reverse())
-      // })
+      .then(data => {
+        console.log("datat", data)
+        setQuizzesList(data.data.reverse())
+      })
   }, []);
 
 
