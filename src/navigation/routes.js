@@ -35,7 +35,7 @@ const Routes = () => {
         </Route>
         <SecuredCreateAQuiz
           path={`/createAQuiz`}
-          component={CreateAQuiz}
+          component={WhatIsTheTitle}
         />
         <Route path='/numberOfAnswers'>
           <HowManyPossibleAnswers />

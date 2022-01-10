@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-import CreateAQuiz from '../components/user/createAQuiz'
+import WhatIsTheTitle from '../components/quizMaker/whatIsTheTitle'
 
 
 
@@ -12,7 +12,7 @@ const SecuredCreateAQuiz = () => {
         render={() =>
           localStorage.getItem('QuizUser')
             ?
-            (<CreateAQuiz />)
+            (<WhatIsTheTitle />)
             :
             (<Redirect to={{ pathname: '/login' }} />)}
       >
