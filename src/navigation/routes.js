@@ -14,6 +14,7 @@ import MyQuizzes from '../components/user/myQuizzes';
 import SecuredMyQuizzes from './securedMyQuizzes';
 import HowManyPossibleAnswers from '../components/quizMaker/howManyPossibleAnswers';
 import AdminPage from '../components/adminPage';
+import SecuredCreateAQuiz from './securedCreateAQuiz';
 
 
 const Routes = () => {
@@ -32,9 +33,10 @@ const Routes = () => {
         <Route path="/deleteUserAccount">
           <DeleteUserAccount />
         </Route>
-        <Route path='/createAQuiz'>
-          <WhatIsTheTitle />
-        </Route>
+        <SecuredCreateAQuiz
+          path={`/createAQuiz`}
+          component={CreateAQuiz}
+        />
         <Route path='/numberOfAnswers'>
           <HowManyPossibleAnswers />
         </Route>
