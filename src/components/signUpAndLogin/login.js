@@ -35,6 +35,7 @@ const Login = () => {
         if (data.success !== false) {
           localStorage.setItem('QuizUser', JSON.stringify(data))
           setRedirectToHomePage(true)
+          console.log('oh jeez login', data)
         }
       })
   }

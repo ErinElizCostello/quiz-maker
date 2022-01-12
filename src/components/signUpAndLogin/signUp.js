@@ -27,7 +27,9 @@ const SignUp = () => {
         data.error === 'username is already taken, pick a new one' ?
           setUsernameAlreadyExistsMessage(true)
           :
+          console.log('oh jeez sign up', data)
           setRedirectToLogin(true)
+          
       })
   }
 
