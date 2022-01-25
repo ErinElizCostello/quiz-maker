@@ -22,7 +22,7 @@ const ListOfQuizzes = () => {
       .then(response => response.json())
       .then(data => {
         console.log("datat", data)
-        setQuizzesList(data.data.reverse())
+        data.data && setQuizzesList(data.data.reverse())
       })
   }, []);
 
