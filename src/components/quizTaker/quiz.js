@@ -87,12 +87,14 @@ const Quiz = () => {
                       <input
                         type="radio"
                         id="radioBtn"
-                        className="radioButtonCircle"
+                        // className="radioButtonCircle"
                         name={thisQuiz.question}
                         value={answer.letter}
                         onChange={answer => onChangeAnswer(answer, thisQuiz.id)}
                       />
-                      <div className="radioButtonLabel">
+                      <div 
+                      // className="radioButtonLabel"
+                      >
                         <label for="radioBtn">
                           {`  ${answer.text}`}
                         </label>
