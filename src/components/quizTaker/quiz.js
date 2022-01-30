@@ -82,7 +82,7 @@ const Quiz = () => {
                   {thisQuiz.answers.map(answer => (
                     <div
                       key={Math.random()}
-                      className="radioButtonWithAnswer"
+                      // className="radioButtonWithAnswer"
                     >
                       <input
                         type="radio"
