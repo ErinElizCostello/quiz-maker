@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto Mono", monospace;
+    /* font-family: "Roboto Mono", monospace; */
   }
 
   .quizQuestions-spacing {
@@ -110,7 +110,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto Mono", monospace;
+    /* font-family: "Roboto Mono", monospace; */
     margin: 30px
   }
 
