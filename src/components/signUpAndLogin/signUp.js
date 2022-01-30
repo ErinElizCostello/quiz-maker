@@ -24,12 +24,11 @@ const SignUp = () => {
   const createNewAccount = () => {
     signUpUser(username, password)
       .then(data => {
-        data.error === 'username is already taken, pick a new one' &&
-          setUsernameAlreadyExistsMessage(true)
-          // :
-          // console.log('oh jeez sign up', data)
-          // setRedirectToLogin(true)
-          
+        data.error === 'username is already taken, pick a new one' ? 
+        console.log('dataDATA', data)
+          // setUsernameAlreadyExistsMessage(true)
+          :
+          setRedirectToLogin(true)
       })
   }
 
