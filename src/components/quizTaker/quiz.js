@@ -82,18 +82,18 @@ const Quiz = () => {
                   {thisQuiz.answers.map(answer => (
                     <div
                       key={Math.random()}
-                      // className="radioButtonWithAnswer"
+                      className="radioButtonWithAnswer"
                     >
                       <input
                         type="radio"
                         id="radioBtn"
-                        // className="radioButtonCircle"
+                        className="radioButtonCircle"
                         name={thisQuiz.question}
                         value={answer.letter}
                         onChange={answer => onChangeAnswer(answer, thisQuiz.id)}
                       />
                       <div 
-                      // className="radioButtonLabel"
+                      className="radioButtonLabel"
                       >
                         <label for="radioBtn">
                           {`  ${answer.text}`}

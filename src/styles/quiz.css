@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* font-family: "Roboto Mono", monospace; */
+    font-family: "Roboto Mono", monospace;
   }
 
   .quizQuestions-spacing {
@@ -76,12 +76,12 @@
     font-size: 22px;
   }
 
-  /* .radioButtonCircle {
+  .radioButtonCircle {
     height: 20px;
     width: 20px;
     color: rgb(119, 118, 118);
     margin-right: 20px;
-  } */
+  }
 
   .quizTakerQuestionSpacers {
     margin: 10
@@ -91,17 +91,17 @@
     margin-bottom: 30px;
   }
 
-  /* .radioButtonWithAnswer {
+  .radioButtonWithAnswer {
     display: flex; 
     flex-direction: row;
     color: rgb(119, 118, 118);
     margin: 10px
-  } */
+  }
 
-  /* .radioButtonLabel {
+  .radioButtonLabel {
     display: inline-block;
     color: rgb(119, 118, 118);
-  }  */
+  } 
 }
 
 @media screen and (max-width: 601px) {
@@ -110,7 +110,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* font-family: "Roboto Mono", monospace; */
+    font-family: "Roboto Mono", monospace;
     margin: 30px
   }
 
@@ -135,12 +135,12 @@
     margin: 10
   }
 
-  /* .radioButtonWithAnswer {
+  .radioButtonWithAnswer {
     display: flex; 
     flex-direction: row;
-  } */
+  }
 
-  /* .radioButtonCircle {
+  .radioButtonCircle {
     color: rgb(119, 118, 118);
     margin-right: 10px;
   }
@@ -151,7 +151,7 @@
     flex-wrap: wrap;
     margin: 10px;
     align-items: center;
-  }  */
+  } 
 
   .seeMyResultsButton {
     background-color: white;
