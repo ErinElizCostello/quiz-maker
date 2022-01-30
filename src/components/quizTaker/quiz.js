@@ -84,21 +84,23 @@ const Quiz = () => {
                       key={Math.random()}
                       className="radioButtonWithAnswer"
                     >
-                      <input
-                        type="radio"
-                        id="radioBtn"
-                        className="radioButtonCircle"
-                        name={thisQuiz.question}
-                        value={answer.letter}
-                        onChange={answer => onChangeAnswer(answer, thisQuiz.id)}
-                      />
-                      <div 
-                      className="radioButtonLabel"
-                      >
-                        <label for="radioBtn">
-                          {`  ${answer.text}`}
-                        </label>
-                      </div>
+                      <form>
+                        <input
+                          type="radio"
+                          id="radioBtn"
+                          className="radioButtonCircle"
+                          name={thisQuiz.question}
+                          value={answer.letter}
+                          onChange={answer => onChangeAnswer(answer, thisQuiz.id)}
+                        />
+                        <div
+                          className="radioButtonLabel"
+                        >
+                          <label for="radioBtn">
+                            {`  ${answer.text}`}
+                          </label>
+                        </div>
+                      </form>
                     </div>
                   ))}
                 </div>
