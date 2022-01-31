@@ -21,8 +21,9 @@ deleteUser = async (req, res) => {
   
       return res.status(200).json({ success: true, data: {user, quizzes} })
     })
-  }).catch(err => console.log(err))
+  }).catch(err => res.send(err))
 }
+
 
 module.exports = {
   deleteUser

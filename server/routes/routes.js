@@ -8,6 +8,7 @@ const DeleteUserControllers = require('../controllers/deleteUser-controllers')
 
 const router = express.Router()
 
+
 router.get('/quizzes', QuizzesControllers.getQuizzes)
 router.get('/quiz/:id', QuizzesControllers.getQuizById)
 router.post('/createQuiz', QuizzesControllers.createQuiz)
@@ -22,5 +23,6 @@ router.post('/signUp', SignUpControllers.createNewUser)
 router.delete('/deleteUser/:user', DeleteUserControllers.deleteUser )
 
 router.get('/verify/:token', VerifyControllers.verifyUser)
+
 
 module.exports = router

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -21,7 +20,6 @@ const ListOfQuizzes = () => {
     fetch(`https://quizmaker-backend.herokuapp.com/quizzes`)
       .then(response => response.json())
       .then(data => {
-        console.log("datat", data)
         data.data && setQuizzesList(data.data.reverse())
       })
   }, []);

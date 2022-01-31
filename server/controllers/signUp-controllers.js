@@ -2,6 +2,7 @@ const SignUp = require('../models/signUpAndLogin-model')
 bcrypt = require('bcrypt'),
   SALT_WORK_FACTOR = 10;
 
+
 createNewUser = async (req, res) => {
   const body = req.body
 
@@ -57,6 +58,7 @@ createNewUser = async (req, res) => {
     }
   })
 }
+
 
 module.exports = {
   createNewUser

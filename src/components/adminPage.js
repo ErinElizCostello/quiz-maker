@@ -18,7 +18,7 @@ const AdminPage = () => {
   }, []);
 
   const deleteThisUser = (username) => {
-    deleteAUserAccount(username).then(data => console.log(data))
+    deleteAUserAccount(username)
   }
 
   return (

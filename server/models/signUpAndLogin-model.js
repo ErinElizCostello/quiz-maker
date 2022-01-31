@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+
 const SignUpAndLogin = new Schema(
     {
         username: { type: String, required: true, index: { unique: true } },
@@ -8,5 +9,6 @@ const SignUpAndLogin = new Schema(
     },
     { timestamps: true },
 )
+
 
 module.exports = mongoose.model('signUpAndLogin', SignUpAndLogin)

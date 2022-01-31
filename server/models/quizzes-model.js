@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+
 const Quizzes = new Schema(
     {
         user: { type: String, required: true },
@@ -10,5 +11,6 @@ const Quizzes = new Schema(
     },
     { timestamps: true },
 )
+
 
 module.exports = mongoose.model('quizzes', Quizzes)

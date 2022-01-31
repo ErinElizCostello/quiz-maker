@@ -7,6 +7,7 @@ import { setQuizTitle } from './quizTitle';
 import { setNumberOfAnswers } from './numberOfAnswers';
 
 
+
 const rootReducer = combineReducers({
   setQuestion,
   setQuizID,

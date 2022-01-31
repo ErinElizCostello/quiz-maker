@@ -1,5 +1,6 @@
 const Quizzes = require('../models/quizzes-model')
 
+
 createQuiz = (req, res) => {
     const body = req.body
 
@@ -34,7 +35,6 @@ createQuiz = (req, res) => {
 }
 
 
-
 deleteQuiz = async (req, res) => {
     await Quizzes.findOneAndDelete({ _id: req.params.id }, (err, quiz) => {
         if (err) {
@@ -48,8 +48,9 @@ deleteQuiz = async (req, res) => {
         }
 
         return res.status(200).json({ success: true, data: quiz })
-    }).catch(err => console.log(err))
+    }).catch(err => res.send(err))
 }
+
 
 getQuizById = async (req, res) => {
     await Quizzes.findOne({ _id: req.params.id }, (err, quiz) => {
@@ -63,8 +64,9 @@ getQuizById = async (req, res) => {
                 .json({ success: false, error: `Quiz not found` })
         }
         return res.status(200).json({ success: true, data: quiz })
-    }).catch(err => console.log(err))
+    }).catch(err => res.send(err))
 }
+
 
 getQuizzesByUser = async (req, res) => {
     await Quizzes.find({user: req.body.username}, (err, quizzes) => {
@@ -77,8 +79,9 @@ getQuizzesByUser = async (req, res) => {
                 .json({ success: false, error: `No quizzes found for that user` })
         }
         return res.status(200).json({ success: true, data: quizzes })
-    }).catch(err => console.log(err))
+    }).catch(err => res.send(err))
 }
+
 
 getQuizzes = async (req, res) => {
     await Quizzes.find({}, (err, quizzes) => {
@@ -91,8 +94,9 @@ getQuizzes = async (req, res) => {
                 .json({ success: false, error: `No quizzes found` })
         }
         return res.status(200).json({ success: true, data: quizzes })
-    }).catch(err => console.log(err))
+    }).catch(err => res.send(err))
 }
+
 
 editQuiz = async (req, res) => {
   const body = req.body

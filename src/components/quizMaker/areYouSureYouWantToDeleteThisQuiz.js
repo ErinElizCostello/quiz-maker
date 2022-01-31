@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { deleteAQuiz } from '../../API/deleteAQuiz';
-
 import "../../styles/areYouSureYouWantToDeleteThisQuiz.css"
 
 

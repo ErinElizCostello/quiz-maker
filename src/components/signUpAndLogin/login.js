@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
 import { Link, Redirect } from 'react-router-dom'
-import '../../styles/login.css'
 
 import { loginUser } from '../../API/loginUser';
 
 import BackButton from '../backButton'
+
+import '../../styles/login.css'
 
 
 
@@ -35,7 +35,6 @@ const Login = () => {
         if (data.success !== false) {
           localStorage.setItem('QuizUser', JSON.stringify(data))
           setRedirectToHomePage(true)
-          console.log('oh jeez login', data)
         }
       })
   }

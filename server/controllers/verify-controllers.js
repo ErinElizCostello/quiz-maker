@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken')
 
+
 verifyUser = (req, res) => {
   const { token } = req.params
 

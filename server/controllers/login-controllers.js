@@ -1,6 +1,7 @@
 const Login = require('../models/signUpAndLogin-model')
 const jwt = require('jsonwebtoken')
 
+
 getUser = async (req, res) => {
 
   await Login.findOne({ username: req.body.username }, (err, user) => {
@@ -38,8 +39,9 @@ getUser = async (req, res) => {
         return res.json({ success: false, message: 'passwords do not match' });
       }
     })
-  }).catch(err => console.log(err))
+  }).catch(err => res.send(err))
 }
+
 
 getAllUsers = async (req, res) => {
   await Login.find({}, (err, users) => {
@@ -52,8 +54,9 @@ getAllUsers = async (req, res) => {
         .json({ success: false, error: `No users found` })
     }
     return res.status(200).json({ success: true, data: users })
-  }).catch(err => console.log(err))
+  }).catch(err => res.send(err))
 }
+
 
 module.exports = {
   getUser,
