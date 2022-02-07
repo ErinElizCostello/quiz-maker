@@ -6,7 +6,7 @@
 [Visit Website](http://reallyhungry.herokuapp.com)
 
 <p align="center">
-  <img src="https://github.com/ErinElizCostello/Recipes/blob/master/src/images/mainPage.png" />
-  <img src="https://github.com/ErinElizCostello/Recipes/blob/master/src/images/quiz.png" />
-  <img src="https://github.com/ErinElizCostello/Recipes/blob/master/src/images/questions.png" />
+  <img src="https://github.com/ErinElizCostello/quiz-maker/blob/master/src/images/mainPage.png" />
+  <img src="https://github.com/ErinElizCostello/quiz-maker/blob/master/src/images/quiz.png" />
+  <img src="https://github.com/ErinElizCostello/quiz-maker/blob/master/src/images/questions.png" />
 </p>
