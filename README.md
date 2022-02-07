@@ -1,7 +1,7 @@
 # QuizMaker5000
 ### Make an account to create you own quizzes, then take quizzes made by others! 
 
-##### Created with: React.js with hooks, Redux, CSS, Express.js, MongoDB, Mongoose, Passport.js, JWT
+##### Created with: React.js with hooks, Redux, CSS, Express.js, MongoDB, Mongoose, JWT
 
 [Visit Website](http://reallyhungry.herokuapp.com)
 
