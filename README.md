@@ -3,7 +3,7 @@
 
 ##### Created with: React.js with hooks, Redux, CSS, Express.js, MongoDB, Mongoose, JWT
 
-[Visit Website](http://reallyhungry.herokuapp.com)
+[Visit Website](https://quizmaker5000.herokuapp.com/)
 
 <p align="center">
   <img src="https://github.com/ErinElizCostello/quiz-maker/blob/master/src/images/mainPage.png" />
